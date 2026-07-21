@@ -380,44 +380,56 @@
   </div>
 
   <article class="qa"><div class="q"><span class="qnum">Q13</span><h3>What is Scrum?</h3></div>
-  <div class="a"><p><strong>Scrum is a lightweight framework</strong> that helps teams deliver value in short cycles called Sprints, by working together, inspecting results frequently, and adapting. It's the most widely used way to <em>do</em> Agile, defined in the ~13-page Scrum Guide.</p></div></article>
+  <div class="a"><p><strong>Scrum is a lightweight framework</strong> that helps teams deliver value in short cycles called Sprints, by working together, inspecting results frequently, and adapting. It's the most widely used way to <em>do</em> Agile, defined in the ~13-page Scrum Guide by Ken Schwaber and Jeff Sutherland. It deliberately gives you just enough structure — three accountabilities, five events, three artifacts — and no more.</p>
+  <div class="example"><b class="lbl">Worked example</b>Our healthcare team turns "let patients rebook a cancelled appointment" into a Product Backlog item, pulls it into a two-week Sprint with a clear Sprint Goal, builds and tests it, demos it to clinic staff at the Review, and improves how they work in the Retro. That full loop — plan, build, inspect, adapt — <em>is</em> Scrum in action.</div></div></article>
 
   <article class="qa"><div class="q"><span class="qnum">Q14</span><h3>Why is Scrum a "framework" and not a "methodology"?</h3></div>
-  <div class="a"><p>Because it's deliberately <strong>incomplete</strong> — it defines the minimum rules (roles, events, artifacts) and leaves the rest to the team. A methodology prescribes step-by-step <em>how</em>; a framework is a container you fill with your own practices (e.g. how you estimate or test).</p></div></article>
+  <div class="a"><p>Because it's deliberately <strong>incomplete</strong> — it defines the minimum rules (roles, events, artifacts) and leaves the rest to the team. A methodology prescribes step-by-step <em>how</em>; a framework is a container you fill with your own practices.</p>
+  <div class="example"><b class="lbl">Worked example</b>Scrum tells you to hold Sprint Planning and produce a Sprint Backlog — but it never says <em>how</em> to estimate (points? t-shirt sizes?), <em>how</em> to test, or <em>which</em> tools to use. One healthcare team uses Planning Poker and TDD; another uses no-estimates and pair testing. Both are doing Scrum correctly. That freedom is why it's a framework.</div></div></article>
 
   <article class="qa"><div class="q"><span class="qnum">Q15</span><h3>What are the three pillars of Scrum?</h3></div>
   <div class="a"><ul class="clean">
-    <li><strong>Transparency</strong> — work and progress are visible and honest.</li>
-    <li><strong>Inspection</strong> — you check the work and process regularly.</li>
-    <li><strong>Adaptation</strong> — you adjust quickly when something's off.</li>
-  </ul><p>You can only adapt what you inspect, and only inspect what's transparent.</p></div></article>
+    <li><strong>Transparency</strong> — work and progress are visible and honest to everyone.</li>
+    <li><strong>Inspection</strong> — you check the work and the process regularly.</li>
+    <li><strong>Adaptation</strong> — you adjust quickly when inspection shows something's off.</li>
+  </ul><p>They hold up empiricism: you can only adapt what you inspect, and only inspect what's transparent.</p>
+  <div class="example"><b class="lbl">Worked example</b>If a team hides that a booking feature is only "80% done" (no transparency), the Review can't inspect reality, so no one adapts — and the gap explodes at release. A visible board + an honest Definition of Done is what makes the other two pillars even possible.</div></div></article>
 
   <article class="qa"><div class="q"><span class="qnum">Q16</span><h3>What are the five Scrum values?</h3></div>
-  <div class="a"><p><strong>Commitment, Focus, Courage, Respect, Openness</strong> (C-F-C-R-O). The events and artifacts are the skeleton; these values are the muscle that make them actually work.</p></div></article>
+  <div class="a"><p><strong>Commitment, Focus, Courage, Respect, Openness</strong> (C-F-C-R-O). The events and artifacts are the skeleton; these values are the muscle that make them actually work.</p>
+  <div class="example"><b class="lbl">Worked example</b>A Retro only works if the values are alive: <strong>courage</strong> to say "our releases keep breaking because we skip testing," <strong>openness</strong> to admit it, and <strong>respect</strong> so it's a systemic conversation, not a blame session. Without the values, a Retro is just a quiet meeting where nothing real is said.</div></div></article>
 
   <article class="qa"><div class="q"><span class="qnum">Q17</span><h3>What is the Scrum Team?</h3></div>
-  <div class="a"><p>One team of typically <strong>10 or fewer people</strong> with three accountabilities: <strong>Product Owner, Scrum Master, and Developers</strong>. There are no sub-teams or hierarchies — they share one Product Goal and are collectively accountable.</p></div></article>
+  <div class="a"><p>One team of typically <strong>10 or fewer people</strong> with three accountabilities: <strong>Product Owner, Scrum Master, and Developers</strong>. There are no sub-teams or hierarchies — they share one Product Goal and are <em>collectively</em> accountable for creating value each Sprint.</p>
+  <div class="example"><b class="lbl">Worked example</b>Our booking team is 7 people: 1 PO (prioritises what patients/clinics need most), 1 Scrum Master (me), and 5 Developers (including 2 who focus on testing and one on integration with the clinic system). No "team lead" hands out tasks — the five Developers plan the work together.</div></div></article>
 
   <article class="qa"><div class="q"><span class="qnum">Q18</span><h3>What do "cross-functional" and "self-managing" mean?</h3></div>
-  <div class="a"><p><strong>Cross-functional</strong> = the team has all the skills needed to build a "Done" increment without depending on outsiders. <strong>Self-managing</strong> = the team decides who does what and how, rather than being directed.</p></div></article>
+  <div class="a"><p><strong>Cross-functional</strong> = the team has <em>all</em> the skills needed to build a "Done" increment without waiting on outsiders. <strong>Self-managing</strong> = the team decides who does what and how, rather than being directed.</p>
+  <div class="example"><b class="lbl">Worked example</b>A cross-functional booking team can design, build, test <em>and</em> deploy a feature itself. If every release has to queue for a separate QA team and a separate DBA team, it's <em>not</em> truly cross-functional — those hand-offs are exactly the impediments a Scrum Master works to remove.</div></div></article>
 
   <article class="qa"><div class="q"><span class="qnum">Q19</span><h3>What is the ideal Scrum team size?</h3></div>
-  <div class="a"><p>The 2020 Guide says <strong>10 or fewer</strong>. Small enough to stay nimble, large enough to complete meaningful work. If it grows too big, you split into multiple cohesive Scrum Teams sharing one Product Goal and backlog.</p></div></article>
+  <div class="a"><p>The 2020 Guide says <strong>10 or fewer</strong>. Small enough to stay nimble and communicate easily, large enough to complete meaningful work each Sprint. If it grows too big, you split into multiple cohesive Scrum Teams sharing one Product Goal and one Product Backlog.</p>
+  <div class="example"><b class="lbl">Worked example</b>When our platform team hit 14 people, Daily Scrums dragged and coordination got messy. We split into a "Booking" team and a "Telehealth" team — each under 8 — sharing one Product Goal and PO. Communication and predictability both improved immediately.</div></div></article>
 
   <article class="qa"><div class="q"><span class="qnum">Q20</span><h3>What is a Sprint?</h3></div>
-  <div class="a"><p>A fixed, short cycle (<strong>1–4 weeks</strong>) in which the team builds a usable increment. It's the <em class="accent-word">heartbeat</em> of Scrum — a new Sprint starts the moment the last one ends, giving a steady rhythm. Length stays consistent.</p></div></article>
+  <div class="a"><p>A fixed, short cycle (<strong>1–4 weeks</strong>) in which the team builds a usable increment. It's the <em class="accent-word">heartbeat</em> of Scrum — a new Sprint starts the moment the last one ends, giving a steady, predictable rhythm. The length stays consistent, quality never drops, and the Sprint Goal doesn't change mid-Sprint.</p>
+  <div class="analogy"><b>Everyday analogy</b> Like a season of a TV show — a fixed length that tells a complete, watchable story, after which the writers learn from the audience before planning the next season.</div></div></article>
 
   <article class="qa"><div class="q"><span class="qnum">Q21</span><h3>Can the Sprint length change?</h3></div>
-  <div class="a"><p>Keep it <strong>consistent</strong> for predictability, but a team <em>can</em> change its standard Sprint length between Sprints (e.g. 3 weeks → 2) as a deliberate decision. Never extend a Sprint mid-flight just to "finish" work.</p></div></article>
+  <div class="a"><p>Keep it <strong>consistent</strong> for predictability, but a team <em>can</em> deliberately change its standard Sprint length between Sprints (e.g. move from 3 weeks to 2) if it helps. What you must <em>never</em> do is extend a Sprint mid-flight just to "finish" work.</p>
+  <div class="example"><b class="lbl">Worked example</b>Our team moved from 3-week to 2-week Sprints because clinic feedback was arriving too slowly. That's a fine, deliberate change. But when a release looked like it might miss the last day, we did <em>not</em> tack on "just two more days" — the unfinished item simply returned to the backlog for the next Sprint.</div></div></article>
 
   <article class="qa"><div class="q"><span class="qnum">Q22</span><h3>What is the Sprint Goal?</h3></div>
-  <div class="a"><p>A single, concise <strong>objective for the Sprint</strong> that gives the team focus and a shared "why." It's the commitment attached to the Sprint Backlog. Work can flex, but the Goal stays fixed for the Sprint.</p></div></article>
+  <div class="a"><p>A single, concise <strong>objective for the Sprint</strong> that gives the team focus and a shared "why." It's the one commitment attached to the Sprint Backlog. Individual items can flex, but the Goal stays fixed for the Sprint.</p>
+  <div class="example"><b class="lbl">Worked example</b>A weak goal is "finish these 8 tickets." A strong Sprint Goal is "<em>patients can book, reschedule and cancel an appointment online for one pilot clinic.</em>" Now if one ticket turns out huge, the team can drop or swap work while still delivering the <em>goal</em> — the tickets serve the goal, not the other way round.</div></div></article>
 
   <article class="qa"><div class="q"><span class="qnum">Q23</span><h3>What is the Product Goal?</h3></div>
-  <div class="a"><p>The <strong>long-term objective for the product</strong> — a future state the team works toward. It's the commitment attached to the Product Backlog, and each Sprint moves the product closer to it. Introduced in the 2020 Scrum Guide.</p></div></article>
+  <div class="a"><p>The <strong>long-term objective for the product</strong> — a future state the team is working toward. It's the commitment attached to the Product Backlog, and every Sprint Goal should move the product a step closer to it. Introduced in the 2020 Scrum Guide to give the backlog a clear "north star."</p>
+  <div class="example"><b class="lbl">Worked example</b>Product Goal: "<em>Become the easiest way for patients to manage all their appointments across every clinic in the network.</em>" Sprint Goals then ladder up to it — online booking, then reminders, then telehealth, then multi-clinic view — each a stepping stone toward that bigger destination.</div></div></article>
 
   <article class="qa"><div class="q"><span class="qnum">Q24</span><h3>Is Scrum only for software?</h3></div>
-  <div class="a"><p>No. Scrum was popularised in software but works for any <strong>complex, adaptive problem</strong> — marketing, hardware, research, event planning. The Scrum Guide is intentionally domain-agnostic; only the practices you layer on top are software-specific.</p></div></article>
+  <div class="a"><p>No. Scrum was popularised in software but works for any <strong>complex, adaptive problem</strong> where requirements emerge — marketing campaigns, hardware, research, even event planning. The Scrum Guide is intentionally domain-agnostic; only the practices you layer on top (like TDD) are software-specific.</p>
+  <div class="example"><b class="lbl">Worked example</b>A hospital's patient-experience team used Scrum to redesign its admissions process — Sprints of small changes, fortnightly reviews with nurses, retros to improve — with not a line of code involved. The framework fit because the problem was complex and feedback-driven.</div></div></article>
 
   <!-- ============ SECTION 3: ROLES ============ -->
   <div class="section-head" id="s3">
@@ -443,50 +455,64 @@
 
   <article class="qa"><div class="q"><span class="qnum">Q25</span><h3>What are the three accountabilities in Scrum?</h3></div>
   <div class="a"><ul class="clean">
-    <li><strong>Product Owner</strong> — maximises value; owns and orders the Product Backlog (the what &amp; why).</li>
-    <li><strong>Developers</strong> — build the increment (the how); anyone doing the work — coders, testers, designers.</li>
-    <li><strong>Scrum Master</strong> — accountable for the team's effectiveness and correct use of Scrum.</li>
-  </ul></div></article>
+    <li><strong>Product Owner</strong> — maximises value; owns and orders the Product Backlog (the <em>what &amp; why</em>).</li>
+    <li><strong>Developers</strong> — build the increment (the <em>how</em>); anyone doing the work — coders, testers, designers.</li>
+    <li><strong>Scrum Master</strong> — accountable for the team's effectiveness and the correct use of Scrum (the <em>how we work</em>).</li>
+  </ul>
+  <div class="example"><b class="lbl">Worked example</b>On our booking team: the PO decides "reminders before booking a multi-clinic view" (priority); the Developers decide whether to use SMS or push and how to build it; and I, the SM, make sure the team can actually deliver — clearing a blocked test environment, keeping the Review useful. Three lanes, one goal.</div></div></article>
 
   <article class="qa"><div class="q"><span class="qnum">Q26</span><h3>What does a Scrum Master do?</h3></div>
-  <div class="a"><p>A <strong>servant leader and coach</strong> who makes the team and environment better. They serve three groups: the <strong>team</strong> (coach self-management, remove impediments, facilitate events), the <strong>Product Owner</strong> (backlog and goal help, stakeholder collaboration), and the <strong>organisation</strong> (help everyone adopt Scrum, remove barriers).</p>
-  <div class="analogy"><b>Everyday analogy</b> A sports coach — not the captain, not a player. They don't score the goals; they train the team, clear obstacles, and help it improve every game.</div></div></article>
+  <div class="a"><p>A <strong>servant leader and coach</strong> who makes the team and its environment better — never a task-master. They serve three groups: the <strong>team</strong> (coach self-management, remove impediments, facilitate events), the <strong>Product Owner</strong> (backlog and goal help, stakeholder collaboration), and the <strong>organisation</strong> (help everyone adopt Scrum, remove barriers between teams and stakeholders).</p>
+  <div class="analogy"><b>Everyday analogy</b> A sports coach — not the captain, not a player. They don't score the goals; they train the players, study the opponents, clear obstacles, and help the team get better every game.</div>
+  <div class="example"><b class="lbl">Worked example</b>A typical week for me: unblock a delayed API from the integrations team, coach the PO on slicing a huge "telehealth" epic, facilitate the Retro, and spend an afternoon helping a stakeholder understand why dumping work straight on a developer hurts delivery. Barely any of it is "running meetings."</div></div></article>
 
   <article class="qa"><div class="q"><span class="qnum">Q27</span><h3>Scrum Master vs Project Manager?</h3></div>
-  <div class="a"><p>A PM <strong>directs from above</strong> — owns scope, budget, timeline, and assigns tasks. A Scrum Master <strong>serves from alongside</strong> — owns the process and team health, has no command authority, and leads through influence and coaching. The team pulls its own work; the team is accountable for delivery.</p></div></article>
+  <div class="a"><p>A PM <strong>directs from above</strong> — owns scope, budget and timeline, and assigns tasks. A Scrum Master <strong>serves from alongside</strong> — owns the process and team health, has <em>no command authority</em>, and leads through influence and coaching. The team pulls its own work and is collectively accountable for delivery.</p>
+  <div class="example"><b class="lbl">Worked example</b>When a booking feature slipped, a PM might reassign people and push a new deadline. As SM, I instead facilitated the team to find the root cause (a hidden dependency), helped them re-plan, and coached the PO on renegotiating scope with the clinic — the team owned the fix, I enabled it.</div>
+  <div class="tip"><span class="tip-ic">★</span><div><b>Say this</b> "A PM pushes work down and manages the plan; a Scrum Master creates the conditions for a self-managing team to succeed — leadership through influence, not authority."</div></div></div></article>
 
   <article class="qa"><div class="q"><span class="qnum">Q28</span><h3>What is servant leadership?</h3></div>
-  <div class="a"><p>Leading by <strong>serving the team's needs first</strong> — asking "what does the team need to succeed and what's in the way?" instead of giving orders. In practice: clearing blockers, shielding focus, asking questions, and building the team's confidence to decide for itself.</p></div></article>
+  <div class="a"><p>Leading by <strong>serving the team's needs first</strong> — asking "what does the team need to succeed, and what's in the way?" instead of giving orders. In practice: clearing blockers, shielding focus, asking questions rather than dictating answers, and building the team's confidence to decide for itself. The 2020 Guide frames the SM as "a true leader who serves."</p>
+  <div class="example"><b class="lbl">Worked example</b>A developer asked me "which caching approach should we use?" A directive leader answers. As a servant leader I said, "What options have you weighed, and what does the team think?" — then removed the real blocker (getting them 30 minutes with the architect). They made a better decision <em>and</em> grew.</div></div></article>
 
   <article class="qa"><div class="q"><span class="qnum">Q29</span><h3>What does the Product Owner do?</h3></div>
-  <div class="a"><p>A single person accountable for <strong>maximising product value</strong>. They own the Product Backlog and its ordering, set the Product Goal, and decide <em>what</em> gets built and in what order — but not <em>how</em>, and not how much the team commits to per Sprint.</p></div></article>
+  <div class="a"><p>A single person accountable for <strong>maximising the product's value</strong>. They own the Product Backlog and its ordering, set the Product Goal, represent stakeholders and patients/customers, and decide <em>what</em> gets built and in what order — but not <em>how</em>, and not how much the team commits to per Sprint.</p>
+  <div class="example"><b class="lbl">Worked example</b>Our PO chose to build appointment <em>reminders</em> before a fancy calendar view, because no-show data showed reminders would cut missed appointments most. That's the PO's core job: turning limited capacity into maximum value, and defending that ordering to stakeholders.</div>
+  <div class="tip"><span class="tip-ic">★</span><div><b>Key point</b> One person, not a committee — and for the PO to work, the organisation must respect their decisions.</div></div></div></article>
 
   <article class="qa"><div class="q"><span class="qnum">Q30</span><h3>What are Developers responsible for?</h3></div>
-  <div class="a"><p>Creating the Sprint Backlog, building a "Done" increment that meets the Definition of Done, adapting their plan daily toward the Sprint Goal, and holding each other accountable as professionals. "Developers" = anyone building the increment, not just programmers.</p></div></article>
+  <div class="a"><p>Creating the Sprint Backlog, building a "Done" increment that meets the Definition of Done, adapting their daily plan toward the Sprint Goal, and holding each other accountable as professionals. "Developers" means <em>anyone building the increment</em> — coders, testers, designers, analysts.</p>
+  <div class="example"><b class="lbl">Worked example</b>In our team, the two people who mostly write automated tests are "Developers" too. When we plan a booking story, they shape the acceptance tests up front — so quality is the whole team's job, not a separate phase handed off at the end.</div></div></article>
 
   <article class="qa"><div class="q"><span class="qnum">Q31</span><h3>Scrum Master vs Agile Coach?</h3></div>
-  <div class="a"><p>A <strong>Scrum Master</strong> focuses on one or two teams and the Scrum framework. An <strong>Agile Coach</strong> works more broadly — multiple teams, leadership, and the organisation's overall agile transformation and culture — and is often framework-agnostic. The SM role is a common stepping stone to coaching.</p></div></article>
+  <div class="a"><p>A <strong>Scrum Master</strong> focuses on one or two teams and the Scrum framework. An <strong>Agile Coach</strong> works more broadly — multiple teams, leadership, and the organisation's overall agile transformation and culture — and is often framework-agnostic. The SM role is the common stepping stone to coaching.</p>
+  <div class="example"><b class="lbl">Worked example</b>As SM I help my booking team run great Sprints. Our Agile Coach operates a level up — running maturity assessments across all five teams on the train, coaching directors on Lean budgeting, and fixing systemic issues like the slow release-approval process that no single team can solve alone.</div></div></article>
 
   <article class="qa"><div class="q"><span class="qnum">Q32</span><h3>Can one person be both Scrum Master and Product Owner?</h3></div>
-  <div class="a"><p>Strongly discouraged — the roles can <strong>conflict</strong>. The PO pushes for scope and value; the SM protects the team and process. One person doing both loses that healthy tension and objectivity. In small setups it happens, but flag it as a risk.</p></div></article>
+  <div class="a"><p>Strongly discouraged — the roles can <strong>conflict</strong>. The PO pushes for more scope and value; the SM protects the team, quality and sustainable pace. One person wearing both hats loses that healthy tension and objectivity. It happens in small startups, but you should name it as a risk.</p>
+  <div class="example"><b class="lbl">Worked example</b>If I were both, and the clinic demanded more features than we could safely build, "PO me" would want to say yes while "SM me" should protect the team from overload — I'd have no one to hold that balance. That's exactly why Scrum separates them.</div></div></article>
 
   <article class="qa"><div class="q"><span class="qnum">Q33</span><h3>Can a Scrum Master serve multiple teams?</h3></div>
-  <div class="a"><p>Yes — experienced SMs often serve 2–3 teams. It depends on maturity: a new team needs far more attention than a mature one. The risk is spreading so thin you become a passive "meeting scheduler" rather than an active coach.</p></div></article>
+  <div class="a"><p>Yes — experienced SMs often serve 2–3 teams. It depends on <strong>team maturity</strong>: a newly formed team needs far more attention than a mature, self-managing one. The risk is spreading so thin you become a passive "meeting scheduler" instead of an active coach.</p>
+  <div class="example"><b class="lbl">Worked example</b>I comfortably support two mature teams. But when we spun up a brand-new telehealth team, I flagged that it needed near-full-time coaching for its first couple of PIs — and pushed back on being handed a third team, because that would have meant only booking meetings, not actually coaching.</div></div></article>
 
   <article class="qa"><div class="q"><span class="qnum">Q34</span><h3>Who manages the team in Scrum?</h3></div>
-  <div class="a"><p>No one "manages" it in the traditional sense — the team is <strong>self-managing</strong>. There's no team lead or manager inside Scrum. The Scrum Master facilitates and coaches; line management (HR, career) usually sits outside the Scrum Team.</p></div></article>
+  <div class="a"><p>No one "manages" it in the traditional command sense — the team is <strong>self-managing</strong>. There's no team lead or manager <em>inside</em> Scrum. The Scrum Master facilitates and coaches; line management (HR, careers, pay) usually sits outside the Scrum Team.</p>
+  <div class="example"><b class="lbl">Worked example</b>New joiners often ask me "so who assigns my tasks?" The answer: no one — you pull the next priority item off the board with the team. It surprises people used to a boss handing out work, and coaching that shift is a big part of the SM role.</div></div></article>
 
   <article class="qa"><div class="q"><span class="qnum">Q35</span><h3>What is the Scrum Master's role with the wider organisation?</h3></div>
-  <div class="a"><p>Helping the organisation <strong>understand and adopt Scrum</strong>, coaching leaders and stakeholders, removing cross-team barriers, and driving an empirical, agile culture. It's the most overlooked part of the role but what separates a senior SM from a ceremony-runner.</p></div></article>
+  <div class="a"><p>Helping the organisation <strong>understand and adopt Scrum</strong>, coaching leaders and stakeholders, removing cross-team barriers, and driving an empirical, agile culture. It's the most overlooked part of the role — and what separates a senior SM from a ceremony-runner.</p>
+  <div class="example"><b class="lbl">Worked example</b>Our releases kept stalling on a multi-day manual compliance sign-off — an <em>organisational</em> impediment no single team could fix. I gathered the data, showed leadership the delay in the value stream, and got the review moved earlier and run in parallel. That's org-level Scrum Mastery.</div></div></article>
 
   <article class="qa"><div class="q"><span class="qnum">Q36</span><h3>What makes a good Scrum Master?</h3></div>
   <div class="a"><ul class="clean">
     <li>Strong <strong>facilitation</strong> and <strong>coaching</strong> skills; asks more than tells.</li>
-    <li><strong>Empathy</strong> and emotional intelligence; builds trust and safety.</li>
+    <li><strong>Empathy</strong> and emotional intelligence; builds trust and psychological safety.</li>
     <li><strong>Servant leadership</strong> — influence without authority.</li>
     <li>Deep Scrum knowledge, plus conflict resolution and impediment removal.</li>
     <li>Aims to make themselves <em>less</em> needed over time.</li>
-  </ul></div></article>
+  </ul>
+  <div class="example"><b class="lbl">Worked example</b>The best compliment I've had was a team saying, "we barely notice you're gone for a day" — because they'd learned to run their own events, resolve their own blockers, and hold each other accountable. A great SM builds a team that eventually needs them little.</div></div></article>
 
   <!-- ============ SECTION 4: EVENTS ============ -->
   <div class="section-head" id="s4">
