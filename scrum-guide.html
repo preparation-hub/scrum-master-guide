@@ -774,40 +774,53 @@
   </div>
 
   <article class="qa"><div class="q"><span class="qnum">Q77</span><h3>What is a burndown chart?</h3></div>
-  <div class="a"><p>A chart of <strong>work remaining over time</strong>, trending toward zero by the end of the Sprint (or release). Comparing the actual line to the ideal line shows whether you're ahead or behind. It's a conversation-starter, not a scoreboard.</p></div></article>
+  <div class="a"><p>A chart of <strong>work remaining over time</strong>, trending toward zero by the end of the Sprint (or release). Comparing the <em>actual</em> line to the <em>ideal</em> line shows whether you're ahead or behind. It's a conversation-starter, not a scoreboard (see the animated chart above).</p>
+  <div class="example"><b class="lbl">Worked example</b>Mid-Sprint our burndown went flat for two days — no work "burning down." That flat line prompted a Daily conversation that surfaced a blocked payment-gateway credential. The chart didn't fix anything; it just made the stall <em>visible</em> so the team could act.</div></div></article>
 
   <article class="qa"><div class="q"><span class="qnum">Q78</span><h3>What is a burnup chart?</h3></div>
-  <div class="a"><p>The mirror image — it tracks work <strong>completed rising toward a total</strong>. Its advantage: a separate "total scope" line makes <strong>scope changes</strong> (scope creep) clearly visible, which a burndown hides.</p></div></article>
+  <div class="a"><p>The mirror image — it tracks work <strong>completed rising toward a total</strong>, with a separate "total scope" line. Its big advantage: that scope line makes <strong>scope changes</strong> (creep) clearly visible, which a burndown hides.</p>
+  <div class="example"><b class="lbl">Worked example</b>Our release looked "behind" on the burndown — but the burnup showed the completed line rising steadily <em>while the scope line kept climbing</em> (stakeholders adding stories). The real issue was scope creep, not slow delivery — a conversation the burnup made obvious and the burndown masked.</div></div></article>
 
   <article class="qa"><div class="q"><span class="qnum">Q79</span><h3>Burndown vs burnup — when to use which?</h3></div>
-  <div class="a"><p>Use <strong>burndown</strong> for a quick "are we on track this Sprint?" view. Use <strong>burnup</strong> when scope changes and you want to see completed work and total scope separately — better for releases and stakeholder communication.</p></div></article>
+  <div class="a"><p>Use <strong>burndown</strong> for a quick "are we on track this Sprint?" view. Use <strong>burnup</strong> when scope changes and you want to see completed work and total scope separately — better for releases and stakeholder communication.</p>
+  <div class="example"><b class="lbl">Worked example</b>Inside the team, we glance at the Sprint burndown daily. For the monthly release update to clinic leadership, I always use the burnup — because it honestly shows both "how much we've built" and "how much they've added."</div></div></article>
 
   <article class="qa"><div class="q"><span class="qnum">Q80</span><h3>What is a Cumulative Flow Diagram (CFD)?</h3></div>
-  <div class="a"><p>A stacked area chart showing how many items are in each workflow state (To Do / In Progress / Done) over time. <strong>Widening bands = a bottleneck</strong>; a growing gap means WIP is piling up. Great for spotting where flow stalls.</p></div></article>
+  <div class="a"><p>A stacked area chart showing how many items sit in each workflow state (To Do / In Progress / Done) over time. <strong>A widening band = a bottleneck</strong>; a growing gap means WIP is piling up. Great for spotting exactly <em>where</em> flow stalls.</p>
+  <div class="example"><b class="lbl">Worked example</b>Our CFD showed the "In Review" band swelling week after week — code was written but sitting unreviewed. That one visual led us to a WIP limit on reviews and a daily review slot; the band shrank and cycle time dropped.</div></div></article>
 
   <article class="qa"><div class="q"><span class="qnum">Q81</span><h3>What is cycle time?</h3></div>
-  <div class="a"><p>The time from when the team <strong>starts working</strong> on an item to when it's <strong>done</strong>. Shorter cycle time = faster delivery. A core flow metric in Kanban and increasingly in Scrum.</p></div></article>
+  <div class="a"><p>The time from when the team <strong>starts working</strong> on an item to when it's <strong>done</strong>. Shorter cycle time = faster delivery and quicker feedback. A core flow metric in Kanban and increasingly used in Scrum.</p>
+  <div class="example"><b class="lbl">Worked example</b>Our average story cycle time was 6 days. Digging in, most of it was <em>waiting</em> for review, not coding. Cutting that wait pulled cycle time to ~3 days — so we delivered value to clinics roughly twice as fast without anyone working harder.</div></div></article>
 
   <article class="qa"><div class="q"><span class="qnum">Q82</span><h3>What is lead time?</h3></div>
-  <div class="a"><p>The time from when an item is <strong>requested/created</strong> to when it's <strong>delivered</strong> — the customer's-eye view. Lead time includes waiting time before work starts; cycle time doesn't. Lead time ≥ cycle time.</p></div></article>
+  <div class="a"><p>The time from when an item is <strong>requested/created</strong> to when it's <strong>delivered</strong> — the customer's-eye view. Lead time <em>includes</em> the wait before work starts; cycle time doesn't. So lead time ≥ cycle time.</p>
+  <div class="example"><b class="lbl">Worked example</b>A clinic asked for a "cancellation reason" field. Cycle time (once we started) was 2 days — but lead time was 5 weeks, because it sat in the backlog first. To the clinic, the 5 weeks is what they <em>felt</em>. That gap is why POs care about lead time.</div></div></article>
 
   <article class="qa"><div class="q"><span class="qnum">Q83</span><h3>What is throughput?</h3></div>
-  <div class="a"><p>The <strong>number of items completed per unit of time</strong> (e.g. 8 stories/sprint). A flow-based alternative to velocity that doesn't rely on story points.</p></div></article>
+  <div class="a"><p>The <strong>number of items completed per unit of time</strong> (e.g. 8 stories/Sprint). A flow-based alternative to velocity that doesn't rely on story points at all.</p>
+  <div class="example"><b class="lbl">Worked example</b>Our support team dropped estimation entirely and just tracks throughput — "we close ~10 items a week." Combined with similar-sized items, that's enough to forecast reliably, without the overhead of pointing every ticket.</div></div></article>
 
   <article class="qa"><div class="q"><span class="qnum">Q84</span><h3>What's the difference between WIP and throughput?</h3></div>
-  <div class="a"><p><strong>WIP</strong> = how many items are <em>in progress right now</em>. <strong>Throughput</strong> = how many you <em>finish</em> per period. Little's Law links them: lower WIP → shorter cycle time → smoother throughput. Limiting WIP is how you speed delivery.</p></div></article>
+  <div class="a"><p><strong>WIP</strong> = how many items are <em>in progress right now</em>. <strong>Throughput</strong> = how many you <em>finish</em> per period. Little's Law links them: lower WIP → shorter cycle time → smoother throughput. Limiting WIP is how you go faster.</p>
+  <div class="example"><b class="lbl">Worked example</b>Our team had 12 items "in progress" for 6 people — everything half-done, nothing finishing. We capped WIP at 4. Counter-intuitively, finishing <em>more</em> by starting <em>less</em>: throughput rose because work stopped stalling mid-flight.</div></div></article>
 
   <article class="qa"><div class="q"><span class="qnum">Q85</span><h3>What is a control chart?</h3></div>
-  <div class="a"><p>A chart plotting each item's <strong>cycle time</strong> with a rolling average and control limits. It reveals consistency and outliers — helping you forecast and spot items that took abnormally long.</p></div></article>
+  <div class="a"><p>A chart plotting each completed item's <strong>cycle time</strong> with a rolling average and control limits. It reveals consistency and outliers — helping you forecast delivery and spot items that took abnormally long.</p>
+  <div class="example"><b class="lbl">Worked example</b>Our control chart showed most stories finished in 2–4 days, but a cluster of outliers all involved the clinic-PMS integration. That pattern pointed us at a specific dependency to fix, rather than guessing.</div></div></article>
 
   <article class="qa"><div class="q"><span class="qnum">Q86</span><h3>How do you measure whether a team is successful?</h3></div>
-  <div class="a"><p>By <strong>outcomes, not output</strong>: value delivered to customers, predictability (meeting goals), quality (low escaped defects), team health, and continuous improvement. A team shipping lots of unused features isn't succeeding.</p></div></article>
+  <div class="a"><p>By <strong>outcomes, not output</strong>: value delivered to customers, predictability (meeting goals), quality (low escaped defects), team health/sustainability, and continuous improvement. A team shipping lots of unused features isn't succeeding.</p>
+  <div class="example"><b class="lbl">Worked example</b>The metric I'm proudest of isn't velocity — it's that <em>patient no-shows dropped ~20% after we shipped reminders.</em> That's an <em>outcome</em>. I'd always rather report a business result than "we did 48 points."</div></div></article>
 
   <article class="qa"><div class="q"><span class="qnum">Q87</span><h3>What is the say/do ratio?</h3></div>
-  <div class="a"><p>Commitment reliability — <strong>work completed ÷ work committed</strong> per Sprint. It shows how trustworthy the team's forecasts are. Consistently high (85%+) matters more than raw velocity.</p></div></article>
+  <div class="a"><p>Commitment reliability — <strong>work completed ÷ work committed</strong> per Sprint. It shows how trustworthy the team's forecasts are. Consistently high (85%+) matters far more than a big velocity number.</p>
+  <div class="example"><b class="lbl">Worked example</b>Our say/do sat around 65% — we kept promising more than we delivered, eroding stakeholder trust. By planning to capacity and slicing smaller, we lifted it above 90%. Stakeholders trusted our forecasts again, which was worth more than any velocity bump.</div></div></article>
 
   <article class="qa"><div class="q"><span class="qnum">Q88</span><h3>Is rising velocity always good?</h3></div>
-  <div class="a"><div class="tip trap"><span class="tip-ic">▲</span><div><b>Trap</b> No. Rising velocity can just mean <em>inflated estimates</em>, not more value. Pushing for "higher velocity" gamifies points. Watch <em>stability</em> and value delivered, not an ever-climbing number.</div></div></div></article>
+  <div class="a"><p><strong>No.</strong> Rising velocity can simply mean <em>inflated estimates</em>, not more value delivered. Pushing for "higher velocity" gamifies points and destroys their usefulness. Watch <em>stability</em> and value delivered, not an ever-climbing number.</p>
+  <div class="example"><b class="lbl">Worked example</b>A manager once asked me to "increase velocity 20%." The team could have hit it overnight just by estimating the same work higher — zero extra value. I coached the manager toward outcome metrics instead. Velocity is a team's <em>planning tool</em>, not a performance KPI.</div>
+  <div class="tip trap"><span class="tip-ic">▲</span><div><b>Trap</b> Never let velocity become a target or a cross-team comparison — it corrupts the moment it's used that way.</div></div></div></article>
 
   <!-- ============ SECTION 8: SM CRAFT ============ -->
   <div class="section-head" id="s8">
@@ -817,59 +830,70 @@
   </div>
 
   <article class="qa"><div class="q"><span class="qnum">Q89</span><h3>What is an impediment? Give examples.</h3></div>
-  <div class="a"><p>Anything <strong>slowing or blocking the team</strong> from reaching its goal. Examples: a broken build/environment, a slow external approval, an unavailable dependency, unclear requirements, too many meetings, or a noisy stakeholder. The SM's job is to remove or escalate them.</p></div></article>
+  <div class="a"><p>Anything <strong>slowing or blocking the team</strong> from reaching its goal. Examples: a broken build or test environment, a slow external approval, an unavailable dependency, unclear requirements, too many meetings, or a disruptive stakeholder. The SM's job is to remove it or escalate it.</p>
+  <div class="example"><b class="lbl">Worked example</b>Recent impediments on my team: a shared staging environment two teams kept overwriting (fixed with a booking rota), and a security sign-off that took days (escalated and moved earlier in the flow). Some I clear directly; some I coach the team to clear; some I escalate.</div></div></article>
 
   <article class="qa"><div class="q"><span class="qnum">Q90</span><h3>How do you remove impediments?</h3></div>
   <div class="a"><ol class="clean">
-    <li><strong>Make it visible</strong> — capture it (impediment log / board).</li>
-    <li><strong>Understand the root cause</strong> — don't just treat symptoms.</li>
-    <li><strong>Resolve what you can</strong> directly; coach the team to resolve its own where possible.</li>
+    <li><strong>Make it visible</strong> — capture it on an impediment log/board.</li>
+    <li><strong>Find the root cause</strong> — treat the disease, not the symptom.</li>
+    <li><strong>Resolve what you can</strong> directly; coach the team to clear its own where possible.</li>
     <li><strong>Escalate</strong> organisational blockers to the right people (RTE, management).</li>
-    <li><strong>Track and follow up</strong> until it's genuinely cleared.</li>
-  </ol></div></article>
+    <li><strong>Track and follow up</strong> until it's genuinely cleared — then prevent recurrence.</li>
+  </ol>
+  <div class="example"><b class="lbl">Worked example</b>"Tests keep failing" looked like the impediment. Root-cause (5 Whys) revealed flaky data setup, not real bugs. Fixing the test data — not chasing individual failures — removed the impediment permanently.</div></div></article>
 
   <article class="qa"><div class="q"><span class="qnum">Q91</span><h3>"What's the biggest impediment you've removed?" (behavioural)</h3></div>
-  <div class="a"><p>Pick a <strong>real, specific</strong> example with a result — avoid the generic "a dependency." Use the shape: <em>situation → what was blocked → what you did → measurable outcome.</em></p>
-  <div class="tip"><span class="tip-ic">★</span><div><b>Example shape</b> "Releases were stalling on a multi-day manual approval. I mapped the flow, showed the wait to leadership, and got the review moved earlier and run in parallel — cutting release lead time by ~40%."</div></div></div></article>
+  <div class="a"><p>Pick a <strong>real, specific</strong> example with a measurable result — avoid the generic "a dependency." Use the shape: <em>situation → what was blocked → what you did → measurable outcome.</em></p>
+  <div class="example"><b class="lbl">Worked example</b>"Our releases stalled for days on a manual compliance sign-off nobody owned. I mapped the release value stream, showed leadership the wait time, and negotiated moving the review earlier and running it in parallel with QA. Release lead time dropped from ~5 days to under 1 — and the pattern stopped repeating."</div></div></article>
 
   <article class="qa"><div class="q"><span class="qnum">Q92</span><h3>What is facilitation?</h3></div>
-  <div class="a"><p><strong>Guiding a group to a productive outcome</strong> without imposing your own — setting the structure, keeping it on track and inclusive, drawing out quiet voices, and helping the group decide. The SM facilitates events; they don't dominate them.</p></div></article>
+  <div class="a"><p><strong>Guiding a group to a productive outcome</strong> without imposing your own opinion — setting the structure, keeping it on track and inclusive, drawing out quiet voices, and helping the group decide. The SM facilitates events; they don't dominate them.</p>
+  <div class="example"><b class="lbl">Worked example</b>In a heated design debate, I didn't pick a side — I put both options on the board, timeboxed 10 minutes each for pros/cons, then ran a quick dot-vote. The team reached its <em>own</em> decision faster, and owned it because it was theirs.</div></div></article>
 
   <article class="qa"><div class="q"><span class="qnum">Q93</span><h3>What are common Scrum anti-patterns?</h3></div>
   <div class="a"><ul class="clean">
     <li>Daily Scrum as a <strong>status report</strong> to the SM/manager.</li>
-    <li>The SM acting as a <strong>secretary/task-master</strong> instead of a coach.</li>
-    <li><strong>Carrying over</strong> unfinished work sprint after sprint.</li>
-    <li>Skipping retros — or retros with <strong>no follow-through</strong>.</li>
-    <li>A <strong>proxy PO</strong> with no real authority; changing the Sprint Goal mid-sprint.</li>
+    <li>The SM acting as a <strong>secretary / task-master</strong> instead of a coach.</li>
+    <li><strong>Carrying over</strong> unfinished work Sprint after Sprint.</li>
+    <li>Skipping Retros — or Retros with <strong>no follow-through</strong>.</li>
+    <li>A <strong>proxy PO</strong> with no real authority; changing the Sprint Goal mid-Sprint.</li>
     <li>"Water-Scrum-fall" — Scrum ceremonies bolted onto a waterfall mindset.</li>
-  </ul></div></article>
+  </ul>
+  <div class="example"><b class="lbl">Worked example</b>I inherited a team doing "Scrum" that was really water-Scrum-fall: a big up-front spec, ceremonies as theatre, and testing crammed into the last Sprint. We tackled one anti-pattern per PI — starting with a real DoD that included testing — rather than trying to fix everything at once.</div></div></article>
 
   <article class="qa"><div class="q"><span class="qnum">Q94</span><h3>How do you handle a team resistant to Scrum?</h3></div>
-  <div class="a"><p>Get curious about <strong>why</strong> — resistance usually hides a real concern. Explain the <em>benefit</em> to them (not "because the framework says so"), start small, involve them in shaping how Scrum is applied, and let early wins build buy-in. Coach, don't force.</p></div></article>
+  <div class="a"><p>Get curious about <strong>why</strong> — resistance usually hides a legitimate concern. Explain the <em>benefit to them</em> (not "because the framework says so"), start small, involve them in shaping how Scrum is applied, and let early wins earn buy-in. Coach, never force.</p>
+  <div class="example"><b class="lbl">Worked example</b>Developers hated the Daily as "a waste of time." Instead of insisting, I asked what would make it useful — they wanted it focused on blockers, not status. We reshaped it around that, kept it to 10 minutes, and the resistance evaporated because it became <em>theirs</em>.</div></div></article>
 
   <article class="qa"><div class="q"><span class="qnum">Q95</span><h3>How do you coach a new / disengaged Product Owner?</h3></div>
-  <div class="a"><p>Teach the value of the role, pair with them on backlog refinement and ordering, help them connect work to outcomes, and protect their decision authority with stakeholders. If they skip Scrum events, show them what breaks when they're absent (unclear priorities, rework) rather than nagging.</p></div></article>
+  <div class="a"><p>Teach the value of the role, pair with them on refinement and ordering, help them connect work to outcomes, and protect their decision authority with stakeholders. If they skip events, show them what <em>breaks</em> when they're absent rather than nagging.</p>
+  <div class="example"><b class="lbl">Worked example</b>A first-time PO kept skipping refinement, so stories arrived vague and got reworked. Rather than lecture, I let one unclear story visibly cause a mid-Sprint mess, then reviewed it together — they connected the dots themselves and started prioritising refinement.</div></div></article>
 
   <article class="qa"><div class="q"><span class="qnum">Q96</span><h3>How do you build psychological safety?</h3></div>
-  <div class="a"><p>Model vulnerability, make it safe to raise problems and admit mistakes, run <strong>blameless</strong> retros, ensure every voice is heard, and never punish honesty. Safety is the foundation for courage and openness — without it, retros go silent.</p></div></article>
+  <div class="a"><p>Model vulnerability, make it safe to raise problems and admit mistakes, run <strong>blameless</strong> retros, ensure every voice is heard, and never punish honesty. Safety is the foundation for courage and openness — without it, retros go silent and problems stay hidden.</p>
+  <div class="example"><b class="lbl">Worked example</b>When a developer's change caused a production incident, I steered the Retro to "what in our <em>process</em> let this reach prod?" (missing automated check) rather than "who did it?" People saw honesty was safe — and started raising near-misses <em>before</em> they became incidents.</div></div></article>
 
   <article class="qa"><div class="q"><span class="qnum">Q97</span><h3>How do you know a team has become mature?</h3></div>
-  <div class="a"><p>They self-organise and resolve most impediments themselves, deliver predictably with good quality, run their own events well, hold each other accountable, and improve continuously — needing the SM less and less. That's success, not redundancy.</p></div></article>
+  <div class="a"><p>They self-organise and resolve most impediments themselves, deliver predictably with good quality, run their own events well, hold each other accountable, and improve continuously — needing the SM less and less. That's success, not redundancy.</p>
+  <div class="example"><b class="lbl">Worked example</b>The sign for me: I was on leave for a week and came back to find they'd run their own Retro, fixed a blocker via the Scrum of Scrums, and still hit the Sprint Goal. My job had shifted from "driving" to "gardening" — and toward org-level impediments.</div></div></article>
 
   <article class="qa"><div class="q"><span class="qnum">Q98</span><h3>How do you handle conflict within the team?</h3></div>
-  <div class="a"><p>Healthy conflict about <em>ideas</em> is good. For personal conflict: facilitate a conversation, keep it on the work and shared goals, hear all sides, and help them resolve it themselves rather than imposing a verdict. Escalate only if it becomes a serious HR issue.</p></div></article>
+  <div class="a"><p>Healthy conflict about <em>ideas</em> is good and worth encouraging. For <em>personal</em> conflict: facilitate a conversation, keep it on the work and shared goals, hear all sides, and help them resolve it themselves rather than imposing a verdict. Escalate only if it becomes a serious HR matter.</p>
+  <div class="example"><b class="lbl">Worked example</b>Two developers clashed repeatedly over coding style. I facilitated a short session where — instead of "who's right" — we agreed a shared style guide and linting rule. The <em>process</em> fix removed the recurring personal friction.</div></div></article>
 
   <article class="qa"><div class="q"><span class="qnum">Q99</span><h3>Coaching vs mentoring vs teaching vs facilitating?</h3></div>
   <div class="a"><ul class="clean">
-    <li><strong>Teaching</strong> — imparting knowledge ("here's how DoD works").</li>
+    <li><strong>Teaching</strong> — imparting knowledge ("here's how the DoD works").</li>
     <li><strong>Mentoring</strong> — sharing your own experience/advice.</li>
     <li><strong>Coaching</strong> — asking questions so <em>they</em> find the answer.</li>
     <li><strong>Facilitating</strong> — guiding a group to its own outcome.</li>
-  </ul><p>A great SM fluidly switches between all four ("stances").</p></div></article>
+  </ul><p>A great SM fluidly switches between all four ("stances") depending on the moment.</p>
+  <div class="example"><b class="lbl">Worked example</b>New joiner asks "what's a spike?" → I <em>teach</em>. Experienced dev stuck on a design → I <em>coach</em> ("what have you tried?"). Whole team deciding an approach → I <em>facilitate</em>. Someone growing into a lead role → I <em>mentor</em>. Reading which stance the moment needs is the skill.</div></div></article>
 
   <article class="qa"><div class="q"><span class="qnum">Q100</span><h3>What does a typical day look like for a Scrum Master?</h3></div>
-  <div class="a"><p>Facilitate the Daily Scrum; follow up on impediments; support refinement; coach the PO and team; check board/flow health; prepare or run upcoming events; coordinate dependencies with other teams; and spend time on organisational improvement. No two days identical — but always in service of the team.</p></div></article>
+  <div class="a"><p>Facilitate the Daily; follow up on impediments; support refinement; coach the PO and team; check board/flow health; prepare or run upcoming events; coordinate dependencies with other teams; and invest time in organisational improvement. No two days are identical — but everything is in service of the team.</p>
+  <div class="example"><b class="lbl">Worked example</b>A real Tuesday: 9:45 Daily (10 min), chase a blocked API with the integrations SM, 30 min coaching the PO on splitting the telehealth epic, prep tomorrow's Retro, review the CFD (spotted a review bottleneck), and draft a proposal to fix the slow release approval. Very little of it is "sitting in meetings."</div></div></article>
 
   <!-- ============ SECTION 9: SCENARIOS ============ -->
   <div class="section-head" id="s9">
