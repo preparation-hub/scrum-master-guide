@@ -316,6 +316,13 @@
   var AVATAR_COLORS = ["#0e7c7b","#ff5c39","#c47d15","#2f8f63","#5b5bd6","#b3357e","#2b7fb3","#8a6d1f"];
   var OUTCOMES = ["Not set","Scheduled","Awaiting result","Cleared","Rejected","Withdrawn"];
   var OUTCOME_CLASS = { "Not set":"none","Scheduled":"scheduled","Awaiting result":"awaiting","Cleared":"cleared","Rejected":"rejected","Withdrawn":"withdrawn" };
+  // Answered guides available for specific company + round (key: "company||round", lowercased)
+  var GUIDES = { "ey||round 1 (l1)": "ey-round-1.html" };
+  function guideFor(c, r) {
+    if (!c || !r) return null;
+    var k = (c.name||"").trim().toLowerCase() + "||" + (r.name||"").trim().toLowerCase();
+    return GUIDES[k] || null;
+  }
 
   // ---------- model ----------
   function uid(prefix) { return (prefix||"id") + "-" + Date.now().toString(36) + "-" + Math.floor(Math.random()*1e6).toString(36); }
@@ -457,7 +464,7 @@
     var roundsHTML = c.rounds.map(function(r){
       var cls = OUTCOME_CLASS[r.outcome] || "none";
       return '<a class="round-row" href="#/c/' + c.id + '/r/' + r.id + '">'
-        + '<span class="rr-name">' + esc(r.name) + '</span>'
+        + '<span class="rr-name">' + esc(r.name) + (guideFor(c,r) ? ' 📖' : '') + '</span>'
         + '<span class="pill ' + cls + '">' + esc(r.outcome === "Not set" ? "—" : r.outcome) + '</span>'
         + '<span class="rr-date">' + fmtDate(r.date) + '</span>'
         + '</a>';
@@ -500,6 +507,7 @@
       +   '<div style="min-width:0"><h1>' + esc(c.name) + '</h1><div class="dh-sub">' + esc(r.name) + (c.role ? ' · ' + esc(c.role) : '') + '</div></div>'
       +   '<div class="detail-actions">'
       +     '<span class="save-ind" id="saveInd">✓ Saved</span>'
+      +     (guideFor(c,r) ? '<a class="btn btn-primary btn-sm" href="' + esc(guideFor(c,r)) + '">📖 Answered guide</a>' : '')
       +     '<button class="btn btn-ghost btn-sm" id="copyBtn" title="Copy this round as text">⧉ Copy</button>'
       +     '<button class="btn btn-ghost btn-sm btn-danger" id="delRoundBtn">🗑 Delete round</button>'
       +   '</div>'
