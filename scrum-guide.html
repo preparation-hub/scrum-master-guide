@@ -112,6 +112,10 @@
   .analogy { border-left: 3px solid var(--teal); background: var(--teal-soft); border-radius: 0 10px 10px 0; padding: 12px 16px; margin: 15px 0; font-size: 15px; color: var(--ink-soft); }
   .analogy b { color: var(--teal); font-family: var(--font-mono); font-size: 10.5px; letter-spacing: .1em; text-transform: uppercase; display: block; margin-bottom: 3px; }
 
+  .example { border-left: 3px solid var(--accent); background: color-mix(in srgb, var(--accent) 6%, var(--surface-2)); border-radius: 0 10px 10px 0; padding: 13px 17px; margin: 16px 0; font-size: 15px; color: var(--ink-soft); }
+  .example b.lbl { color: var(--accent-ink); font-family: var(--font-mono); font-size: 10.5px; letter-spacing: .1em; text-transform: uppercase; display: block; margin-bottom: 5px; }
+  .example strong { color: var(--ink); font-weight: 650; }
+
   ul.clean, ol.clean { margin: 13px 0; padding-left: 0; list-style: none; }
   ul.clean li, ol.clean li { position: relative; padding: 5px 0 5px 26px; }
   ul.clean li::before { content: ""; position: absolute; left: 4px; top: 14px; width: 7px; height: 7px; border-radius: 2px; background: var(--accent); transform: rotate(45deg); }
@@ -242,12 +246,31 @@
     <p>Interviews almost always open here. Get these crisp — they set the tone for the rest.</p>
   </div>
 
+  <div class="figure">
+    <span class="anim-badge">Animated</span>
+    <svg viewBox="0 0 480 250" role="img" aria-label="Animated chart of value delivered over time: Waterfall stays flat and delivers one big spike at the end, while Agile delivers value in a rising staircase from early on.">
+      <line x1="52" y1="20" x2="52" y2="205" class="d-line" stroke-width="1.5"/>
+      <line x1="52" y1="205" x2="452" y2="205" class="d-line" stroke-width="1.5"/>
+      <text x="24" y="115" class="d-muted t-label" transform="rotate(-90 24 115)" text-anchor="middle">Value delivered</text>
+      <text x="252" y="233" class="d-muted t-label" text-anchor="middle">Time →</text>
+      <!-- waterfall: flat then late spike -->
+      <polyline class="draw-line" points="52,200 350,198 352,60 452,55" style="stroke:var(--dg-muted)" fill="none" stroke-width="2.5" stroke-linejoin="round"/>
+      <text x="300" y="190" class="d-muted t-label">Waterfall — value only at the end</text>
+      <!-- agile: rising staircase -->
+      <polyline class="draw-line" points="52,205 110,205 110,170 180,170 180,130 260,130 260,90 340,90 340,55 452,55" class="d-accent-s" fill="none" stroke-width="3" stroke-linejoin="round"/>
+      <text x="120" y="150" class="d-accent-f t-label">Agile — value every iteration</text>
+    </svg>
+    <p class="figcap">Same destination, very different risk: Agile is delivering (and de-risking) value the whole way, not betting everything on one big-bang release.</p>
+  </div>
+
   <article class="qa"><div class="q"><span class="qnum">Q1</span><h3>What is Agile?</h3></div>
-  <div class="a"><p><strong>Agile is a mindset</strong> for building products in small, iterative steps — delivering working value frequently, getting feedback, and adapting, instead of planning everything up front. It's defined by the values and principles of the <strong>Agile Manifesto</strong>, not by any single process.</p>
-  <div class="analogy"><b>Everyday analogy</b> Like cooking while tasting as you go and adjusting the seasoning — rather than following a fixed recipe blindly and only discovering at the end that it's too salty.</div></div></article>
+  <div class="a"><p><strong>Agile is a mindset and a way of working</strong> built on delivering value in small, frequent increments, collaborating closely with customers, and adapting to change — rather than rigidly following a big up-front plan. It emerged in 2001 when 17 software leaders, frustrated that huge "plan-everything-first" projects kept failing, wrote the <strong>Agile Manifesto</strong>. Crucially, Agile isn't a process you install; it's a philosophy that frameworks like Scrum and Kanban put into practice.</p>
+  <div class="analogy"><b>Everyday analogy</b> Like cooking while tasting as you go and adjusting the seasoning — rather than following a fixed recipe blindly and only discovering at the very end that the whole dish is too salty.</div>
+  <div class="example"><b class="lbl">Worked example</b>A hospital wants a <strong>patient-booking app</strong>. The waterfall way: spend six months writing a full specification, a year building it, and only at launch discover clinics actually wanted <em>SMS appointment reminders</em> far more than the fancy calendar you polished. The Agile way: ship online booking for <em>one</em> clinic in three weeks, watch how real patients use it, and let what you learn reshape what you build next.</div></div></article>
 
   <article class="qa"><div class="q"><span class="qnum">Q2</span><h3>What is the Agile Manifesto?</h3></div>
-  <div class="a"><p>A short 2001 document written by 17 software practitioners that captures the philosophy of Agile in <strong>4 values</strong> and <strong>12 principles</strong>. It's the foundation all Agile frameworks (Scrum, Kanban, XP) build on.</p></div></article>
+  <div class="a"><p>A short document written in <strong>February 2001</strong> by 17 software practitioners at Snowbird, Utah, who were fed up with heavyweight, documentation-driven processes. It captures the philosophy of Agile in <strong>4 values</strong> and <strong>12 principles</strong>, and it's the foundation every Agile framework (Scrum, Kanban, XP) builds on. It's deliberately a statement of <em>preferences and values</em>, not a rulebook or methodology.</p>
+  <div class="example"><b class="lbl">Worth knowing</b>It grew out of existing lightweight methods (Scrum, XP, Crystal, DSDM). So when an interviewer asks "is Scrum the same as Agile?", you can say: <strong>the Manifesto is the shared philosophy; Scrum is one framework that predates and now implements it.</strong></div></div></article>
 
   <article class="qa"><div class="q"><span class="qnum">Q3</span><h3>What are the 4 values of the Agile Manifesto?</h3></div>
   <div class="a"><p>"We value the items on the left more than the items on the right":</p>
@@ -257,6 +280,7 @@
     <li><strong>Customer collaboration</strong> over contract negotiation</li>
     <li><strong>Responding to change</strong> over following a plan</li>
   </ol>
+  <div class="example"><b class="lbl">Worked example</b>"<strong>Working software over comprehensive documentation</strong>" doesn't mean "no docs." On a healthcare project you still need compliance and API documentation — but you'd rather have a working, demoable booking flow in the Sprint Review than a beautiful 80-page design document and nothing running.</div>
   <div class="tip trap"><span class="tip-ic">▲</span><div><b>Trap</b> "Over" doesn't mean the right side is worthless — documentation and plans still matter, we just value the left <em>more</em>.</div></div></div></article>
 
   <article class="qa"><div class="q"><span class="qnum">Q4</span><h3>Can you name some of the 12 Agile principles?</h3></div>
@@ -270,45 +294,55 @@
     <li><strong>Working software</strong> is the primary measure of progress.</li>
     <li>Maintain a <strong>sustainable pace</strong>.</li>
     <li>Teams <strong>reflect and adjust</strong> at regular intervals.</li>
-  </ul></div></article>
+  </ul>
+  <div class="example"><b class="lbl">Worked example</b>The last one — "reflect and adjust at regular intervals" — is literally why the <strong>Retrospective</strong> exists. If an interviewer asks "which principle does the Retro come from?", that's it. Connecting a principle to a concrete Scrum practice is exactly what impresses.</div></div></article>
 
   <article class="qa"><div class="q"><span class="qnum">Q5</span><h3>Agile vs Waterfall — what's the difference?</h3></div>
-  <div class="a"><p><strong>Waterfall</strong> is sequential: plan → design → build → test → release, all once. <strong>Agile</strong> does a little of everything in each short iteration and releases value repeatedly. Waterfall fixes scope and lets time/cost vary; Agile fixes time/cost and flexes scope. Waterfall suits stable requirements; Agile suits uncertainty and change.</p></div></article>
+  <div class="a"><p><strong>Waterfall</strong> is sequential: plan → design → build → test → release, all once, with value arriving only at the very end. <strong>Agile</strong> does a little of everything in each short iteration and releases usable value repeatedly (see the chart above). Waterfall fixes <em>scope</em> and lets time/cost vary; Agile fixes <em>time and cost</em> and flexes scope. Waterfall suits stable, well-understood requirements (e.g. a regulatory report with fixed rules); Agile suits uncertainty and change (most product work).</p>
+  <div class="example"><b class="lbl">Worked example</b>Our booking app in Waterfall: the business sees nothing usable until month 18, and any market change in between is expensive to absorb. In Agile: clinics are booking real patients from week 3, and when priorities shift (say, telehealth suddenly matters more), we simply re-order the backlog next Sprint.</div>
+  <div class="tip"><span class="tip-ic">★</span><div><b>Balanced answer</b> Don't bash Waterfall — say it's the right tool when requirements are truly fixed. Maturity impresses more than dogma.</div></div></div></article>
 
   <article class="qa"><div class="q"><span class="qnum">Q6</span><h3>What are the benefits of Agile?</h3></div>
   <div class="a"><ul class="clean">
-    <li><strong>Faster value</strong> — usable increments early and often.</li>
+    <li><strong>Faster value</strong> — usable increments early and often, not one big-bang launch.</li>
     <li><strong>Flexibility</strong> — change is welcomed, not penalised.</li>
-    <li><strong>Better quality</strong> — continuous testing and feedback.</li>
-    <li><strong>Transparency</strong> — progress is visible every sprint.</li>
+    <li><strong>Better quality</strong> — continuous testing and feedback build quality in.</li>
+    <li><strong>Transparency</strong> — progress is visible every Sprint.</li>
     <li><strong>Higher engagement</strong> — empowered, self-managing teams.</li>
     <li><strong>Reduced risk</strong> — problems surface early, when they're cheap to fix.</li>
-  </ul></div></article>
+  </ul>
+  <div class="example"><b class="lbl">Worked example</b>The "reduced risk" point wins interviews. In Waterfall, a wrong assumption made in month 1 can stay hidden until testing in month 15 — enormously expensive. In Agile, that same assumption is exposed at the next Sprint Review, so the blast radius is one Sprint, not the whole project.</div></div></article>
 
   <article class="qa"><div class="q"><span class="qnum">Q7</span><h3>What is iterative and incremental development?</h3></div>
-  <div class="a"><p><strong>Incremental</strong> = building the product in slices, adding a bit more each time. <strong>Iterative</strong> = revisiting and refining what you built based on feedback. Agile does both: each sprint adds an increment <em>and</em> improves on earlier work.</p>
-  <div class="analogy"><b>Everyday analogy</b> Painting a portrait: incremental = adding the eyes, then nose, then mouth; iterative = going back to refine the eyes after seeing the whole face.</div></div></article>
+  <div class="a"><p><strong>Incremental</strong> = building the product in slices, adding a bit more usable functionality each time. <strong>Iterative</strong> = revisiting and refining what you already built, based on feedback. Agile does <em>both</em>: each Sprint adds an increment <em>and</em> improves earlier work.</p>
+  <div class="analogy"><b>Everyday analogy</b> Painting a portrait: incremental = adding the eyes, then the nose, then the mouth; iterative = going back to refine the eyes after seeing how the whole face looks.</div>
+  <div class="example"><b class="lbl">Worked example — the classic</b>Building a car for a customer who needs transport: the <em>wrong</em> way delivers a wheel, then a chassis, then a body (nothing usable until the end). The iterative-incremental way delivers a <strong>skateboard → scooter → bicycle → motorbike → car</strong> — the customer can travel (get value and give feedback) at every step, and you learn what they actually need along the way.</div></div></article>
 
   <article class="qa"><div class="q"><span class="qnum">Q8</span><h3>What are the common Agile frameworks?</h3></div>
   <div class="a"><ul class="clean">
-    <li><strong>Scrum</strong> — the most popular; fixed-length sprints, defined roles and events.</li>
-    <li><strong>Kanban</strong> — continuous flow with WIP limits.</li>
-    <li><strong>Extreme Programming (XP)</strong> — engineering practices (TDD, pair programming).</li>
-    <li><strong>Scrumban</strong> — Scrum structure + Kanban flow.</li>
+    <li><strong>Scrum</strong> — the most popular; fixed-length sprints, defined roles and events. Best for feature delivery.</li>
+    <li><strong>Kanban</strong> — continuous flow with WIP limits. Best for support/ops/unpredictable work.</li>
+    <li><strong>Extreme Programming (XP)</strong> — engineering practices (TDD, pair programming, CI).</li>
+    <li><strong>Scrumban</strong> — Scrum structure + Kanban flow; great for maintenance teams.</li>
     <li><strong>SAFe, LeSS, Nexus</strong> — frameworks for scaling Agile across many teams.</li>
-  </ul></div></article>
+  </ul>
+  <div class="example"><b class="lbl">Worked example</b>A product team building new features → Scrum. A production-support team firefighting incidents → Kanban (you can't "sprint-commit" to unpredictable incidents). Many real orgs run <strong>both side by side</strong>, which is a great point to make.</div></div></article>
 
   <article class="qa"><div class="q"><span class="qnum">Q9</span><h3>What is empirical process control?</h3></div>
-  <div class="a"><p>Making decisions based on <strong>what you actually observe</strong> (experience/evidence) rather than up-front prediction. Scrum is built on it, resting on three pillars: <strong>Transparency, Inspection, and Adaptation</strong>. It suits complex work where you can't plan everything in advance.</p></div></article>
+  <div class="a"><p>Making decisions based on <strong>what you actually observe</strong> (evidence and experience) rather than up-front prediction. It's the theory Scrum is built on, resting on three pillars: <strong>Transparency, Inspection, and Adaptation</strong>. It suits <em>complex</em> work where you can't reliably plan everything in advance — the opposite of a "defined" process like a factory assembly line.</p>
+  <div class="example"><b class="lbl">Worked example</b>You <em>predicted</em> a feature would take 3 Sprints. After Sprint 1's Review, real usage data shows users don't want half of it. Empiricism says: don't stubbornly follow the plan — <strong>inspect the evidence and adapt</strong> the backlog. Scrum's events exist precisely to create these inspect-and-adapt moments.</div></div></article>
 
   <article class="qa"><div class="q"><span class="qnum">Q10</span><h3>What does "inspect and adapt" mean?</h3></div>
-  <div class="a"><p>Regularly <strong>examine</strong> your product and process (inspect) and <strong>adjust</strong> based on what you learn (adapt). Every Scrum event is an inspect-and-adapt opportunity — the Review inspects the product, the Retrospective inspects the way of working.</p></div></article>
+  <div class="a"><p>Regularly <strong>examine</strong> your product and your process (inspect), and <strong>adjust</strong> based on what you learn (adapt). Every Scrum event is an inspect-and-adapt loop: the Daily inspects progress to the goal, the Review inspects the product with stakeholders, the Retrospective inspects the way of working.</p>
+  <div class="example"><b class="lbl">Worked example</b>Retro shows the team keeps getting blocked waiting on a test environment (inspect). They adapt by booking a dedicated environment and adding a check to the Definition of Ready. Next Sprint they inspect again — did it help? That closing of the loop is the whole point; inspection without adaptation is just a meeting.</div></div></article>
 
   <article class="qa"><div class="q"><span class="qnum">Q11</span><h3>What does "fail fast" mean in Agile?</h3></div>
-  <div class="a"><p>Try small experiments and surface problems <strong>early and cheaply</strong>, rather than discovering a big failure at the end. Short iterations mean a wrong assumption costs one sprint, not the whole project. Failing fast is really about <em>learning fast</em>.</p></div></article>
+  <div class="a"><p>Run small experiments and surface problems <strong>early and cheaply</strong>, instead of discovering a big failure at the end. Short iterations mean a wrong assumption costs one Sprint, not the whole project. "Fail fast" is really about <em>learning fast</em> — it's not an excuse for sloppiness.</p>
+  <div class="example"><b class="lbl">Worked example</b>Unsure whether patients will use video consultations? Don't build the full telehealth suite. Ship a tiny pilot to one clinic behind a feature flag, measure uptake for two weeks, and let the data decide whether to invest further. If it flops, you've lost a Sprint — not a year.</div></div></article>
 
   <article class="qa"><div class="q"><span class="qnum">Q12</span><h3>What is a self-organizing (self-managing) team?</h3></div>
-  <div class="a"><p>A team that <strong>decides internally how to do its work</strong> — who does what, and how — without being told by a manager. The 2020 Scrum Guide uses the term <strong>self-managing</strong>. The Scrum Master coaches the team toward this; they don't direct it.</p></div></article>
+  <div class="a"><p>A team that <strong>decides internally how to do its work</strong> — who does what, and how — without being told by a manager. The 2020 Scrum Guide uses the term <strong>self-managing</strong> (it also expanded this to include managing <em>what</em> they work on within the Sprint). The Scrum Master coaches the team toward this maturity; they don't direct it.</p>
+  <div class="example"><b class="lbl">Worked example</b>A blocker appears mid-Sprint. In a command-and-control team, everyone waits for the lead to assign a fix. In a self-managing team, a developer simply picks it up, pairs with a tester, and the team re-plans the day in the Daily — no permission needed. The Scrum Master's job is to build <em>that</em> reflex, then step back.</div></div></article>
 
   <!-- ============ SECTION 2: SCRUM FRAMEWORK ============ -->
   <div class="section-head" id="s2">
