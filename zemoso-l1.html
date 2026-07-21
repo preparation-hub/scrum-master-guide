@@ -1,0 +1,522 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Zemoso Technologies L1 Scrum Master interview — the actual questions, answered in depth as a 6-year SM in healthcare, with examples, diagrams and animation.">
+<title>Zemoso — L1 Round · Answered</title>
+<style>
+  :root {
+    --paper: #eef1ef; --surface: #ffffff; --surface-2: #f6f8f6;
+    --ink: #16262b; --ink-soft: #43565a; --muted: #77878a;
+    --line: #dde3e0; --line-soft: #e8ece9;
+    --accent: #ff5c39; --accent-ink: #c8391a;
+    --teal: #0e7c7b; --teal-soft: #d8eae9;
+    --amber: #c47d15; --amber-bg: #fbf1dc; --amber-line: #eccf92;
+    --good: #2f8f63; --good-bg: #e3f2ea;
+    --shadow: 0 1px 2px rgba(22,38,43,.06), 0 8px 24px rgba(22,38,43,.06);
+    --shadow-lg: 0 2px 6px rgba(22,38,43,.08), 0 24px 60px rgba(22,38,43,.12);
+    --font-display: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Palatino, Georgia, serif;
+    --font-body: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    --font-mono: ui-monospace, "SF Mono", "Cascadia Code", "Consolas", monospace;
+    --maxw: 840px;
+    --dg-ink: var(--ink); --dg-line: #c3ccc9; --dg-fill: #ffffff; --dg-fill-2: #eef2f0;
+    --dg-accent: var(--accent); --dg-teal: var(--teal); --dg-amber: var(--amber); --dg-muted: #8b9a9c; --dg-good: var(--good);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --paper: #0d1416; --surface: #15201f; --surface-2: #1a2624;
+      --ink: #eef3f0; --ink-soft: #bcc9c5; --muted: #839290;
+      --line: #26312f; --line-soft: #202b29;
+      --accent: #ff6f4d; --accent-ink: #ff8b70;
+      --teal: #37b3b0; --teal-soft: #14312f;
+      --amber: #e6b45c; --amber-bg: #2a2416; --amber-line: #4d4222;
+      --good: #4bbd83; --good-bg: #14281f;
+      --shadow: 0 1px 2px rgba(0,0,0,.4), 0 8px 24px rgba(0,0,0,.35);
+      --shadow-lg: 0 2px 6px rgba(0,0,0,.5), 0 24px 60px rgba(0,0,0,.5);
+      --dg-ink: #dfe8e4; --dg-line: #3a4744; --dg-fill: #1a2624; --dg-fill-2: #223230; --dg-muted: #7d8c8a;
+    }
+  }
+  :root[data-theme="dark"] {
+    --paper: #0d1416; --surface: #15201f; --surface-2: #1a2624;
+    --ink: #eef3f0; --ink-soft: #bcc9c5; --muted: #839290;
+    --line: #26312f; --line-soft: #202b29;
+    --accent: #ff6f4d; --accent-ink: #ff8b70;
+    --teal: #37b3b0; --teal-soft: #14312f;
+    --amber: #e6b45c; --amber-bg: #2a2416; --amber-line: #4d4222;
+    --good: #4bbd83; --good-bg: #14281f;
+    --shadow: 0 1px 2px rgba(0,0,0,.4), 0 8px 24px rgba(0,0,0,.35);
+    --shadow-lg: 0 2px 6px rgba(0,0,0,.5), 0 24px 60px rgba(0,0,0,.5);
+    --dg-ink: #dfe8e4; --dg-line: #3a4744; --dg-fill: #1a2624; --dg-fill-2: #223230; --dg-muted: #7d8c8a;
+  }
+  :root[data-theme="light"] {
+    --paper: #eef1ef; --surface: #ffffff; --surface-2: #f6f8f6;
+    --ink: #16262b; --ink-soft: #43565a; --muted: #77878a;
+    --line: #dde3e0; --line-soft: #e8ece9;
+    --accent: #ff5c39; --accent-ink: #c8391a;
+    --teal: #0e7c7b; --teal-soft: #d8eae9;
+    --amber: #c47d15; --amber-bg: #fbf1dc; --amber-line: #eccf92;
+    --good: #2f8f63; --good-bg: #e3f2ea;
+    --dg-ink: #16262b; --dg-line: #c3ccc9; --dg-fill: #ffffff; --dg-fill-2: #eef2f0; --dg-muted: #8b9a9c;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(--font-body); font-size: 17px; line-height: 1.75; -webkit-font-smoothing: antialiased; }
+
+  .topbar { position: sticky; top: 0; z-index: 50; background: color-mix(in srgb, var(--paper) 86%, transparent); backdrop-filter: saturate(1.4) blur(10px); border-bottom: 1px solid var(--line); }
+  .topbar-inner { max-width: 1080px; margin: 0 auto; padding: 10px 24px; display: flex; align-items: center; gap: 14px; }
+  .back { font-family: var(--font-mono); font-size: 12px; letter-spacing: .04em; text-decoration: none; color: var(--ink); border: 1px solid var(--line); border-radius: 8px; padding: 6px 11px; white-space: nowrap; background: var(--surface); }
+  .back:hover { background: var(--surface-2); }
+  .brand { font-family: var(--font-mono); font-size: 12px; letter-spacing: .12em; text-transform: uppercase; color: var(--accent-ink); font-weight: 600; white-space: nowrap; }
+  .brand b { color: var(--ink); }
+  .navchips { display: flex; gap: 6px; overflow-x: auto; scrollbar-width: none; margin-left: auto; }
+  .navchips::-webkit-scrollbar { display: none; }
+  .navchips a { flex: none; font-family: var(--font-mono); font-size: 11.5px; letter-spacing: .04em; text-decoration: none; color: var(--ink-soft); padding: 5px 11px; border-radius: 999px; border: 1px solid transparent; white-space: nowrap; transition: background .18s, color .18s; }
+  .navchips a:hover { background: var(--surface-2); color: var(--ink); }
+  .navchips a.active { background: var(--ink); color: var(--paper); }
+  :root[data-theme="dark"] .navchips a.active { color: #0d1416; }
+
+  .hero { max-width: 1080px; margin: 0 auto; padding: 56px 24px 24px; }
+  .eyebrow { font-family: var(--font-mono); font-size: 12.5px; letter-spacing: .22em; text-transform: uppercase; color: var(--accent-ink); margin: 0 0 20px; display: flex; align-items: center; gap: 12px; }
+  .eyebrow::after { content: ""; flex: 1; height: 1px; background: linear-gradient(90deg, var(--line), transparent); }
+  .hero h1 { font-family: var(--font-display); font-weight: 600; font-size: clamp(32px, 5.5vw, 54px); line-height: 1.05; letter-spacing: -0.015em; margin: 0 0 20px; text-wrap: balance; }
+  .hero h1 em { font-style: italic; color: var(--accent); }
+  .hero .lede { font-size: clamp(16px, 2.2vw, 19px); color: var(--ink-soft); max-width: 66ch; margin: 0 0 28px; }
+  .hero-meta { display: flex; flex-wrap: wrap; gap: 14px 30px; font-family: var(--font-mono); font-size: 12.5px; color: var(--muted); letter-spacing: .03em; border-top: 1px solid var(--line); padding-top: 22px; }
+  .hero-meta b { color: var(--ink); font-weight: 600; }
+
+  .persona-note { max-width: 1080px; margin: 20px auto 0; padding: 0 24px; }
+  .persona-note .pn-inner { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; box-shadow: var(--shadow); padding: 16px 20px; font-size: 14.5px; color: var(--ink-soft); }
+  .persona-note b { color: var(--ink); }
+
+  main { max-width: var(--maxw); margin: 0 auto; padding: 20px 24px 90px; }
+  .section-head { margin: 66px 0 10px; padding-top: 22px; border-top: 2px solid var(--ink); scroll-margin-top: 76px; }
+  .section-head:first-of-type { margin-top: 24px; }
+  .section-kicker { font-family: var(--font-mono); font-size: 12px; letter-spacing: .16em; text-transform: uppercase; color: var(--accent-ink); display: flex; align-items: baseline; gap: 10px; }
+  .section-kicker .num { color: var(--muted); }
+  .section-head h2 { font-family: var(--font-display); font-weight: 600; font-size: clamp(23px, 4vw, 30px); letter-spacing: -0.01em; margin: 10px 0 8px; text-wrap: balance; }
+  .section-head p { color: var(--ink-soft); margin: 0; max-width: 62ch; font-size: 15.5px; }
+
+  .qa { background: var(--surface); border: 1px solid var(--line); border-radius: 16px; box-shadow: var(--shadow); padding: 24px 28px 10px; margin: 20px 0; scroll-margin-top: 80px; }
+  .q { display: flex; gap: 14px; align-items: flex-start; margin-bottom: 4px; }
+  .qnum { flex: none; font-family: var(--font-mono); font-size: 12.5px; font-weight: 600; color: var(--accent); background: color-mix(in srgb, var(--accent) 12%, transparent); border-radius: 8px; padding: 4px 9px; margin-top: 4px; letter-spacing: .01em; min-width: 34px; text-align: center; }
+  .q h3 { font-family: var(--font-display); font-weight: 600; font-size: clamp(18px, 2.7vw, 22px); line-height: 1.3; letter-spacing: -0.01em; margin: 0; text-wrap: balance; }
+  .a { padding-top: 2px; }
+  .a p { margin: 15px 0; }
+  .a strong { color: var(--ink); font-weight: 650; }
+  .a .accent-word { color: var(--accent-ink); font-weight: 600; }
+
+  .analogy { border-left: 3px solid var(--teal); background: var(--teal-soft); border-radius: 0 12px 12px 0; padding: 14px 18px; margin: 20px 0; font-size: 15.5px; color: var(--ink-soft); }
+  .analogy b { color: var(--teal); font-family: var(--font-mono); font-size: 11px; letter-spacing: .1em; text-transform: uppercase; display: block; margin-bottom: 4px; }
+
+  .example { border-left: 3px solid var(--accent); background: color-mix(in srgb, var(--accent) 6%, var(--surface-2)); border-radius: 0 12px 12px 0; padding: 15px 19px; margin: 20px 0; font-size: 15.5px; color: var(--ink-soft); }
+  .example b.lbl { color: var(--accent-ink); font-family: var(--font-mono); font-size: 11px; letter-spacing: .1em; text-transform: uppercase; display: flex; align-items: center; gap: 7px; margin-bottom: 6px; }
+  .example strong { color: var(--ink); font-weight: 650; }
+
+  ul.clean, ol.clean { margin: 16px 0; padding-left: 0; list-style: none; }
+  ul.clean li, ol.clean li { position: relative; padding: 6px 0 6px 27px; }
+  ul.clean li::before { content: ""; position: absolute; left: 5px; top: 16px; width: 7px; height: 7px; border-radius: 2px; background: var(--accent); transform: rotate(45deg); }
+  ol.clean { counter-reset: step; }
+  ol.clean li { counter-increment: step; }
+  ol.clean li::before { content: counter(step); position: absolute; left: 0; top: 7px; font-family: var(--font-mono); font-size: 11px; font-weight: 600; color: var(--teal); background: var(--teal-soft); width: 19px; height: 19px; border-radius: 5px; display: grid; place-items: center; }
+
+  .tip { display: flex; gap: 13px; background: var(--amber-bg); border: 1px solid var(--amber-line); border-radius: 12px; padding: 14px 18px; margin: 20px 0; font-size: 15px; color: var(--ink); }
+  .tip .tip-ic { flex: none; color: var(--amber); margin-top: 1px; }
+  .tip b { color: var(--amber); font-family: var(--font-mono); font-size: 11px; letter-spacing: .1em; text-transform: uppercase; }
+  .trap { border-color: var(--accent); background: color-mix(in srgb, var(--accent) 8%, var(--surface)); }
+  .trap .tip-ic { color: var(--accent); }
+  .trap b { color: var(--accent-ink); }
+  .say { border-color: var(--teal); background: var(--teal-soft); }
+  .say .tip-ic { color: var(--teal); }
+  .say b { color: var(--teal); }
+
+  .figure { margin: 24px 0 8px; border: 1px solid var(--line-soft); background: var(--surface-2); border-radius: 14px; padding: 22px 16px 12px; overflow-x: auto; position: relative; }
+  .figure svg { display: block; margin: 0 auto; max-width: 100%; height: auto; }
+  .figcap { font-family: var(--font-mono); font-size: 12px; color: var(--muted); letter-spacing: .04em; margin-top: 12px; text-align: center; }
+  .anim-badge { position: absolute; top: 10px; right: 12px; font-family: var(--font-mono); font-size: 9.5px; letter-spacing: .12em; text-transform: uppercase; color: var(--accent-ink); background: color-mix(in srgb, var(--accent) 12%, var(--surface)); border: 1px solid color-mix(in srgb, var(--accent) 30%, transparent); border-radius: 999px; padding: 3px 9px; display: inline-flex; align-items: center; gap: 5px; }
+  .anim-badge::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: var(--accent); animation: blink 1.4s ease-in-out infinite; }
+  @keyframes blink { 0%,100% { opacity: 1; } 50% { opacity: .25; } }
+  .spin-marker { animation: orbit 6s linear infinite; transform-origin: 235px 130px; }
+  @keyframes orbit { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+
+  code.inline { font-family: var(--font-mono); font-size: .86em; background: var(--surface-2); border: 1px solid var(--line); border-radius: 5px; padding: 1px 6px; color: var(--ink); }
+  pre.jql { font-family: var(--font-mono); font-size: 13px; background: var(--surface-2); border: 1px solid var(--line); border-radius: 10px; padding: 14px 16px; overflow-x: auto; margin: 10px 0; color: var(--ink); line-height: 1.55; }
+
+  .d-fill { fill: var(--dg-fill); } .d-fill2 { fill: var(--dg-fill-2); }
+  .d-stroke { stroke: var(--dg-line); } .d-line { stroke: var(--dg-line); }
+  .d-ink { fill: var(--dg-ink); } .d-muted { fill: var(--dg-muted); }
+  .d-accent-f { fill: var(--dg-accent); } .d-accent-s { stroke: var(--dg-accent); }
+  .d-teal-f { fill: var(--dg-teal); } .d-teal-s { stroke: var(--dg-teal); }
+  .d-amber-f { fill: var(--dg-amber); } .d-good-f { fill: var(--dg-good); }
+  text { font-family: var(--font-body); }
+  .t-label { font-family: var(--font-mono); font-size: 11px; letter-spacing: .04em; }
+  .t-title { font-weight: 600; }
+
+  footer { border-top: 1px solid var(--line); background: var(--surface); }
+  .footer-inner { max-width: var(--maxw); margin: 0 auto; padding: 34px 24px 64px; color: var(--muted); font-size: 14.5px; line-height: 1.7; }
+  .footer-inner a { color: var(--accent-ink); }
+  :focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 4px; }
+  @media (prefers-reduced-motion: reduce) { * { scroll-behavior: auto !important; transition: none !important; } .spin-marker, .anim-badge::before { animation: none !important; } }
+  @media (max-width: 640px) { body { font-size: 16px; } .qa { padding: 20px 18px 8px; } .brand { display: none; } }
+  @media print { @page { margin: 14mm 12mm; } * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; animation: none !important; } body { background:#fff; font-size: 11.5pt; } .topbar { position: static; } .navchips,.back { display:none; } .qa,.figure,.section-head,.tip,.analogy,.example { break-inside: avoid; page-break-inside: avoid; } .qa { box-shadow:none; } }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="topbar-inner">
+    <a class="back" href="index.html">← Hub</a>
+    <div class="brand"><b>Zemoso</b> · L1 Round</div>
+    <nav class="navchips" aria-label="Sections">
+      <a href="#intro">Intro</a>
+      <a href="#stories">Stories &amp; INVEST</a>
+      <a href="#scrum">Scrum</a>
+      <a href="#agile">Agile Values</a>
+      <a href="#jira">Jira &amp; JQL</a>
+      <a href="#flow">Flow Metrics</a>
+      <a href="#change">Change</a>
+      <a href="#scenarios">Scenarios</a>
+      <a href="#spikes">Spikes &amp; Concepts</a>
+    </nav>
+  </div>
+</div>
+
+<header class="hero">
+  <p class="eyebrow">Interview Prep · Zemoso Technologies · Scrum Master</p>
+  <h1>Zemoso — L1 Round, <em>answered from experience</em>.</h1>
+  <p class="lede">Zemoso's L1 goes deep on fundamentals with sharp follow-ups — user stories &amp; INVEST, Agile values, JQL, flow metrics, spikes, and feedback models. Every question you were asked, answered in the first person as a Scrum Master with ~6 years' experience in a healthcare context, with worked examples and diagrams.</p>
+  <div class="hero-meta">
+    <span><b>47</b> questions</span>
+    <span><b>9</b> topic areas</span>
+    <span><b>Voice</b> 6 yrs · Healthcare</span>
+    <span><b>Style</b> fundamentals + follow-ups</span>
+  </div>
+</header>
+
+<div class="persona-note">
+  <div class="pn-inner">
+    <b>The persona these answers assume →</b> a Senior Scrum Master (~6 years) supporting <b>two teams on a five-team ART</b> building a <b>digital healthcare platform</b> (patient booking, telehealth, practice-management integrations). Two-week sprints. Numbers and stories are realistic illustrations — <b>swap in your own real details</b> before the interview. Zemoso's L1 is fundamentals-heavy with rapid follow-ups, so keep answers crisp and be ready for the "which one is missing?" style probes.
+  </div>
+</div>
+
+<main>
+
+  <div class="figure">
+    <span class="anim-badge">Animated</span>
+    <svg viewBox="0 0 470 270" role="img" aria-label="Animated Scrum cycle: product backlog feeds the sprint, daily scrums steer it, review and retro end it, producing an increment — looping continuously.">
+      <rect x="20" y="105" width="92" height="60" rx="10" class="d-fill2 d-stroke" stroke-width="1.4"/>
+      <text x="66" y="130" text-anchor="middle" class="d-ink t-title" font-size="11">Product</text>
+      <text x="66" y="146" text-anchor="middle" class="d-ink t-title" font-size="11">Backlog</text>
+      <line x1="114" y1="135" x2="150" y2="135" class="d-accent-s" stroke-width="2" marker-end="url(#ar)"/>
+      <circle cx="235" cy="130" r="72" class="d-teal-s" fill="none" stroke-width="2" stroke-dasharray="5 6"/>
+      <text x="235" y="42" text-anchor="middle" class="d-teal-f t-label" style="letter-spacing:.1em">SPRINT 1–4 WEEKS</text>
+      <circle cx="235" cy="130" r="44" class="d-fill2 d-stroke" fill="none" stroke-width="1.4"/>
+      <text x="235" y="126" text-anchor="middle" class="d-ink t-title" font-size="11">Daily</text>
+      <text x="235" y="141" text-anchor="middle" class="d-ink t-title" font-size="11">Scrum</text>
+      <g class="spin-marker"><circle cx="235" cy="58" r="7" class="d-accent-f"/></g>
+      <line x1="320" y1="135" x2="356" y2="135" class="d-accent-s" stroke-width="2" marker-end="url(#ar)"/>
+      <rect x="360" y="88" width="92" height="40" rx="9" class="d-fill d-stroke" stroke-width="1.4"/>
+      <text x="406" y="112" text-anchor="middle" class="d-ink t-title" font-size="10.5">Review</text>
+      <rect x="360" y="138" width="92" height="40" rx="9" class="d-fill d-stroke" stroke-width="1.4"/>
+      <text x="406" y="162" text-anchor="middle" class="d-ink t-title" font-size="10.5">Retro</text>
+      <path d="M406 180 L406 235 L66 235 L66 168" class="d-teal-s" fill="none" stroke-width="1.8" stroke-dasharray="5 5" marker-end="url(#art)"/>
+      <text x="235" y="256" text-anchor="middle" class="d-teal-f t-label">↑ Increment ships; the loop repeats every Sprint</text>
+      <defs>
+        <marker id="ar" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto"><path d="M0 0 L9 4.5 L0 9 Z" fill="var(--dg-accent)"/></marker>
+        <marker id="art" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto"><path d="M0 0 L9 4.5 L0 9 Z" fill="var(--dg-teal)"/></marker>
+      </defs>
+    </svg>
+    <p class="figcap">The delivery loop underpinning every answer below.</p>
+  </div>
+
+  <!-- INTRO -->
+  <div class="section-head" id="intro">
+    <div class="section-kicker"><span class="num">01</span> Introduction</div>
+    <h2>Opening the round</h2>
+    <p>Keep it to ~60–90 seconds: role, scale, and one concrete result.</p>
+  </div>
+
+  <article class="qa"><div class="q"><span class="qnum">Q1</span><h3>Quick introduction — your current role, experience and key work.</h3></div>
+  <div class="a"><p>Structure it: <em>who you are → current role &amp; scale → a signature result → why you're a fit.</em> Keep it tight and outcome-led.</p>
+  <div class="example"><b class="lbl">◆ In my experience</b>"I'm a Scrum Master with ~6 years' experience, currently supporting <strong>two teams on a five-team ART</strong> building a digital healthcare platform — patient booking, telehealth and clinic-system integrations. I run our Scrum events, coach a first-time PO, and manage cross-team dependencies. A result I'm proud of: after we shipped appointment reminders, patient no-shows dropped ~20%, and I lifted our say/do ratio from ~68% to ~90% by fixing over-commitment. I'm drawn to Zemoso because of its product-engineering culture."</div></div></article>
+
+  <!-- STORIES & INVEST -->
+  <div class="section-head" id="stories">
+    <div class="section-kicker"><span class="num">02</span> User Stories &amp; INVEST</div>
+    <h2>Where Zemoso probes hardest</h2>
+    <p>Expect rapid "which one is missing?" follow-ups — know the 3 C's and INVEST cold.</p>
+  </div>
+
+  <div class="figure">
+    <svg viewBox="0 0 640 120" role="img" aria-label="INVEST acronym: Independent, Negotiable, Valuable, Estimable, Small, Testable.">
+      <g class="t-label">
+        <rect x="14" y="30" width="98" height="58" rx="9" class="d-fill d-stroke" stroke-width="1.3"/><text x="63" y="58" text-anchor="middle" class="d-accent-f t-title" font-size="16">I</text><text x="63" y="76" text-anchor="middle" class="d-muted">ndependent</text>
+        <rect x="118" y="30" width="98" height="58" rx="9" class="d-fill d-stroke" stroke-width="1.3"/><text x="167" y="58" text-anchor="middle" class="d-accent-f t-title" font-size="16">N</text><text x="167" y="76" text-anchor="middle" class="d-muted">egotiable</text>
+        <rect x="222" y="30" width="98" height="58" rx="9" class="d-fill d-stroke" stroke-width="1.3"/><text x="271" y="58" text-anchor="middle" class="d-accent-f t-title" font-size="16">V</text><text x="271" y="76" text-anchor="middle" class="d-muted">aluable</text>
+        <rect x="326" y="30" width="98" height="58" rx="9" class="d-fill d-stroke" stroke-width="1.3"/><text x="375" y="58" text-anchor="middle" class="d-accent-f t-title" font-size="16">E</text><text x="375" y="76" text-anchor="middle" class="d-muted">stimable</text>
+        <rect x="430" y="30" width="98" height="58" rx="9" class="d-fill d-stroke" stroke-width="1.3"/><text x="479" y="58" text-anchor="middle" class="d-accent-f t-title" font-size="16">S</text><text x="479" y="76" text-anchor="middle" class="d-muted">mall</text>
+        <rect x="534" y="30" width="98" height="58" rx="9" class="d-fill d-stroke" stroke-width="1.3"/><text x="583" y="58" text-anchor="middle" class="d-accent-f t-title" font-size="16">T</text><text x="583" y="76" text-anchor="middle" class="d-muted">estable</text>
+      </g>
+    </svg>
+    <p class="figcap">The six qualities of a good user story.</p>
+  </div>
+
+  <article class="qa"><div class="q"><span class="qnum">Q2</span><h3>What are the three C's of a user story?</h3></div>
+  <div class="a"><ul class="clean">
+    <li><strong>Card</strong> — the short written story (a placeholder for a conversation).</li>
+    <li><strong>Conversation</strong> — the discussion that fleshes out the detail.</li>
+    <li><strong>Confirmation</strong> — the acceptance criteria that confirm it's done.</li>
+  </ul>
+  <div class="example"><b class="lbl">◆ In my experience</b>"For 'patient reschedules an appointment,' the <em>card</em> is one line; the <em>conversation</em> answered 'how late can they reschedule? what about paid slots?'; and the <em>confirmation</em> was the AC — 'cannot reschedule within 2 hours of the slot.'"</div></div></article>
+
+  <article class="qa"><div class="q"><span class="qnum">Q3</span><h3>If developers still have many questions about a Jira story, which of the three C's is missing?</h3></div>
+  <div class="a"><p>The <strong>Conversation</strong>. Lots of open questions means the discussion that turns a placeholder card into shared understanding hasn't happened — usually a sign refinement was skipped.</p></div></article>
+
+  <article class="qa"><div class="q"><span class="qnum">Q4</span><h3>What are the characteristics of a good user story?</h3></div>
+  <div class="a"><p>They follow <strong>INVEST</strong>: Independent, Negotiable, Valuable, Estimable, Small, Testable (see diagram). In short: a thin, independently valuable slice with clear acceptance criteria that fits comfortably in a Sprint.</p></div></article>
+
+  <article class="qa"><div class="q"><span class="qnum">Q5</span><h3>If a story is valuable, estimable and testable but can't be completed without another story, which INVEST principle is missing?</h3></div>
+  <div class="a"><p><strong>Independent.</strong> Needing another story to be completable means it isn't independent — a dependency that should be resolved (or the two stories merged/re-sliced) before it enters a Sprint.</p></div></article>
+
+  <article class="qa"><div class="q"><span class="qnum">Q6</span><h3>Which INVEST principle is most commonly violated?</h3></div>
+  <div class="a"><p>Usually <strong>Independent</strong> or <strong>Small</strong> — real-world stories tend to be too big and tangled with dependencies. That's exactly why <em>vertical slicing</em> matters.</p>
+  <div class="example"><b class="lbl">◆ In my experience</b>"Our booking stories kept violating 'Small' and 'Independent' — one 13-point story spanned UI, scheduling and the clinic PMS. Slicing it vertically (one provider → multi-provider → real-time availability) fixed both and killed our spillover."</div></div></article>
+
+  <article class="qa"><div class="q"><span class="qnum">Q7</span><h3>A backlog item like "build an online banking system" — is it a user story, feature, or epic?</h3></div>
+  <div class="a"><p>An <strong>Epic</strong> — a very large body of work spanning many Sprints (arguably even an initiative). It must be broken into Features, then into small user Stories before it can be built.</p></div></article>
+
+  <article class="qa"><div class="q"><span class="qnum">Q8</span><h3>For a good user story, which is more important: a detailed story or a valuable story?</h3></div>
+  <div class="a"><p>A <strong>valuable</strong> story. Detail emerges through the <em>conversation</em> just-in-time; value is the reason to build it at all. An exhaustively detailed but low-value story is waste; a valuable one with light detail can be fleshed out as it's pulled in.</p></div></article>
+
+  <article class="qa"><div class="q"><span class="qnum">Q9</span><h3>If a user story has detailed acceptance criteria, do we still need conversation?</h3></div>
+  <div class="a"><p><strong>Yes.</strong> Acceptance criteria capture the <em>what</em>, but the conversation surfaces the <em>why</em>, edge cases, and technical trade-offs. AC are an <em>output</em> of good conversation, not a replacement for it.</p>
+  <div class="example"><b class="lbl">◆ In my experience</b>"Our reschedule story had crisp AC, but the 5-minute conversation revealed a timezone edge case for cross-clinic bookings that no AC had captured. The talk still adds value even when the card looks complete."</div></div></article>
+
+  <!-- SCRUM -->
+  <div class="section-head" id="scrum">
+    <div class="section-kicker"><span class="num">03</span> Scrum Fundamentals</div>
+    <h2>Pillars, structure, DoD/DoR, accountability</h2>
+  </div>
+
+  <article class="qa"><div class="q"><span class="qnum">Q10</span><h3>What are the three pillars of Scrum?</h3></div>
+  <div class="a"><p><strong>Transparency, Inspection, and Adaptation</strong> — the pillars that hold up Scrum's empirical process control.</p></div></article>
+
+  <article class="qa"><div class="q"><span class="qnum">Q11</span><h3>Could you elaborate on the three pillars?</h3></div>
+  <div class="a"><ul class="clean">
+    <li><strong>Transparency</strong> — the work and progress are visible and honest (shared board, clear DoD).</li>
+    <li><strong>Inspection</strong> — you check work and process regularly (that's what the events are for).</li>
+    <li><strong>Adaptation</strong> — you adjust quickly when inspection reveals a problem.</li>
+  </ul><p>The chain: you can only adapt what you inspect, and only inspect what's transparent.</p>
+  <div class="example"><b class="lbl">◆ In my experience</b>"When a team hid that a feature was only '80% done,' there was no transparency — so the Review couldn't inspect reality and nobody adapted, and it blew up at release. An honest board + DoD is what makes the other two pillars possible."</div></div></article>
+
+  <article class="qa"><div class="q"><span class="qnum">Q12</span><h3>What are the Scrum framework's roles, events, and artifacts?</h3></div>
+  <div class="a"><ul class="clean">
+    <li><strong>Accountabilities (3):</strong> Product Owner, Scrum Master, Developers.</li>
+    <li><strong>Events (5):</strong> the Sprint, Sprint Planning, Daily Scrum, Sprint Review, Sprint Retrospective.</li>
+    <li><strong>Artifacts (3):</strong> Product Backlog, Sprint Backlog, Increment (each with a commitment: Product Goal, Sprint Goal, Definition of Done).</li>
+  </ul></div></article>
+
+  <article class="qa"><div class="q"><span class="qnum">Q13</span><h3>What is a Sprint?</h3></div>
+  <div class="a"><p>A fixed, short cycle (1–4 weeks) in which the team builds a usable increment toward the Sprint Goal. It's the heartbeat of Scrum — a new Sprint starts immediately after the previous one ends, and its length stays consistent.</p></div></article>
+
+  <article class="qa"><div class="q"><span class="qnum">Q14</span><h3>What is the exit criteria for DoD and the entry criteria for DoR?</h3></div>
+  <div class="a"><p><strong>DoR (Definition of Ready)</strong> is the <em>entry</em> gate — what a story needs to <em>enter</em> a Sprint (clear, estimated, dependency-free, has AC). <strong>DoD (Definition of Done)</strong> is the <em>exit</em> gate — what it needs to <em>leave</em> as truly finished (tested, reviewed, deployed, compliant). DoR guards the start; DoD guards the finish.</p>
+  <div class="tip"><span class="tip-ic">★</span><div><b>Note</b> DoD is official Scrum; DoR is a widely-used practice but <em>not</em> in the Scrum Guide.</div></div></div></article>
+
+  <article class="qa"><div class="q"><span class="qnum">Q15</span><h3>If Scrum has no project manager, who is responsible if a Sprint fails?</h3></div>
+  <div class="a"><p><strong>No single person — the Scrum Team owns delivery collectively.</strong> Scrum deliberately removes the single-throat-to-choke model. A "failed" Sprint is a learning signal to inspect and adapt in the Retro, not a hunt for who to blame.</p></div></article>
+
+  <article class="qa"><div class="q"><span class="qnum">Q16</span><h3>Why does Scrum promote collective ownership instead of individual blame?</h3></div>
+  <div class="a"><p>Because complex product work is a <em>team</em> outcome, and blame kills the transparency Scrum depends on. Collective ownership builds psychological safety, so people raise problems early instead of hiding them — which is how the team actually improves.</p>
+  <div class="example"><b class="lbl">◆ In my experience</b>"After a prod incident I steered the Retro to 'what in our <em>process</em> let this through?' not 'who did it?' The fix was a missing automated check. People saw honesty was safe and started flagging near-misses before they became incidents."</div></div></article>
+
+  <!-- AGILE VALUES -->
+  <div class="section-head" id="agile">
+    <div class="section-kicker"><span class="num">04</span> Agile Values &amp; the Jira Trap</div>
+    <h2>Manifesto values — and the classic "tools" trap</h2>
+    <p>Zemoso loves the "individuals over tools / Jira" line of questioning. Know the intent, not just the words.</p>
+  </div>
+
+  <article class="qa"><div class="q"><span class="qnum">Q17</span><h3>What are the Agile values?</h3></div>
+  <div class="a"><p>The four values of the Agile Manifesto — "we value the left more than the right":</p>
+  <ol class="clean">
+    <li><strong>Individuals and interactions</strong> over processes and tools</li>
+    <li><strong>Working software</strong> over comprehensive documentation</li>
+    <li><strong>Customer collaboration</strong> over contract negotiation</li>
+    <li><strong>Responding to change</strong> over following a plan</li>
+  </ol></div></article>
+
+  <article class="qa"><div class="q"><span class="qnum">Q18</span><h3>Are there four principles or four values?</h3></div>
+  <div class="a"><div class="tip trap"><span class="tip-ic">▲</span><div><b>Watch the wording</b> There are <strong>4 values</strong> and <strong>12 principles</strong>. This question is checking you don't muddle the two.</div></div></div></article>
+
+  <article class="qa"><div class="q"><span class="qnum">Q19</span><h3>Does "individuals and interactions over processes and tools" mean processes and tools are not important?</h3></div>
+  <div class="a"><p><strong>No.</strong> "Over" means we <em>prioritise</em> the left, not that the right is worthless. Good processes and tools matter — they should <em>serve</em> people and collaboration, not the other way round.</p></div></article>
+
+  <article class="qa"><div class="q"><span class="qnum">Q20</span><h3>If Jira is down, will development stop?</h3></div>
+  <div class="a"><p><strong>No.</strong> Jira is a tool that <em>supports</em> the work; it isn't the work. If it's down, the team keeps building and collaborating — tracking on a whiteboard or sticky notes until it's back. Developers writing code don't need Jira to write code.</p></div></article>
+
+  <article class="qa"><div class="q"><span class="qnum">Q21</span><h3>If the team can continue without Jira using whiteboards or sticky notes, why do companies spend so much on Jira?</h3></div>
+  <div class="a"><p>Because at <strong>scale</strong>, tools like Jira provide what sticky notes can't: a single source of truth across distributed teams, history and audit trails, traceability (story → code → release — vital in regulated healthcare), reporting and metrics, integrations, and search. The value is <em>coordination and transparency at scale</em>, not the day-to-day coding.</p>
+  <div class="example"><b class="lbl">◆ In my experience</b>"A co-located team of 5 could run on a physical board. But our five-team ART, partly remote, with compliance audit needs, would be chaos without Jira — we need cross-team dependency links, release traceability and dashboards. Jira earns its cost through <em>scale and governance</em>, not because a whiteboard can't hold tasks."</div></div></article>
+
+  <!-- JIRA & JQL -->
+  <div class="section-head" id="jira">
+    <div class="section-kicker"><span class="num">05</span> Jira &amp; JQL</div>
+    <h2>Hands-on tool questions</h2>
+    <p>Be practical and specific — have real JQL ready.</p>
+  </div>
+
+  <article class="qa"><div class="q"><span class="qnum">Q22</span><h3>What is a Jira workflow?</h3></div>
+  <div class="a"><p>The <strong>set of statuses and transitions</strong> an issue moves through — e.g. <em>To Do → In Progress → In Review → Done</em> — with rules on who can move it and what must happen at each step. It models your team's process inside Jira.</p></div></article>
+
+  <article class="qa"><div class="q"><span class="qnum">Q23</span><h3>What is JQL?</h3></div>
+  <div class="a"><p><strong>Jira Query Language</strong> — a SQL-like language for searching and filtering issues precisely (e.g. <code class="inline">project = HEALTH AND status = Blocked</code>). It powers advanced search, saved filters and dashboard gadgets.</p></div></article>
+
+  <article class="qa"><div class="q"><span class="qnum">Q24</span><h3>What is the difference between basic search and JQL?</h3></div>
+  <div class="a"><p><strong>Basic search</strong> is a point-and-click, drop-down filter UI — easy but limited. <strong>JQL (advanced search)</strong> is the text query language — far more powerful, supporting complex logic (AND/OR/NOT), functions (<code class="inline">openSprints()</code>, <code class="inline">currentUser()</code>), and ordering. Basic search is a subset of what JQL can express.</p></div></article>
+
+  <article class="qa"><div class="q"><span class="qnum">Q25</span><h3>How do you find all work assigned to a team member using JQL?</h3></div>
+  <div class="a"><pre class="jql">project = HEALTH AND assignee = "jane.doe" AND resolution = Unresolved ORDER BY priority DESC</pre>
+  <p>(Use <code class="inline">assignee = currentUser()</code> for "my" work.)</p></div></article>
+
+  <article class="qa"><div class="q"><span class="qnum">Q26</span><h3>How do you find unresolved critical bugs using JQL?</h3></div>
+  <div class="a"><pre class="jql">project = HEALTH AND issuetype = Bug AND priority in (Critical, Highest) AND resolution = Unresolved ORDER BY created ASC</pre></div></article>
+
+  <article class="qa"><div class="q"><span class="qnum">Q27</span><h3>How do you find blocked stories in Jira using JQL?</h3></div>
+  <div class="a"><pre class="jql">project = HEALTH AND issuetype = Story AND (status = Blocked OR issueLinkType = "is blocked by") AND resolution = Unresolved</pre>
+  <div class="tip"><span class="tip-ic">★</span><div><b>Tip</b> Say you save these as filters powering dashboard gadgets, so hygiene is monitored continuously rather than manually.</div></div></div></article>
+
+  <!-- FLOW METRICS -->
+  <div class="section-head" id="flow">
+    <div class="section-kicker"><span class="num">06</span> Flow Metrics &amp; WSJF</div>
+    <h2>WIP, throughput, cycle time, prioritisation</h2>
+  </div>
+
+  <article class="qa"><div class="q"><span class="qnum">Q28</span><h3>What do you understand about WSJF?</h3></div>
+  <div class="a"><p><strong>Weighted Shortest Job First</strong> — a prioritisation model: <code class="inline">WSJF = Cost of Delay ÷ Job Size</code>, where Cost of Delay = business value + time criticality + risk-reduction/opportunity. Do the highest-WSJF items first to maximise value per unit of effort.</p>
+  <div class="example"><b class="lbl">◆ In my experience</b>"Reminders: high value (fewer no-shows), time-critical (flu season), small size → very high WSJF, so it went ahead of a big 'multi-clinic dashboard.' WSJF made 'small + urgent + valuable beats big + nice-to-have' objective rather than political."</div></div></article>
+
+  <article class="qa"><div class="q"><span class="qnum">Q29</span><h3>What is throughput?</h3></div>
+  <div class="a"><p>The <strong>number of work items completed per unit of time</strong> (e.g. 8 stories/Sprint). A flow metric and an alternative to velocity that doesn't rely on story points.</p></div></article>
+
+  <article class="qa"><div class="q"><span class="qnum">Q30</span><h3>What is the difference between WIP and throughput?</h3></div>
+  <div class="a"><p><strong>WIP</strong> = items <em>in progress right now</em>. <strong>Throughput</strong> = items <em>finished per period</em>. Little's Law links them: <code class="inline">Cycle Time = WIP ÷ Throughput</code> — so lower WIP shortens cycle time and smooths throughput.</p>
+  <div class="example"><b class="lbl">◆ In my experience</b>"We had 12 items in progress for 6 people — everything half-done, nothing shipping. Capping WIP at 4 meant you had to <em>finish</em> before starting; throughput actually rose because work stopped stalling."</div></div></article>
+
+  <article class="qa"><div class="q"><span class="qnum">Q31</span><h3>What do you understand by cycle time?</h3></div>
+  <div class="a"><p>The time from when the team <strong>starts</strong> an item to when it's <strong>done</strong>. Shorter cycle time = faster delivery and feedback. (Lead time is broader — from <em>request</em> to delivery, including the wait before work starts.)</p></div></article>
+
+  <article class="qa"><div class="q"><span class="qnum">Q32</span><h3>Can WSJF be used in Scrum?</h3></div>
+  <div class="a"><p><strong>Yes.</strong> WSJF comes from SAFe but nothing stops a Scrum PO using it to order the Product Backlog. Scrum doesn't prescribe a prioritisation technique, so borrowing WSJF (or MoSCoW, or cost-of-delay) is perfectly valid.</p></div></article>
+
+  <!-- CHANGE -->
+  <div class="section-head" id="change">
+    <div class="section-kicker"><span class="num">07</span> Influence &amp; Change</div>
+    <h2>The "CEO wants to drop Scrum" line</h2>
+  </div>
+
+  <article class="qa"><div class="q"><span class="qnum">Q33</span><h3>If a CEO says to stop following Scrum from tomorrow, how would you convince them in 2–3 minutes?</h3></div>
+  <div class="a"><p>Don't defend the label — connect to <em>their</em> goals: "Scrum is just how we get predictable delivery, fast feedback and quality. Which of those is it failing to give you?" Often the real problem is <em>bad implementation</em>, not Scrum. I'd offer to fix the actual pain and show the value with data.</p>
+  <div class="example"><b class="lbl">◆ In my experience</b>"An exec called Scrum 'pointless meetings' — the real issue was 90-minute Dailies and demo-less Sprints, i.e. <em>bad</em> Scrum. We fixed the implementation and the complaint vanished. I defended the outcomes, never the label."</div></div></article>
+
+  <article class="qa"><div class="q"><span class="qnum">Q34</span><h3>If the CEO still refuses, what will you do?</h3></div>
+  <div class="a"><p>I'd <strong>respect the decision</strong> — I lead by influence, not authority. I'd help transition responsibly and <em>keep the practices that create value</em> (short feedback loops, transparency, sustainable pace, retrospectives) whatever we end up calling the process. The goal is outcomes, not orthodoxy.</p></div></article>
+
+  <article class="qa"><div class="q"><span class="qnum">Q35</span><h3>Can a Scrum Master force Scrum?</h3></div>
+  <div class="a"><p><strong>No.</strong> A Scrum Master has no command authority — they coach, facilitate and influence. Forced Scrum is "zombie Scrum": ceremonies without buy-in. Adoption has to be chosen by the team and organisation to actually work.</p></div></article>
+
+  <!-- SCENARIOS -->
+  <div class="section-head" id="scenarios">
+    <div class="section-kicker"><span class="num">08</span> Scenarios</div>
+    <h2>Judgment under pressure</h2>
+  </div>
+
+  <article class="qa"><div class="q"><span class="qnum">Q36</span><h3>A user story is lacking the final design and the design team wants to deliver it in one day — what would you do as Scrum Master?</h3></div>
+  <div class="a"><p>Don't let the team sit blocked or build blind. I'd: keep the story out of "in progress" until it's <em>Ready</em>; facilitate design and devs to agree the <em>minimum</em> design needed to start (or run a quick <strong>functional spike</strong>); pull forward other ready work so the team stays productive for that day; and if the one-day design slips, protect the Sprint Goal by re-planning with the PO. The root-cause fix is a Definition of Ready so design lands <em>before</em> the Sprint.</p></div></article>
+
+  <article class="qa"><div class="q"><span class="qnum">Q37</span><h3>What will you do if developers are caught in an internal disagreement about which development technique to apply?</h3></div>
+  <div class="a"><p>Technical decisions belong to the <strong>self-managing Developers</strong> — not me. I <em>facilitate</em>: get both options and their trade-offs on the board, timebox the debate, and if they can't converge, suggest a small <strong>spike</strong> or a time-boxed trial to let evidence decide. I'd also loop in the architect if it's a cross-cutting call. My job is a healthy decision process, not picking the winner.</p>
+  <div class="example"><b class="lbl">◆ In my experience</b>"Two devs deadlocked on caching approaches. I timeboxed a 2-hour spike to benchmark both against our real load. The data settled it in a way no amount of arguing would have — and they owned the outcome."</div></div></article>
+
+  <article class="qa"><div class="q"><span class="qnum">Q38</span><h3>What will you do if your Product Owner is new to Scrum and not interested in Scrum meetings?</h3></div>
+  <div class="a"><p>Coach, don't nag. Explain the PO's value and what <em>breaks</em> without them (unclear priorities, rework, a rudderless backlog). Make events worth their time — bring sharp, prepared refinement. Often the best teacher is letting one small consequence play out and reviewing it together, so they connect the dots themselves.</p>
+  <div class="example"><b class="lbl">◆ In my experience</b>"My first-time PO skipped refinement, so vague stories caused a mid-Sprint mess. Rather than lecture, I walked them through that mess afterward — they immediately saw the link and started prioritising refinement. Buy-in beats pressure."</div></div></article>
+
+  <article class="qa"><div class="q"><span class="qnum">Q39</span><h3>Under your resume you mentioned removing impediments — what's the biggest one you removed? (not "a dependency")</h3></div>
+  <div class="a"><p>Have a real, specific, measurable story ready — situation → what was blocked → what you did → outcome.</p>
+  <div class="example"><b class="lbl">◆ In my experience</b>"Our releases stalled for days on a manual compliance/security sign-off nobody owned. I mapped the release value stream, showed leadership the wait time, and negotiated moving the review earlier and running it in parallel with QA. Release lead time dropped from ~5 days to under 1 — and the pattern stopped recurring. That was organisational, not a simple task dependency."</div></div></article>
+
+  <!-- SPIKES & CONCEPTS -->
+  <div class="section-head" id="spikes">
+    <div class="section-kicker"><span class="num">09</span> Spikes &amp; Concepts</div>
+    <h2>Spikes, MMF/MVP, ST vs RTE, and MAD/SAD/GLAD</h2>
+  </div>
+
+  <article class="qa"><div class="q"><span class="qnum">Q40</span><h3>What do you understand about a spike?</h3></div>
+  <div class="a"><p>A <strong>time-boxed research task</strong> to reduce uncertainty — you produce knowledge (or a throwaway prototype), not shippable functionality. Used when a story is too unclear or risky to estimate confidently.</p></div></article>
+
+  <article class="qa"><div class="q"><span class="qnum">Q41</span><h3>When do you use a spike in Scrum?</h3></div>
+  <div class="a"><p>When there's enough <strong>uncertainty</strong> that the team can't estimate or start safely — an unfamiliar technology, an unclear requirement, or a risky integration. The spike buys just enough knowledge to proceed, then is closed.</p>
+  <div class="example"><b class="lbl">◆ In my experience</b>"Before committing to telehealth, we ran a 2-day spike comparing two video SDKs on quality, cost and privacy compliance. The output was a recommendation, which let us estimate the real stories with confidence."</div></div></article>
+
+  <article class="qa"><div class="q"><span class="qnum">Q42</span><h3>What are the types of spikes?</h3></div>
+  <div class="a"><p>Broadly <strong>technical</strong> and <strong>functional</strong> spikes, plus commonly-named <strong>research</strong> and <strong>refactoring</strong> spikes. All are time-boxed to protect the Sprint.</p></div></article>
+
+  <article class="qa"><div class="q"><span class="qnum">Q43</span><h3>What is a technical spike and what is a functional spike?</h3></div>
+  <div class="a"><ul class="clean">
+    <li><strong>Technical spike</strong> — explores a technical approach: feasibility, which library, performance, security (e.g. "can this video SDK meet our latency and privacy needs?").</li>
+    <li><strong>Functional spike</strong> — explores how users will interact or clarifies requirements, often via a quick prototype (e.g. mocking the telehealth waiting-room screen to test with users).</li>
+  </ul></div></article>
+
+  <article class="qa"><div class="q"><span class="qnum">Q44</span><h3>What do you understand by a research spike or refactoring spike?</h3></div>
+  <div class="a"><p>A <strong>research spike</strong> gathers knowledge to inform a decision (evaluate options, investigate a problem). A <strong>refactoring spike</strong> is a time-boxed effort to explore or improve the internal structure of existing code — reducing technical debt without changing external behaviour.</p></div></article>
+
+  <article class="qa"><div class="q"><span class="qnum">Q45</span><h3>What do you understand about MMF and MVP?</h3></div>
+  <div class="a"><p><strong>MVP (Minimum Viable Product)</strong> — the smallest release that delivers value and lets you <em>learn</em> from real users. <strong>MMF (Minimum Marketable Feature)</strong> — the smallest feature chunk worth releasing to market. MVP is about validated learning; MMF is about marketable value.</p>
+  <div class="example"><b class="lbl">◆ In my experience</b>"Our booking <strong>MVP</strong> was 'book a fixed slot at one pilot clinic' — enough to learn if patients would book online at all. Later, 'reschedule + reminders + confirmations' together made an <strong>MMF</strong> polished enough to roll out network-wide."</div></div></article>
+
+  <article class="qa"><div class="q"><span class="qnum">Q46</span><h3>What is the difference between ST and RTE?</h3></div>
+  <div class="a"><p>In SAFe: the <strong>RTE (Release Train Engineer)</strong> is the servant leader / "Scrum Master" of an <em>Agile Release Train</em> (one ART). The <strong>STE (Solution Train Engineer)</strong> plays the same role one level up — for a <em>Solution Train</em> that coordinates <strong>multiple ARTs</strong> building a large solution. In short: RTE : ART :: STE : Solution Train.</p>
+  <div class="tip"><span class="tip-ic">★</span><div><b>Clarify if needed</b> "ST" here almost certainly means <strong>Solution Train / STE</strong>. If they meant something else, it's fine to ask them to confirm — precise terms matter in SAFe.</div></div></div></article>
+
+  <article class="qa"><div class="q"><span class="qnum">Q47</span><h3>What do you understand about MAD, SAD, and GLAD?</h3></div>
+  <div class="a"><p>It's a <strong>retrospective format</strong> — usually called <strong>Mad · Sad · Glad</strong> — where the team groups feelings about the Sprint into three columns:</p>
+  <ul class="clean">
+    <li><strong>Glad</strong> — what went well / made us happy.</li>
+    <li><strong>Sad</strong> — what disappointed us or fell short.</li>
+    <li><strong>Mad</strong> — what frustrated or angered us.</li>
+  </ul>
+  <p>It surfaces the <em>emotional</em> health of the team, not just facts — great for spotting morale issues early. The team then votes on what to act on.</p>
+  <div class="example"><b class="lbl">◆ In my experience</b>"When our data-only retros went flat, Mad-Sad-Glad surfaced real frustration about constant interruptions that the numbers had hidden. That emotional signal led to a WIP-limit and focus-time change that a metrics-only retro would have missed."</div></div></article>
+
+  <p style="margin-top:52px; padding:22px 24px; background:var(--surface); border:1px solid var(--line); border-radius:16px; box-shadow:var(--shadow); color:var(--ink-soft); font-size:15.5px;">
+    <strong style="color:var(--ink); font-family:var(--font-display); font-size:18px;">Interview mindset for Zemoso L1.</strong><br>
+    This round rewards <em>crisp fundamentals</em> and calm handling of rapid "which one is missing?" follow-ups. When they push (INVEST, the 3 C's, values vs principles), answer the specific probe directly, then add one line of reasoning or a quick example. For the tool/Jira traps, always land on the principle: <em>tools serve people</em>.
+  </p>
+
+</main>
+
+<footer>
+  <div class="footer-inner">
+    Prep guide for <b>Zemoso Technologies — L1 Round</b> Scrum Master interview · answered as a ~6-year SM in a healthcare context. Examples and figures are realistic illustrations — <b>replace with your own real details</b> before the interview. Reflects Scrum Guide 2020 &amp; SAFe practice. ← <a href="index.html">Back to the Hub</a>
+  </div>
+</footer>
+
+<script>
+  (function () {
+    var chips = Array.prototype.slice.call(document.querySelectorAll('.navchips a'));
+    var map = {};
+    chips.forEach(function (c) { var id = c.getAttribute('href').slice(1); var el = document.getElementById(id); if (el) map[id] = c; });
+    var ids = Object.keys(map);
+    function onScroll() {
+      var pos = window.scrollY + 120, cur = null;
+      ids.forEach(function (id) { var el = document.getElementById(id); if (el && el.offsetTop <= pos) cur = id; });
+      chips.forEach(function (c) { c.classList.remove('active'); });
+      if (cur && map[cur]) { map[cur].classList.add('active'); map[cur].scrollIntoView({ block: 'nearest', inline: 'nearest' }); }
+    }
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+  })();
+</script>
+</body>
+</html>
