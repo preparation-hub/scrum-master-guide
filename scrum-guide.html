@@ -1002,43 +1002,56 @@
   </div>
 
   <article class="qa"><div class="q"><span class="qnum">Q119</span><h3>What is SAFe?</h3></div>
-  <div class="a"><p>The <strong>Scaled Agile Framework</strong> — a set of patterns for applying Lean-Agile across many teams, programs and the portfolio. It's the most widely adopted (and most prescriptive) scaling framework, organising teams into <strong>Agile Release Trains</strong>.</p></div></article>
+  <div class="a"><p>The <strong>Scaled Agile Framework</strong> — a set of patterns for applying Lean-Agile across many teams, programs and the portfolio. It's the most widely adopted (and most prescriptive) scaling framework, organising teams into <strong>Agile Release Trains</strong>.</p>
+  <div class="example"><b class="lbl">Worked example</b>Our healthcare platform is too big for one team, so five teams (booking, telehealth, integrations, patient-records, notifications) run as one ART. SAFe gives them a shared cadence and a PI Planning event so they all pull toward the same quarterly goals instead of drifting apart.</div></div></article>
 
   <article class="qa"><div class="q"><span class="qnum">Q120</span><h3>What is an Agile Release Train (ART)?</h3></div>
-  <div class="a"><p>A long-lived <strong>team of Agile teams</strong> (typically 5–12 teams, 50–125 people) that plans, commits and delivers together on a shared cadence (the PI). It's the primary value-delivery vehicle in SAFe.</p></div></article>
+  <div class="a"><p>A long-lived <strong>team of Agile teams</strong> (typically 5–12 teams, 50–125 people) that plans, commits and delivers together on a shared cadence (the PI). It's the primary value-delivery vehicle in SAFe.</p>
+  <div class="example"><b class="lbl">Worked example</b>Our ART of ~50 people delivers the whole patient platform. "Train" is the right metaphor: it leaves on a fixed schedule (the PI), and teams sync their work to that timetable rather than each running to its own clock.</div></div></article>
 
   <article class="qa"><div class="q"><span class="qnum">Q121</span><h3>What is a Program Increment (PI)?</h3></div>
-  <div class="a"><p>A <strong>timebox (~8–12 weeks)</strong> in which an ART delivers value, made up of several iterations plus a final <strong>Innovation &amp; Planning (IP)</strong> iteration. A PI is to an ART what a Sprint is to a team.</p></div></article>
+  <div class="a"><p>A <strong>timebox (~8–12 weeks)</strong> in which an ART delivers value, made up of several iterations plus a final <strong>Innovation &amp; Planning (IP)</strong> iteration. A PI is to an ART what a Sprint is to a team.</p>
+  <div class="example"><b class="lbl">Worked example</b>Our PI is five 2-week iterations (four delivery + one IP). The IP iteration is breathing room — innovation time, learning, and PI Planning for the <em>next</em> increment — which stops teams treating it as just more delivery capacity.</div></div></article>
 
   <article class="qa"><div class="q"><span class="qnum">Q122</span><h3>What is PI Planning?</h3></div>
-  <div class="a"><p>A <strong>two-day event</strong> where the whole ART plans the upcoming PI together — aligning on vision, drafting team plans iteration-by-iteration, surfacing dependencies on the program board, setting PI objectives, ROAMing risks, and finishing with a confidence vote. It's the heartbeat of SAFe alignment.</p></div></article>
+  <div class="a"><p>A <strong>two-day event</strong> where the whole ART plans the upcoming PI together — aligning on vision, drafting team plans iteration-by-iteration, surfacing dependencies on the program board, setting PI objectives, ROAMing risks, and ending with a confidence vote. It's the heartbeat of SAFe alignment.</p>
+  <div class="example"><b class="lbl">Worked example</b>At our last PI Planning, booking and integrations discovered on the program board that both needed the same API in iteration 2 — a clash invisible until everyone planned in one room. They resequenced on the spot. That's the magic of PI Planning: dependencies surface <em>before</em> they become blockers.</div></div></article>
 
   <article class="qa"><div class="q"><span class="qnum">Q123</span><h3>What is the Release Train Engineer (RTE)?</h3></div>
-  <div class="a"><p>The <strong>"Scrum Master of the ART"</strong> — a servant leader who facilitates ART events (PI Planning, Scrum of Scrums, I&amp;A), manages risks and dependencies across teams, and drives relentless improvement at the program level.</p></div></article>
+  <div class="a"><p>The <strong>"Scrum Master of the ART"</strong> — a servant leader who facilitates ART events (PI Planning, Scrum of Scrums, I&amp;A), manages risks and dependencies across teams, and drives relentless improvement at the program level.</p>
+  <div class="example"><b class="lbl">Worked example</b>When our slow release-approval problem spanned all five teams, no single Scrum Master could fix it — our RTE owned that org-level impediment and drove the change with leadership. The RTE handles what's above any one team's reach.</div></div></article>
 
   <article class="qa"><div class="q"><span class="qnum">Q124</span><h3>Scrum Master vs RTE?</h3></div>
-  <div class="a"><p>Same servant-leadership pattern, different scope: the <strong>SM serves one team</strong>; the <strong>RTE serves the whole ART</strong> (many teams). The RTE coordinates the SMs and handles program-level impediments and dependencies.</p></div></article>
+  <div class="a"><p>Same servant-leadership pattern, different scope: the <strong>SM serves one team</strong>; the <strong>RTE serves the whole ART</strong> (many teams). The RTE coordinates the SMs and handles program-level impediments and dependencies.</p>
+  <div class="example"><b class="lbl">Worked example</b>I (SM) unblock my booking team; the RTE unblocks the <em>train</em>. When my team's dependency on integrations stalled, I raised it at the Scrum of Scrums, which the RTE facilitates — they helped broker the fix across the two teams.</div></div></article>
 
   <article class="qa"><div class="q"><span class="qnum">Q125</span><h3>What is WSJF?</h3></div>
-  <div class="a"><p><strong>Weighted Shortest Job First</strong> — a prioritisation model: <code class="inline">WSJF = Cost of Delay ÷ Job Size</code>. Cost of Delay = user/business value + time criticality + risk reduction/opportunity. You do the highest-WSJF items first to maximise value delivered. Used to order the program backlog.</p></div></article>
+  <div class="a"><p><strong>Weighted Shortest Job First</strong> — a prioritisation model: <code class="inline">WSJF = Cost of Delay ÷ Job Size</code>, where Cost of Delay = user/business value + time criticality + risk-reduction/opportunity. Do the highest-WSJF items first to maximise value per unit of effort. Used to order the program backlog.</p>
+  <div class="example"><b class="lbl">Worked example</b>Reminders: high value (fewer no-shows), high time-criticality (flu season), small job size → very high WSJF. A big "multi-clinic dashboard": decent value but huge job size → lower WSJF. So reminders went first — WSJF made "small + urgent + valuable beats big + nice-to-have" objective, not political.</div></div></article>
 
   <article class="qa"><div class="q"><span class="qnum">Q126</span><h3>What is the confidence vote?</h3></div>
-  <div class="a"><p>At the end of PI Planning, everyone votes <strong>fist-of-five</strong> on their confidence in meeting the PI objectives. Average <strong>3+ proceeds</strong>; below 3, the plan is reworked. Low individual votes must be heard.</p></div></article>
+  <div class="a"><p>At the end of PI Planning, everyone votes <strong>fist-of-five</strong> on their confidence in meeting the PI objectives. Average <strong>3+ proceeds</strong>; below 3, the plan is reworked. Anyone voting 1–2 must be heard.</p>
+  <div class="example"><b class="lbl">Worked example</b>Our last vote averaged 2.5 because integrations felt overloaded. Rather than plough ahead, the ART moved a feature to the next PI and re-voted at 4. Better to fix confidence in the room than discover the over-commitment three iterations later.</div></div></article>
 
   <article class="qa"><div class="q"><span class="qnum">Q127</span><h3>What is ROAM?</h3></div>
-  <div class="a"><p>How program risks are handled at PI Planning: <strong>R</strong>esolved (no longer a concern), <strong>O</strong>wned (someone owns it), <strong>A</strong>ccepted (can't fix, live with it), <strong>M</strong>itigated (plan to reduce it). Every risk is openly ROAMed.</p></div></article>
+  <div class="a"><p>How program risks are handled at PI Planning: <strong>R</strong>esolved (no longer a concern), <strong>O</strong>wned (someone owns it), <strong>A</strong>ccepted (can't fix, live with it), <strong>M</strong>itigated (plan to reduce it). Every risk is surfaced and openly ROAMed.</p>
+  <div class="example"><b class="lbl">Worked example</b>"Third-party video SDK may not pass security review" → we <em>Mitigated</em> it (started the review early, kept a fallback SDK). "Key architect on leave in iteration 3" → <em>Owned</em> by the RTE (arranged cover). Naming each risk's status stops them lurking silently.</div></div></article>
 
   <article class="qa"><div class="q"><span class="qnum">Q128</span><h3>Committed vs uncommitted (stretch) PI objectives?</h3></div>
-  <div class="a"><p><strong>Committed</strong> objectives are high-confidence and <em>count toward the PI Predictability measure</em>. <strong>Uncommitted (stretch)</strong> are lower-certainty — planned and visible, giving a buffer, but not counted in the commitment (they count in actuals if delivered). They protect predictability while keeping stretch work visible.</p></div></article>
+  <div class="a"><p><strong>Committed</strong> objectives are high-confidence and <em>count toward the PI Predictability measure</em>. <strong>Uncommitted (stretch)</strong> objectives are lower-certainty — planned and visible, giving a buffer, but not counted in the commitment (they count in actuals if delivered). They protect predictability while keeping stretch work visible.</p>
+  <div class="example"><b class="lbl">Worked example</b>The risky video integration was set as an <em>uncommitted</em> objective; the booking/waiting-room flow was <em>committed</em>. That protected our predictability score, and when video landed early it counted as upside — smart use of the stretch mechanism.</div></div></article>
 
   <article class="qa"><div class="q"><span class="qnum">Q129</span><h3>What is PI Predictability?</h3></div>
-  <div class="a"><p>Actual business value delivered ÷ planned business value (committed objectives), scored by Business Owners at the end of the PI. A healthy team/ART lands <strong>80–100%</strong>. It's the headline SAFe reliability metric.</p></div></article>
+  <div class="a"><p>Actual business value delivered ÷ planned business value (committed objectives only), scored by Business Owners at the end of the PI. A healthy team/ART lands <strong>80–100%</strong>. It's the headline SAFe reliability metric.</p>
+  <div class="example"><b class="lbl">Worked example</b>Our teams run ~90–95%. When one team consistently scored 60%, it wasn't "lazy" — they were over-committing every PI. Coaching them to commit realistically (and use stretch objectives) fixed the score and, more importantly, rebuilt stakeholder trust.</div></div></article>
 
   <article class="qa"><div class="q"><span class="qnum">Q130</span><h3>What is the Inspect &amp; Adapt (I&amp;A) event?</h3></div>
-  <div class="a"><p>The ART-level retrospective at the end of each PI: a <strong>PI System Demo</strong>, quantitative/qualitative measurement, and a structured <strong>problem-solving workshop</strong> that produces improvement backlog items for the next PI. Think "retrospective for the whole train."</p></div></article>
+  <div class="a"><p>The ART-level retrospective at the end of each PI: a <strong>PI System Demo</strong>, quantitative/qualitative measurement, and a structured <strong>problem-solving workshop</strong> that produces improvement backlog items for the next PI. Think "Retrospective for the whole train."</p>
+  <div class="example"><b class="lbl">Worked example</b>Our I&amp;A problem-solving workshop root-caused (with a fishbone + 5 Whys) why cross-team integration kept slipping. The output — "adopt shared API contracts + a weekly integration test" — became committed improvement items in the next PI, not just good intentions.</div></div></article>
 
   <article class="qa"><div class="q"><span class="qnum">Q131</span><h3>What is the System Demo?</h3></div>
-  <div class="a"><p>A demo of the <strong>integrated work of all teams</strong> on the ART, ideally every iteration. Unlike a single team's Sprint Review, it shows the full system working together — the real measure of ART progress.</p></div></article>
+  <div class="a"><p>A demo of the <strong>integrated work of all teams</strong> on the ART, ideally every iteration. Unlike a single team's Sprint Review, it shows the full system working <em>together</em> — the real, honest measure of ART progress.</p>
+  <div class="example"><b class="lbl">Worked example</b>Each team's own demo looked green, but the first System Demo exposed that booking and notifications didn't actually talk to each other end-to-end. Only integrating for real revealed it — which is exactly why the System Demo exists.</div></div></article>
 
   <article class="qa"><div class="q"><span class="qnum">Q132</span><h3>SAFe vs LeSS vs Nexus vs Scrum of Scrums?</h3></div>
   <div class="a"><ul class="clean">
@@ -1046,7 +1059,8 @@
     <li><strong>Nexus</strong> — Scrum.org's lightweight framework for ~3–9 teams; adds a Nexus Integration Team.</li>
     <li><strong>LeSS</strong> — Large-Scale Scrum; keeps Scrum almost as-is with one PO and one backlog across teams; minimal extra process.</li>
     <li><strong>SAFe</strong> — the heaviest/most prescriptive; adds program &amp; portfolio layers. Popular in large enterprises.</li>
-  </ul><p>Principle is common: align teams to one goal while managing dependencies. Pick the lightest that solves the problem.</p></div></article>
+  </ul>
+  <div class="example"><b class="lbl">Worked example</b>Three teams on one product with light coordination needs → Nexus or LeSS. A 50-person, multi-stakeholder, compliance-heavy healthcare program → SAFe's extra structure earns its keep. The principle is common: align teams to one goal while managing dependencies — pick the <em>lightest</em> framework that solves your actual problem.</div></div></article>
 
   <!-- ============ SECTION 11: KANBAN ============ -->
   <div class="section-head" id="s11">
@@ -1074,33 +1088,41 @@
   </div>
 
   <article class="qa"><div class="q"><span class="qnum">Q133</span><h3>What is Kanban?</h3></div>
-  <div class="a"><p>An Agile method based on <strong>visualising work</strong>, <strong>limiting work-in-progress (WIP)</strong>, and managing <strong>continuous flow</strong> — pulling new work only as capacity frees up. No fixed iterations or prescribed roles.</p></div></article>
+  <div class="a"><p>An Agile method based on <strong>visualising work</strong>, <strong>limiting work-in-progress (WIP)</strong>, and managing <strong>continuous flow</strong> — pulling new work only as capacity frees up. No fixed iterations, no prescribed roles (see the animated board above).</p>
+  <div class="example"><b class="lbl">Worked example</b>Our production-support team can't "sprint-commit" — incidents arrive unpredictably. So they run Kanban: a board (To Do / Doing / Done), a WIP limit of 3, and they pull the next-highest-priority ticket whenever a slot frees. No planning ceremony needed — just steady, visible flow.</div></div></article>
 
   <article class="qa"><div class="q"><span class="qnum">Q134</span><h3>Scrum vs Kanban?</h3></div>
   <div class="a"><ul class="clean">
-    <li><strong>Cadence:</strong> Scrum = fixed sprints; Kanban = continuous flow.</li>
+    <li><strong>Cadence:</strong> Scrum = fixed Sprints; Kanban = continuous flow.</li>
     <li><strong>Roles/events:</strong> Scrum prescribes them; Kanban doesn't.</li>
-    <li><strong>Change:</strong> Scrum between sprints; Kanban any time.</li>
-    <li><strong>Core lever:</strong> Scrum = sprint commitment; Kanban = WIP limits.</li>
-  </ul></div></article>
+    <li><strong>Change:</strong> Scrum between Sprints; Kanban any time.</li>
+    <li><strong>Core lever:</strong> Scrum = the Sprint commitment; Kanban = WIP limits.</li>
+  </ul>
+  <div class="example"><b class="lbl">Worked example</b>Our booking <em>feature</em> team uses Scrum (plans a Sprint Goal, commits, delivers on a cadence). Our <em>support</em> team uses Kanban (pulls whatever's most urgent, no sprint boundary). Same company, right tool for each kind of work — a great answer to give.</div></div></article>
 
   <article class="qa"><div class="q"><span class="qnum">Q135</span><h3>What is Scrumban?</h3></div>
-  <div class="a"><p>A hybrid — <strong>Scrum's structure with Kanban's flow and WIP limits</strong>. Popular for maintenance/support teams with unpredictable, interrupt-driven work that still want some cadence and ceremonies.</p></div></article>
+  <div class="a"><p>A hybrid — <strong>Scrum's structure with Kanban's flow and WIP limits</strong>. Popular for maintenance/support teams with unpredictable, interrupt-driven work that still want some cadence and ceremonies.</p>
+  <div class="example"><b class="lbl">Worked example</b>Our platform's "keep-the-lights-on" team kept its Retro and a light planning rhythm (Scrum) but dropped fixed Sprint commitments in favour of WIP limits and pull (Kanban) — because half their week was unplannable incidents. Scrumban gave them structure without false commitments.</div></div></article>
 
   <article class="qa"><div class="q"><span class="qnum">Q136</span><h3>What are WIP limits?</h3></div>
-  <div class="a"><p>Caps on how many items can be in a workflow state at once. They <strong>expose bottlenecks</strong>, force finishing over starting, and shorten cycle time. "Stop starting, start finishing."</p></div></article>
+  <div class="a"><p>Caps on how many items can sit in a workflow state at once. They <strong>expose bottlenecks</strong>, force finishing over starting, and shorten cycle time. The mantra: "stop starting, start finishing."</p>
+  <div class="example"><b class="lbl">Worked example</b>Our team had 12 things "in progress" and nothing shipping. We set a WIP limit of 4 on "Doing." Suddenly, to start something new you first had to <em>finish</em> something — so work stopped stalling half-done, and throughput actually rose.</div></div></article>
 
   <article class="qa"><div class="q"><span class="qnum">Q137</span><h3>What is a pull system?</h3></div>
-  <div class="a"><p>Work is <strong>pulled</strong> into the next stage only when there's capacity — rather than pushed based on a schedule. It prevents overloading and keeps flow smooth. Kanban is a pull system.</p></div></article>
+  <div class="a"><p>Work is <strong>pulled</strong> into the next stage only when there's capacity — rather than <em>pushed</em> in on a schedule. It prevents overloading and keeps flow smooth. Kanban is a pull system.</p>
+  <div class="example"><b class="lbl">Worked example</b>In a push system, a manager assigns 10 tickets to a developer whether or not they can handle them (they pile up). In our pull system, the developer takes the next ticket only when they finish one — like a supermarket restocking a shelf as it empties, not dumping the whole warehouse on it.</div></div></article>
 
   <article class="qa"><div class="q"><span class="qnum">Q138</span><h3>What is Little's Law?</h3></div>
-  <div class="a"><p><code class="inline">Cycle Time = WIP ÷ Throughput</code>. Practically: the more items you have in progress at once, the longer each takes to finish. It's the maths behind limiting WIP to go faster.</p></div></article>
+  <div class="a"><p><code class="inline">Cycle Time = WIP ÷ Throughput</code>. Practically: the more items you have in progress at once, the longer each takes to finish. It's the maths behind limiting WIP to go faster.</p>
+  <div class="example"><b class="lbl">Worked example</b>If a team finishes 5 items/week (throughput) and has 20 in progress (WIP), average cycle time = 20 ÷ 5 = <strong>4 weeks</strong>. Halve WIP to 10 and cycle time halves to 2 weeks — same people, faster delivery, just by starting less.</div></div></article>
 
   <article class="qa"><div class="q"><span class="qnum">Q139</span><h3>When would you use Kanban over Scrum?</h3></div>
-  <div class="a"><p>When work is <strong>continuous and unpredictable</strong> — support, ops, BAU, incident response — where fixed sprint commitments don't fit. Also good for very mature teams that flow well without sprint structure, or as a first step for teams not ready for full Scrum.</p></div></article>
+  <div class="a"><p>When work is <strong>continuous and unpredictable</strong> — support, ops, BAU, incident response — where fixed Sprint commitments don't fit. Also good for very mature teams that flow well without Sprint structure, or as a gentle first step for teams not ready for full Scrum.</p>
+  <div class="example"><b class="lbl">Worked example</b>We'd never run our on-call incident team in Scrum — you can't plan a 2-week batch of "unknown emergencies." Kanban fits: visualise, limit WIP, pull the most urgent. Conversely, our roadmap feature work fits Scrum's goal-driven cadence.</div></div></article>
 
   <article class="qa"><div class="q"><span class="qnum">Q140</span><h3>Can you use WSJF or flow metrics in Scrum?</h3></div>
-  <div class="a"><p>Yes — they're complementary. Many Scrum teams use <strong>WSJF</strong> to order the backlog and track <strong>flow metrics</strong> (cycle time, throughput, CFD) alongside velocity. Scrum doesn't forbid borrowing good practices.</p></div></article>
+  <div class="a"><p>Yes — they're complementary. Many Scrum teams use <strong>WSJF</strong> to order the backlog and track <strong>flow metrics</strong> (cycle time, throughput, CFD) alongside velocity. Scrum doesn't forbid borrowing good practices from Kanban.</p>
+  <div class="example"><b class="lbl">Worked example</b>My Scrum teams run Sprints <em>and</em> watch a CFD and cycle time — the CFD is what caught our review bottleneck. "Scrum" and "flow metrics" aren't rivals; the best teams use both.</div></div></article>
 
   <!-- ============ SECTION 12: ENGINEERING ============ -->
   <div class="section-head" id="s12">
@@ -1110,22 +1132,29 @@
   </div>
 
   <article class="qa"><div class="q"><span class="qnum">Q141</span><h3>What is technical debt?</h3></div>
-  <div class="a"><p>The <strong>future cost of shortcuts taken today</strong> — quick or messy code that will slow the team later, like interest on a loan. Some is deliberate and fine; unmanaged debt compounds and kills velocity.</p></div></article>
+  <div class="a"><p>The <strong>future cost of shortcuts taken today</strong> — quick or messy code that will slow the team later, like interest on a loan. Some debt is deliberate and sensible (ship fast, clean up soon); <em>unmanaged</em> debt compounds and quietly kills velocity.</p>
+  <div class="analogy"><b>Everyday analogy</b> Like putting off cleaning the kitchen — one skipped night is fine, but skip it for weeks and eventually you can't cook at all until you deal with the mess.</div>
+  <div class="example"><b class="lbl">Worked example</b>To hit a launch, our team hardcoded clinic settings instead of building a config system. That was fine short-term — but three clinics later, every onboarding needed a code change. We'd taken on debt; the "interest" was slow, risky onboarding until we paid it back.</div></div></article>
 
   <article class="qa"><div class="q"><span class="qnum">Q142</span><h3>How do you handle technical debt as a Scrum Master?</h3></div>
-  <div class="a"><p>Make it <strong>visible</strong> (as backlog items), coach a strong DoD to stop new debt forming, and help the PO understand why reserving some capacity each sprint to pay it down protects future delivery. Frame it in business terms — speed and risk — not just "clean code."</p></div></article>
+  <div class="a"><p>Make it <strong>visible</strong> (as backlog items, not invisible "we'll get to it"), coach a strong DoD to stop new debt forming, and help the PO see why reserving some capacity each Sprint to pay it down protects future delivery. Frame it in <em>business</em> terms — speed and risk — not "clean code for its own sake."</p>
+  <div class="example"><b class="lbl">Worked example</b>Our PO resisted "tech tasks" until I reframed the hardcoded-clinic debt as "each new clinic takes 3 days of dev instead of 3 minutes." Suddenly it was a business cost. We agreed to spend ~15% of each Sprint on debt, and onboarding time collapsed.</div></div></article>
 
   <article class="qa"><div class="q"><span class="qnum">Q143</span><h3>What is refactoring?</h3></div>
-  <div class="a"><p><strong>Improving the internal structure</strong> of code without changing its external behaviour — making it cleaner and easier to maintain. It's how teams keep technical debt under control continuously.</p></div></article>
+  <div class="a"><p><strong>Improving the internal structure</strong> of code without changing its external behaviour — making it cleaner and easier to maintain. It's how teams keep technical debt under control <em>continuously</em>, rather than in scary big-bang rewrites.</p>
+  <div class="example"><b class="lbl">Worked example</b>While adding cancellation, a developer noticed the booking logic was duplicated in three places. They refactored it into one shared function — behaviour identical to patients, but the next feature was far easier and safer to build. Good teams refactor as they go, "leaving the campsite cleaner."</div></div></article>
 
   <article class="qa"><div class="q"><span class="qnum">Q144</span><h3>What is Test-Driven Development (TDD)?</h3></div>
-  <div class="a"><p>Writing the <strong>test first</strong>, then just enough code to pass it, then refactoring — the "red-green-refactor" loop. It builds quality in from the start and produces a safety net of automated tests.</p></div></article>
+  <div class="a"><p>Writing the <strong>test first</strong>, then just enough code to make it pass, then refactoring — the "red → green → refactor" loop. It builds quality in from the start and leaves a safety net of automated tests.</p>
+  <div class="example"><b class="lbl">Worked example</b>For the "can't reschedule within 2 hours" rule, the dev first wrote a failing test for that exact case (red), then wrote the rule to pass it (green), then tidied up (refactor). Now that rule can never silently break — any future change that violates it fails the test immediately.</div></div></article>
 
   <article class="qa"><div class="q"><span class="qnum">Q145</span><h3>TDD vs Shift-Left testing?</h3></div>
-  <div class="a"><p><strong>Shift-left</strong> is the broad principle of <em>testing earlier</em> in the lifecycle (not just at the end). <strong>TDD</strong> is one specific practice that embodies it. Shift-left is the philosophy; TDD is a technique that delivers it.</p></div></article>
+  <div class="a"><p><strong>Shift-left</strong> is the broad principle of <em>testing earlier</em> in the lifecycle (not saving it for the end). <strong>TDD</strong> is one specific practice that embodies it. Shift-left is the philosophy; TDD is a technique that delivers it.</p>
+  <div class="example"><b class="lbl">Worked example</b>Our team shifted left in several ways: writing acceptance tests <em>during</em> refinement, TDD on core logic, and automated security scans in the pipeline. Defects that used to surface in a late UAT phase now get caught the same day they're introduced — far cheaper to fix.</div></div></article>
 
   <article class="qa"><div class="q"><span class="qnum">Q146</span><h3>What are CI/CD and DevOps?</h3></div>
-  <div class="a"><p><strong>CI</strong> (Continuous Integration) = merge and automatically build/test code frequently. <strong>CD</strong> (Continuous Delivery/Deployment) = keep it always releasable / auto-deploy. <strong>DevOps</strong> = the culture and tooling uniting development and operations for fast, reliable delivery. All enable the small, frequent, quality releases Agile promises.</p></div></article>
+  <div class="a"><p><strong>CI</strong> (Continuous Integration) = merge and automatically build/test code frequently. <strong>CD</strong> (Continuous Delivery/Deployment) = keep it always releasable / auto-deploy. <strong>DevOps</strong> = the culture and tooling uniting development and operations for fast, reliable delivery. Together they enable the small, frequent, quality releases Agile promises.</p>
+  <div class="example"><b class="lbl">Worked example</b>Before CI/CD, our releases were monthly, manual and terrifying. After building a pipeline (auto-build, auto-test, one-click deploy to staging), we shipped small changes several times a week with confidence — and a rollback took minutes. That capability is what makes "potentially shippable every Sprint" actually realistic.</div></div></article>
 
   <!-- ============ SECTION 13: AI ============ -->
   <div class="section-head" id="s13">
@@ -1137,19 +1166,24 @@
   <article class="qa"><div class="q"><span class="qnum">Q147</span><h3>How can AI help a Scrum Master?</h3></div>
   <div class="a"><ul class="clean">
     <li>Drafting user stories &amp; acceptance criteria (then refined with the team).</li>
-    <li>Summarising retros/reviews into action items; generating status updates.</li>
+    <li>Summarising Retros/Reviews into action items; generating status updates.</li>
     <li>Analysing defect, spillover and cycle-time data for patterns.</li>
     <li>Generating test-case outlines from acceptance criteria.</li>
-  </ul><p>It saves time on admin/analysis so the SM spends more on coaching people.</p></div></article>
+  </ul><p>It saves time on admin and analysis so the SM spends more time on the human work — coaching, facilitation, unblocking.</p>
+  <div class="example"><b class="lbl">Worked example</b>I feed our (anonymised) sprint data to an AI to spot patterns — it flagged that most spillover clustered on stories touching the clinic-PMS integration. That insight took seconds and pointed us straight at a dependency to fix. The AI did the pattern-spotting; I did the coaching that followed.</div></div></article>
 
   <article class="qa"><div class="q"><span class="qnum">Q148</span><h3>How do you use AI in Jira?</h3></div>
-  <div class="a"><p><strong>Atlassian Intelligence</strong> offers natural-language <strong>JQL generation</strong>, summarising long issues/threads, drafting descriptions and acceptance criteria, and AI-assisted automation rules. Say what you've actually used and be aware of the rest.</p></div></article>
+  <div class="a"><p><strong>Atlassian Intelligence</strong> offers natural-language <strong>JQL generation</strong>, summarising long issues/threads, drafting descriptions and acceptance criteria, and AI-assisted automation rules. Be honest about what you've actually used and aware of the rest.</p>
+  <div class="example"><b class="lbl">Worked example</b>Instead of hand-writing JQL, I type "show blocked stories in the current sprint not updated in 2 days" and Atlassian Intelligence generates the query. It also summarises a noisy 40-comment ticket into a two-line status for my stakeholder update — small time-savers that add up.</div></div></article>
 
   <article class="qa"><div class="q"><span class="qnum">Q149</span><h3>What is Generative AI in an Agile context?</h3></div>
-  <div class="a"><p>AI that <strong>creates content</strong> (text, code, images) from prompts. In Agile teams it accelerates drafting stories, docs, test cases and boilerplate code — a productivity assistant, with a human always reviewing the output.</p></div></article>
+  <div class="a"><p>AI that <strong>creates content</strong> (text, code, images) from prompts. In Agile teams it accelerates drafting stories, docs, test cases and boilerplate code — a productivity assistant, with a human always reviewing the output.</p>
+  <div class="example"><b class="lbl">Worked example</b>A developer used GenAI to scaffold the boilerplate for our notification service and draft its unit tests, then reviewed and corrected both. It shaved hours off the grunt work — but the <em>engineering judgement</em> (does this handle the timezone edge case?) stayed firmly human.</div></div></article>
 
   <article class="qa"><div class="q"><span class="qnum">Q150</span><h3>What are the risks of using AI as a Scrum Master?</h3></div>
-  <div class="a"><div class="tip trap"><span class="tip-ic">▲</span><div><b>Show balance</b> Data privacy/confidentiality (never feed sensitive or customer/PHI data into public tools), over-reliance and skill atrophy, hallucinated/incorrect output, and losing the human touch. Always keep a human in the loop and validate.</div></div></div></article>
+  <div class="a"><p>Real risks to name: <strong>data privacy/confidentiality</strong> (never feed sensitive or patient/PHI data into public tools), <strong>over-reliance and skill atrophy</strong>, <strong>hallucinated or subtly wrong output</strong>, and <strong>losing the human touch</strong> that coaching depends on. Always keep a human in the loop and validate.</p>
+  <div class="example"><b class="lbl">Worked example</b>In healthcare this is sharp: I'd never paste real patient records or clinic data into a public chatbot to "summarise an issue." I use only sanitised, non-sensitive text, and treat AI output as a <em>draft</em> to verify — not a decision-maker. Showing that judgement is exactly what interviewers want to hear.</div>
+  <div class="tip trap"><span class="tip-ic">▲</span><div><b>Show balance</b> Enthusiasm <em>plus</em> awareness of privacy and validation is the winning answer — pure hype (or pure fear) both read as naïve.</div></div></div></article>
 
   <!-- ============ SECTION 14: CURVEBALLS ============ -->
   <div class="section-head" id="s14">
@@ -1159,7 +1193,8 @@
   </div>
 
   <article class="qa"><div class="q"><span class="qnum">B1</span><h3>How do you influence without authority?</h3></div>
-  <div class="a"><p>Through <strong>trust, data, and relationships</strong>: build credibility by delivering, use transparent metrics to make trade-offs visible, appeal to shared goals, listen genuinely, and let the team/stakeholders reach the conclusion themselves. Influence is earned, not assigned — it's the core of the SM role.</p></div></article>
+  <div class="a"><p>Through <strong>trust, data, and relationships</strong>: build credibility by consistently delivering, use transparent metrics to make trade-offs visible, appeal to shared goals, listen genuinely, and let the team and stakeholders reach the conclusion themselves. Influence is earned, not assigned — it's the very core of the Scrum Master role.</p>
+  <div class="example"><b class="lbl">Worked example</b>I couldn't <em>order</em> the clinics to stop dropping urgent asks on developers — I have no authority over them. Instead I showed them the data (each interruption delayed a feature they wanted), built a relationship with their manager, and let them conclude that routing through the PO served <em>them</em> better. Behaviour changed because they chose it, not because I mandated it.</div></div></article>
 
   <article class="qa"><div class="q"><span class="qnum">B2</span><h3>Logic puzzle: find the 3 fastest of 20 horses, 5 at a time, no stopwatch.</h3></div>
   <div class="a"><p>They're testing <em>structured reasoning</em>, not the exact answer. Talk it through: <strong>5 races</strong> of 4 horses each (25 horses; for 20 it's fewer) → race the winners → then a final race of the strongest candidates. The classic answer for 25 horses is <strong>7 races</strong>. Narrate your logic calmly; that's what they're scoring.</p></div></article>
