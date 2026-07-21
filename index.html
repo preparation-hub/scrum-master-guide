@@ -509,7 +509,6 @@
       +     '<span class="save-ind" id="saveInd">✓ Saved</span>'
       +     (guideFor(c,r) ? '<a class="btn btn-primary btn-sm" href="' + esc(guideFor(c,r)) + '">📖 Answered guide</a>' : '')
       +     '<button class="btn btn-ghost btn-sm" id="copyBtn" title="Copy this round as text">⧉ Copy</button>'
-      +     '<button class="btn btn-ghost btn-sm btn-danger" id="delRoundBtn">🗑 Delete round</button>'
       +   '</div>'
       + '</div>'
       + '<div class="panel">'
@@ -537,7 +536,6 @@
         flashSaved();
       });
     });
-    document.getElementById("delRoundBtn").addEventListener("click", function(){ delRound(cid, rid); });
     document.getElementById("copyBtn").addEventListener("click", function(){ copyRound(c, r); });
     window.scrollTo(0, 0);
   }
