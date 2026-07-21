@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="EY Round 1 (L1) Scrum Master interview — the actual questions, answered in depth with diagrams and how-to-say-it tips.">
+<meta name="description" content="EY Round 1 (L1) Scrum Master interview — the actual questions, answered in depth as a 6-year-experienced SM in healthcare, with examples and diagrams.">
 <title>EY — Round 1 (L1) · Answered</title>
 <style>
   :root {
@@ -19,7 +19,7 @@
     --font-display: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Palatino, Georgia, serif;
     --font-body: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     --font-mono: ui-monospace, "SF Mono", "Cascadia Code", "Consolas", monospace;
-    --maxw: 820px;
+    --maxw: 840px;
     --dg-ink: var(--ink); --dg-line: #c3ccc9; --dg-fill: #ffffff; --dg-fill-2: #eef2f0;
     --dg-accent: var(--accent); --dg-teal: var(--teal); --dg-amber: var(--amber); --dg-muted: #8b9a9c;
   }
@@ -61,7 +61,7 @@
   }
   * { box-sizing: border-box; }
   html { scroll-behavior: smooth; }
-  body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(--font-body); font-size: 17px; line-height: 1.68; -webkit-font-smoothing: antialiased; }
+  body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(--font-body); font-size: 17px; line-height: 1.75; -webkit-font-smoothing: antialiased; }
 
   .topbar { position: sticky; top: 0; z-index: 50; background: color-mix(in srgb, var(--paper) 86%, transparent); backdrop-filter: saturate(1.4) blur(10px); border-bottom: 1px solid var(--line); }
   .topbar-inner { max-width: 1080px; margin: 0 auto; padding: 10px 24px; display: flex; align-items: center; gap: 14px; }
@@ -76,42 +76,51 @@
   .navchips a.active { background: var(--ink); color: var(--paper); }
   :root[data-theme="dark"] .navchips a.active { color: #0d1416; }
 
-  .hero { max-width: 1080px; margin: 0 auto; padding: 52px 24px 20px; }
-  .eyebrow { font-family: var(--font-mono); font-size: 12.5px; letter-spacing: .22em; text-transform: uppercase; color: var(--accent-ink); margin: 0 0 18px; display: flex; align-items: center; gap: 12px; }
+  .hero { max-width: 1080px; margin: 0 auto; padding: 56px 24px 24px; }
+  .eyebrow { font-family: var(--font-mono); font-size: 12.5px; letter-spacing: .22em; text-transform: uppercase; color: var(--accent-ink); margin: 0 0 20px; display: flex; align-items: center; gap: 12px; }
   .eyebrow::after { content: ""; flex: 1; height: 1px; background: linear-gradient(90deg, var(--line), transparent); }
-  .hero h1 { font-family: var(--font-display); font-weight: 600; font-size: clamp(32px, 5.5vw, 54px); line-height: 1.05; letter-spacing: -0.015em; margin: 0 0 18px; text-wrap: balance; }
+  .hero h1 { font-family: var(--font-display); font-weight: 600; font-size: clamp(32px, 5.5vw, 54px); line-height: 1.05; letter-spacing: -0.015em; margin: 0 0 20px; text-wrap: balance; }
   .hero h1 em { font-style: italic; color: var(--accent); }
-  .hero .lede { font-size: clamp(16px, 2.2vw, 19px); color: var(--ink-soft); max-width: 64ch; margin: 0 0 26px; }
-  .hero-meta { display: flex; flex-wrap: wrap; gap: 12px 28px; font-family: var(--font-mono); font-size: 12.5px; color: var(--muted); letter-spacing: .03em; border-top: 1px solid var(--line); padding-top: 20px; }
+  .hero .lede { font-size: clamp(16px, 2.2vw, 19px); color: var(--ink-soft); max-width: 66ch; margin: 0 0 28px; }
+  .hero-meta { display: flex; flex-wrap: wrap; gap: 14px 30px; font-family: var(--font-mono); font-size: 12.5px; color: var(--muted); letter-spacing: .03em; border-top: 1px solid var(--line); padding-top: 22px; }
   .hero-meta b { color: var(--ink); font-weight: 600; }
 
-  main { max-width: var(--maxw); margin: 0 auto; padding: 20px 24px 80px; }
-  .section-head { margin: 56px 0 8px; padding-top: 20px; border-top: 2px solid var(--ink); }
-  .section-head:first-of-type { margin-top: 20px; }
+  .persona-note { max-width: 1080px; margin: 20px auto 0; padding: 0 24px; }
+  .persona-note .pn-inner { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; box-shadow: var(--shadow); padding: 16px 20px; font-size: 14.5px; color: var(--ink-soft); }
+  .persona-note b { color: var(--ink); }
+
+  main { max-width: var(--maxw); margin: 0 auto; padding: 20px 24px 90px; }
+  .section-head { margin: 72px 0 10px; padding-top: 24px; border-top: 2px solid var(--ink); }
+  .section-head:first-of-type { margin-top: 24px; }
   .section-kicker { font-family: var(--font-mono); font-size: 12px; letter-spacing: .16em; text-transform: uppercase; color: var(--accent-ink); display: flex; align-items: baseline; gap: 10px; }
   .section-kicker .num { color: var(--muted); }
-  .section-head h2 { font-family: var(--font-display); font-weight: 600; font-size: clamp(23px, 4vw, 30px); letter-spacing: -0.01em; margin: 8px 0 6px; text-wrap: balance; }
-  .section-head p { color: var(--ink-soft); margin: 0; max-width: 60ch; font-size: 15.5px; }
+  .section-head h2 { font-family: var(--font-display); font-weight: 600; font-size: clamp(23px, 4vw, 30px); letter-spacing: -0.01em; margin: 10px 0 8px; text-wrap: balance; }
+  .section-head p { color: var(--ink-soft); margin: 0; max-width: 62ch; font-size: 15.5px; }
 
-  .qa { background: var(--surface); border: 1px solid var(--line); border-radius: 16px; box-shadow: var(--shadow); padding: 24px 28px 8px; margin: 20px 0; scroll-margin-top: 84px; }
-  .q { display: flex; gap: 15px; align-items: flex-start; }
-  .qnum { flex: none; font-family: var(--font-mono); font-size: 13px; font-weight: 600; color: var(--accent); background: color-mix(in srgb, var(--accent) 12%, transparent); border-radius: 8px; padding: 4px 9px; margin-top: 4px; letter-spacing: .02em; }
-  .q h3 { font-family: var(--font-display); font-weight: 600; font-size: clamp(19px, 3vw, 23px); line-height: 1.25; letter-spacing: -0.01em; margin: 0; text-wrap: balance; }
-  .a p { margin: 13px 0; }
+  .qa { background: var(--surface); border: 1px solid var(--line); border-radius: 18px; box-shadow: var(--shadow); padding: 30px 34px 18px; margin: 26px 0; scroll-margin-top: 84px; }
+  .q { display: flex; gap: 16px; align-items: flex-start; margin-bottom: 6px; }
+  .qnum { flex: none; font-family: var(--font-mono); font-size: 13px; font-weight: 600; color: var(--accent); background: color-mix(in srgb, var(--accent) 12%, transparent); border-radius: 8px; padding: 5px 10px; margin-top: 4px; letter-spacing: .02em; }
+  .q h3 { font-family: var(--font-display); font-weight: 600; font-size: clamp(19px, 3vw, 23px); line-height: 1.3; letter-spacing: -0.01em; margin: 0; text-wrap: balance; }
+  .a { padding-top: 4px; }
+  .a p { margin: 17px 0; }
   .a strong { color: var(--ink); font-weight: 650; }
   .a .accent-word { color: var(--accent-ink); font-weight: 600; }
 
-  .analogy { border-left: 3px solid var(--teal); background: var(--teal-soft); border-radius: 0 10px 10px 0; padding: 12px 16px; margin: 16px 0; font-size: 15.5px; color: var(--ink-soft); }
-  .analogy b { color: var(--teal); font-family: var(--font-mono); font-size: 11px; letter-spacing: .1em; text-transform: uppercase; display: block; margin-bottom: 3px; }
+  .analogy { border-left: 3px solid var(--teal); background: var(--teal-soft); border-radius: 0 12px 12px 0; padding: 15px 20px; margin: 22px 0; font-size: 15.5px; color: var(--ink-soft); }
+  .analogy b { color: var(--teal); font-family: var(--font-mono); font-size: 11px; letter-spacing: .1em; text-transform: uppercase; display: block; margin-bottom: 4px; }
 
-  ul.clean, ol.clean { margin: 13px 0; padding-left: 0; list-style: none; }
-  ul.clean li, ol.clean li { position: relative; padding: 5px 0 5px 26px; }
-  ul.clean li::before { content: ""; position: absolute; left: 4px; top: 15px; width: 7px; height: 7px; border-radius: 2px; background: var(--accent); transform: rotate(45deg); }
+  .example { border-left: 3px solid var(--accent); background: color-mix(in srgb, var(--accent) 6%, var(--surface-2)); border-radius: 0 12px 12px 0; padding: 16px 20px; margin: 22px 0; font-size: 15.5px; color: var(--ink-soft); }
+  .example b.lbl { color: var(--accent-ink); font-family: var(--font-mono); font-size: 11px; letter-spacing: .1em; text-transform: uppercase; display: flex; align-items: center; gap: 7px; margin-bottom: 7px; }
+  .example strong { color: var(--ink); font-weight: 650; }
+
+  ul.clean, ol.clean { margin: 18px 0; padding-left: 0; list-style: none; }
+  ul.clean li, ol.clean li { position: relative; padding: 7px 0 7px 28px; }
+  ul.clean li::before { content: ""; position: absolute; left: 5px; top: 17px; width: 7px; height: 7px; border-radius: 2px; background: var(--accent); transform: rotate(45deg); }
   ol.clean { counter-reset: step; }
   ol.clean li { counter-increment: step; }
-  ol.clean li::before { content: counter(step); position: absolute; left: 0; top: 6px; font-family: var(--font-mono); font-size: 11px; font-weight: 600; color: var(--teal); background: var(--teal-soft); width: 18px; height: 18px; border-radius: 5px; display: grid; place-items: center; }
+  ol.clean li::before { content: counter(step); position: absolute; left: 0; top: 8px; font-family: var(--font-mono); font-size: 11px; font-weight: 600; color: var(--teal); background: var(--teal-soft); width: 19px; height: 19px; border-radius: 5px; display: grid; place-items: center; }
 
-  .tip { display: flex; gap: 12px; background: var(--amber-bg); border: 1px solid var(--amber-line); border-radius: 12px; padding: 13px 16px; margin: 18px 0 20px; font-size: 15px; color: var(--ink); }
+  .tip { display: flex; gap: 13px; background: var(--amber-bg); border: 1px solid var(--amber-line); border-radius: 12px; padding: 15px 18px; margin: 22px 0; font-size: 15px; color: var(--ink); }
   .tip .tip-ic { flex: none; color: var(--amber); margin-top: 1px; }
   .tip b { color: var(--amber); font-family: var(--font-mono); font-size: 11px; letter-spacing: .1em; text-transform: uppercase; }
   .trap { border-color: var(--accent); background: color-mix(in srgb, var(--accent) 8%, var(--surface)); }
@@ -121,12 +130,12 @@
   .say .tip-ic { color: var(--teal); }
   .say b { color: var(--teal); }
 
-  .figure { margin: 20px 0 4px; border: 1px solid var(--line-soft); background: var(--surface-2); border-radius: 12px; padding: 18px 14px 10px; overflow-x: auto; }
+  .figure { margin: 26px 0 8px; border: 1px solid var(--line-soft); background: var(--surface-2); border-radius: 14px; padding: 22px 16px 12px; overflow-x: auto; }
   .figure svg { display: block; margin: 0 auto; max-width: 100%; height: auto; }
-  .figcap { font-family: var(--font-mono); font-size: 12px; color: var(--muted); letter-spacing: .04em; margin-top: 10px; text-align: center; }
+  .figcap { font-family: var(--font-mono); font-size: 12px; color: var(--muted); letter-spacing: .04em; margin-top: 12px; text-align: center; }
 
   code.inline { font-family: var(--font-mono); font-size: .86em; background: var(--surface-2); border: 1px solid var(--line); border-radius: 5px; padding: 1px 6px; color: var(--ink); }
-  pre.jql { font-family: var(--font-mono); font-size: 13px; background: var(--surface-2); border: 1px solid var(--line); border-radius: 10px; padding: 12px 14px; overflow-x: auto; margin: 8px 0; color: var(--ink); line-height: 1.5; }
+  pre.jql { font-family: var(--font-mono); font-size: 13px; background: var(--surface-2); border: 1px solid var(--line); border-radius: 10px; padding: 14px 16px; overflow-x: auto; margin: 10px 0; color: var(--ink); line-height: 1.55; }
 
   .d-fill { fill: var(--dg-fill); } .d-fill2 { fill: var(--dg-fill-2); }
   .d-stroke { stroke: var(--dg-line); } .d-line { stroke: var(--dg-line); }
@@ -139,18 +148,18 @@
   .t-title { font-weight: 600; }
 
   footer { border-top: 1px solid var(--line); background: var(--surface); }
-  .footer-inner { max-width: var(--maxw); margin: 0 auto; padding: 32px 24px 60px; color: var(--muted); font-size: 14.5px; }
+  .footer-inner { max-width: var(--maxw); margin: 0 auto; padding: 34px 24px 64px; color: var(--muted); font-size: 14.5px; line-height: 1.7; }
   .footer-inner a { color: var(--accent-ink); }
   :focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 4px; }
   @media (prefers-reduced-motion: reduce) { * { scroll-behavior: auto !important; transition: none !important; } }
-  @media (max-width: 640px) { body { font-size: 16px; } .qa { padding: 18px 18px 6px; } .brand { display: none; } }
+  @media (max-width: 640px) { body { font-size: 16px; } .qa { padding: 22px 20px 12px; } .brand { display: none; } }
 
   @media print {
     @page { margin: 14mm 12mm; }
     * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
     body { background: #fff; font-size: 11.5pt; }
     .topbar { position: static; } .navchips, .back { display: none; }
-    .qa, .figure, .section-head, .tip, .analogy, article { break-inside: avoid; page-break-inside: avoid; }
+    .qa, .figure, .section-head, .tip, .analogy, .example, article { break-inside: avoid; page-break-inside: avoid; }
     .qa { box-shadow: none; }
   }
 </style>
@@ -181,15 +190,21 @@
 
 <header class="hero">
   <p class="eyebrow">Interview Prep · EY · Scrum Master</p>
-  <h1>EY — Round 1 (L1), <em>answered in full</em>.</h1>
-  <p class="lede">Every question you were actually asked in the EY L1 round, grouped by theme, each with a clear model answer, diagrams for the tricky bits, and a short "how to say it" line. Personal/behavioural ones include a suggested framing rather than a fixed answer.</p>
+  <h1>EY — Round 1 (L1), <em>answered from experience</em>.</h1>
+  <p class="lede">Every question you were asked in the EY L1 round, answered in the first person as a Scrum Master with ~6 years' experience — grounded in a healthcare delivery context, with concrete examples, diagrams for the tricky concepts, and a short "how to say it" line.</p>
   <div class="hero-meta">
     <span><b>31</b> questions</span>
     <span><b>13</b> topic areas</span>
+    <span><b>Voice</b> 6 yrs · Healthcare</span>
     <span><b>Focus</b> SAFe · Agile · Jira · AI</span>
-    <span><b>Level</b> L1 screening</span>
   </div>
 </header>
+
+<div class="persona-note">
+  <div class="pn-inner">
+    <b>The persona these answers assume →</b> a Senior Scrum Master with ~6 years' experience, currently supporting <b>two Scrum teams on a five-team ART</b> building a <b>digital healthcare platform</b> (patient appointment booking, telehealth consultations, and practice-management-system integrations). Two-week sprints; a PI is five iterations (four delivery + one IP). The numbers and stories below are realistic illustrations — <b>swap in your own real project details, names and figures</b> before the interview.
+  </div>
+</div>
 
 <main>
 
@@ -197,15 +212,15 @@
   <div class="section-head" id="about">
     <div class="section-kicker"><span class="num">01</span> Your Positioning</div>
     <h2>Who you are and how you frame your role</h2>
-    <p>Opening, identity-setting questions. Answer honestly, but frame yourself as someone already operating beyond pure ceremony-running.</p>
+    <p>Opening, identity-setting questions. Answer honestly, but frame yourself as someone already operating beyond just running ceremonies.</p>
   </div>
 
   <article class="qa">
     <div class="q"><span class="qnum">Q1</span><h3>Are you managing at a team level, or are you a designated Agile Coach?</h3></div>
     <div class="a">
-      <p>Be honest about your title, then show the <em class="accent-word">range</em> of what you actually do. Most SAFe Scrum Masters sit between the two.</p>
-      <div class="tip say"><span class="tip-ic">✎</span><div><b>Suggested framing</b> "My designated role is Scrum Master at the team level, supporting [1–2] teams on the ART. In practice I also do coaching work — mentoring the PO on backlog health, running Agile maturity assessments, and helping other teams with dependency and flow issues. So I'm operating as a team-level SM with a coaching footprint, and moving toward a full Agile Coach role."</div></div>
-      <p>Key distinction to signal you know: a <strong>Scrum Master</strong> serves 1–2 teams and the process; an <strong>Agile Coach</strong> works across teams, leadership, and the organisation on the broader transformation and mindset.</p>
+      <p>Over my six years I've grown from running ceremonies for a single team into a coaching role, so I position myself in the middle and show the range of what I do.</p>
+      <div class="example"><b class="lbl">◆ In my experience</b>"My designated title is Senior Scrum Master, and I currently support <strong>two Scrum teams on a five-team ART</strong> delivering our healthcare booking and telehealth platform. Alongside the day-to-day facilitation, I run our quarterly <strong>Agile maturity assessments</strong>, mentor a newer Scrum Master on the train, and coach a first-time Product Owner on backlog health. So officially I'm a team-level SM, but in practice I already operate with a coaching footprint across the ART."</div>
+      <p>The distinction I make sure to show I understand: a <strong>Scrum Master</strong> serves one or two teams and the process; an <strong>Agile Coach</strong> works across teams, leadership and the wider organisation on the transformation and mindset.</p>
     </div>
   </article>
 
@@ -219,17 +234,18 @@
   <article class="qa">
     <div class="q"><span class="qnum">Q2</span><h3>How do you assess the Agile maturity of a team? What metrics do you use, and how do you evaluate?</h3></div>
     <div class="a">
-      <p>I assess maturity across <strong>several dimensions</strong>, not one score, using a mix of a structured assessment plus objective delivery data.</p>
-      <p><strong>Dimensions I look at:</strong></p>
+      <p>I assess maturity across <strong>several dimensions</strong>, not one score, combining a structured self-assessment with objective delivery data over a few sprints.</p>
+      <p><strong>The dimensions I look at:</strong></p>
       <ul class="clean">
         <li><strong>Delivery predictability</strong> — does the team reliably meet its Sprint Goal and PI objectives?</li>
-        <li><strong>Quality &amp; engineering practices</strong> — CI/CD, automated testing, low escaped defects, low tech debt.</li>
+        <li><strong>Quality &amp; engineering practices</strong> — CI/CD, test automation, low escaped defects, controlled tech debt.</li>
         <li><strong>Self-organisation</strong> — does the team plan and solve problems without me driving every decision?</li>
-        <li><strong>Collaboration &amp; transparency</strong> — healthy backlog, honest Daily Scrums, useful retros with follow-through.</li>
-        <li><strong>Value focus</strong> — does the team understand the "why" and outcomes, not just output?</li>
+        <li><strong>Collaboration &amp; transparency</strong> — a healthy backlog, honest Daily Scrums, retros with real follow-through.</li>
+        <li><strong>Value focus</strong> — does the team understand the "why" and the patient/clinic outcome, not just output?</li>
       </ul>
-      <p><strong>Metrics:</strong> say/do ratio (commitment reliability), velocity <em>stability</em> (not size), sprint/PI predictability, defect leakage, cycle time and flow efficiency, and team happiness/engagement. Tools like a <strong>SAFe/Agility Health self-assessment</strong> add the qualitative view.</p>
-      <div class="tip"><span class="tip-ic">★</span><div><b>Evaluation</b> "I read <em>trends over 3–4 sprints</em>, not a snapshot, and I combine the numbers with a team self-assessment. A team can have high velocity and still be immature if quality or self-organisation is weak. I use it to start a coaching conversation, never to grade the team."</div></div>
+      <p><strong>Metrics I use:</strong> say/do ratio (commitment reliability), velocity <em>stability</em> (not size), sprint and PI predictability, defect leakage, cycle time and flow efficiency, and team happiness. I overlay a <strong>SAFe / Agility Health–style radar</strong> the team fills in themselves, so the picture is theirs, not mine.</p>
+      <div class="example"><b class="lbl">◆ In my experience</b>"When I joined my current ART, one team <em>looked</em> productive — velocity around 50 — but had roughly <strong>30% escaped defects</strong> and spilled work every sprint. My assessment across delivery, quality and self-organisation showed the team was actually immature despite the velocity. Over two PIs, by tightening the Definition of Done and refining smaller, we lifted <strong>say/do from ~68% to ~90%</strong> and cut escaped defects by more than half."</div>
+      <div class="tip"><span class="tip-ic">★</span><div><b>Evaluation</b> "I read <em>trends over three to four sprints</em>, never a snapshot, and I use it to start a coaching conversation — not to grade the team. A high velocity with poor quality is <em>low</em> maturity."</div></div>
     </div>
   </article>
 
@@ -243,37 +259,38 @@
   <article class="qa">
     <div class="q"><span class="qnum">Q3</span><h3>How do you handle recurring spillover of user stories? What have you done to improve it?</h3></div>
     <div class="a">
-      <p>Recurring spillover is a <em class="accent-word">symptom</em> — I treat it as a retro topic and chase the root cause rather than pushing the team harder.</p>
-      <p><strong>Common root causes &amp; my fixes:</strong></p>
+      <p>I treat recurring spillover as a <em class="accent-word">symptom</em> — a retrospective topic — and chase the root cause rather than pushing the team harder.</p>
+      <p><strong>The common root causes and how I address each:</strong></p>
       <ul class="clean">
-        <li><strong>Over-commitment</strong> → plan to <em>capacity</em> and historical velocity, not optimism; leave buffer for BAU/support.</li>
-        <li><strong>Stories too big</strong> → stronger refinement and <strong>vertical slicing</strong> so items finish within a sprint.</li>
-        <li><strong>Weak Definition of Ready</strong> → don't pull a story into the sprint until it's clear, estimated, and dependency-free.</li>
-        <li><strong>Mid-sprint scope / interruptions</strong> → protect the Sprint Goal, track unplanned work, make it visible.</li>
-        <li><strong>Hidden dependencies</strong> → surface and resolve them in planning and Scrum of Scrums.</li>
+        <li><strong>Over-commitment</strong> → plan to <em>capacity</em> and historical velocity, not optimism; leave a buffer for production support.</li>
+        <li><strong>Stories too big</strong> → stronger refinement and <strong>vertical slicing</strong> so items finish inside one sprint.</li>
+        <li><strong>Weak Definition of Ready</strong> → don't pull a story in until it's clear, estimated and dependency-free.</li>
+        <li><strong>Mid-sprint scope / interruptions</strong> → protect the Sprint Goal and make unplanned work visible.</li>
+        <li><strong>Hidden dependencies</strong> → surface them in planning and the Scrum of Scrums.</li>
       </ul>
-      <div class="tip"><span class="tip-ic">★</span><div><b>What I did</b> "On my team, chronic spillover dropped after we enforced a Definition of Ready and split large stories. Our say/do ratio went from ~65% to consistently above 85% over three sprints."</div></div>
+      <div class="example"><b class="lbl">◆ In my experience</b>"On my team, our appointment-booking stories kept spilling because they were written end-to-end — 'patient books an appointment' as a single 13-pointer that touched UI, the scheduling service and the clinic PMS integration. We started <strong>vertically slicing</strong> them (first a single provider, fixed slot; then multi-provider; then real-time availability) and enforced a Definition of Ready. Spillover dropped from around a third of the sprint to under 10%, and our say/do ratio settled above 85%."</div>
     </div>
   </article>
 
   <article class="qa">
     <div class="q"><span class="qnum">Q4</span><h3>A critical feature misses a SAFe release. How do you handle it — immediate actions and proactive measures?</h3></div>
     <div class="a">
-      <p><strong>Immediate actions (transparency first):</strong></p>
+      <p><strong>Immediate actions — transparency first:</strong></p>
       <ol class="clean">
-        <li>Raise it <em>early</em> — the moment the risk is real, not at the deadline. Inform the PO, RTE and stakeholders.</li>
-        <li>Assess impact honestly — what's done, what's not, and the options.</li>
-        <li>Explore alternatives: <strong>descope to an MVP</strong>, ship behind a <strong>feature toggle</strong>, or deliver a partial slice that still gives value.</li>
-        <li>Coordinate at ART level via the RTE for cross-team dependencies; re-plan the remainder into the next iteration/PI.</li>
+        <li>Raise it <em>early</em>, the moment the risk is real — not at the deadline. I inform the PO, the RTE and stakeholders.</li>
+        <li>Assess impact honestly — what's done, what isn't, and the options.</li>
+        <li>Explore alternatives: <strong>descope to an MVP</strong>, ship behind a <strong>feature toggle</strong>, or release a thin slice that still gives value.</li>
+        <li>Coordinate at ART level through the RTE for cross-team dependencies; re-plan the remainder into the next iteration or PI.</li>
         <li>Run a quick root-cause review so the miss becomes a learning, not a blame exercise.</li>
       </ol>
-      <p><strong>Proactive measures to prevent recurrence:</strong></p>
+      <div class="example"><b class="lbl">◆ In my experience</b>"We were due to release <strong>telehealth video consultations</strong> for a PI milestone, and a third-party video SDK integration slipped. Rather than miss the whole thing, we flagged it a week out, shipped the <strong>booking and waiting-room flow behind a feature flag</strong>, and released the live video two weeks later once it was stable. Stakeholders got value on time and we protected quality — no half-tested video going to patients."</div>
+      <p><strong>Proactive measures to prevent a repeat:</strong></p>
       <ul class="clean">
-        <li>Define <strong>MVP vs nice-to-have</strong> up front so there's always a shippable core.</li>
+        <li>Define <strong>MVP vs nice-to-have</strong> up front, so there's always a shippable core.</li>
         <li>Realistic PI planning with capacity buffers and <strong>uncommitted (stretch) objectives</strong>.</li>
-        <li>Actively manage dependencies and <strong>ROAM</strong> program risks.</li>
+        <li>Actively manage dependencies and <strong>ROAM</strong> program risks at planning.</li>
         <li>Continuous integration and <strong>incremental delivery</strong> — integrate every sprint, not at the end.</li>
-        <li>Feature flags so incomplete work can ship dark and be released when ready.</li>
+        <li>Feature flags so incomplete work can ship dark and be switched on when ready.</li>
       </ul>
     </div>
   </article>
@@ -282,13 +299,14 @@
     <div class="q"><span class="qnum">Q5</span><h3>How would you protect your team from stakeholder pressure?</h3></div>
     <div class="a">
       <ul class="clean">
-        <li><strong>Single channel:</strong> route all work through the Product Owner and the backlog — no side-assignments to developers.</li>
-        <li><strong>Use data, not opinions:</strong> show capacity and velocity so "can we add this?" becomes a visible trade-off conversation.</li>
+        <li><strong>Single channel:</strong> all work flows through the Product Owner and the backlog — no side-assignments to developers.</li>
+        <li><strong>Use data, not opinions:</strong> I show capacity and velocity so "can we also add this?" becomes a visible trade-off.</li>
         <li><strong>Protect the Sprint Goal:</strong> new asks go to the backlog for the next sprint, not into the running one.</li>
-        <li><strong>Negotiate scope, never quality or sustainable pace.</strong></li>
-        <li><strong>Escalate</strong> to the RTE/leadership when pressure is persistent and unreasonable.</li>
+        <li><strong>Negotiate scope — never quality or sustainable pace.</strong></li>
+        <li><strong>Escalate</strong> to the RTE / leadership when the pressure is persistent and unreasonable.</li>
       </ul>
-      <div class="tip say"><span class="tip-ic">✎</span><div><b>Say this</b> "My job isn't to say 'no' — it's to make the cost of 'yes' visible, so stakeholders make an informed call with the PO."</div></div>
+      <div class="example"><b class="lbl">◆ In my experience</b>"A clinic-facing stakeholder kept dropping 'urgent' tweaks straight onto a developer mid-sprint. I set up a simple rule — everything comes to the PO — and started showing the sprint's committed capacity in our review. Once the stakeholder could <em>see</em> that each new ask pushed out a patient-facing feature they cared about, the interruptions basically stopped and the requests went into refinement instead."</div>
+      <div class="tip say"><span class="tip-ic">✎</span><div><b>Say this</b> "My job isn't to say 'no' — it's to make the cost of 'yes' visible so the stakeholder and PO make an informed call together."</div></div>
     </div>
   </article>
 
@@ -298,11 +316,12 @@
       <ol class="clean">
         <li><strong>Own it</strong> — no excuses. Acknowledge the miss and its impact clearly.</li>
         <li><strong>Share the root cause and the fix</strong> — a concrete, credible corrective plan with dates.</li>
-        <li><strong>Over-communicate progress</strong> — short, regular updates showing the plan is working (burn-up, demos).</li>
+        <li><strong>Over-communicate progress</strong> — short, regular updates showing the plan is working (a burn-up, a demo).</li>
         <li><strong>Deliver small, visible wins early</strong> to rebuild trust incrementally.</li>
         <li><strong>Show the systemic change</strong> — the metric or process that now prevents a repeat.</li>
       </ol>
-      <div class="tip"><span class="tip-ic">★</span><div><b>Principle</b> Confidence is rebuilt with <em>consistency</em>, not one big apology. Predictable delivery over the next few sprints is what actually wins them back.</div></div>
+      <div class="example"><b class="lbl">◆ In my experience</b>"After the telehealth slip, I moved our stakeholders from a monthly update to a <strong>short weekly note plus a working demo</strong>, and we shipped the video feature in two visible increments. Two sprints of predictable delivery did more for their confidence than any apology — and we kept the weekly demo because they valued the visibility."</div>
+      <div class="tip"><span class="tip-ic">★</span><div><b>Principle</b> Confidence comes back through <em>consistency</em>, not one big apology. Predictable delivery over the next few sprints is what actually wins people back.</div></div>
     </div>
   </article>
 
@@ -322,9 +341,9 @@
         <li><strong>Analyse</strong> — qualitative (probability × impact matrix) and, where needed, quantitative.</li>
         <li><strong>Plan responses</strong> — the four strategies: <strong>Avoid, Mitigate, Transfer, Accept</strong> (plus Exploit/Enhance for opportunities).</li>
         <li><strong>Add contingency</strong> — schedule and budget reserves.</li>
-        <li><strong>Monitor &amp; control</strong> — review regularly, track triggers, update the register.</li>
+        <li><strong>Monitor &amp; control</strong> — review regularly, track triggers, keep the register current.</li>
       </ol>
-      <div class="tip"><span class="tip-ic">★</span><div><b>Bridge to Agile</b> "In Agile/SAFe I use the same thinking but lighter — a <strong>RAID log</strong> at team level and <strong>ROAM</strong> (Resolved, Owned, Accepted, Mitigated) for program risks at PI Planning."</div></div>
+      <div class="tip"><span class="tip-ic">★</span><div><b>Bridge to Agile</b> "In my SAFe work I use the same thinking but lighter — a <strong>RAID log</strong> at team level and <strong>ROAM</strong> (Resolved, Owned, Accepted, Mitigated) for program risks at PI Planning. In healthcare I always carry a compliance/patient-data-privacy risk line explicitly."</div></div>
     </div>
   </article>
 
@@ -357,30 +376,32 @@
         </svg>
         <p class="figcap">The "iron triangle" flips: Waterfall fixes scope; Agile fixes time and cost and flexes scope.</p>
       </div>
-      <div class="tip say"><span class="tip-ic">✎</span><div><b>One-liner</b> "Traditional PM plans everything up front and delivers once; Agile delivers in small increments, inspects, and adapts. Waterfall suits stable requirements; Agile suits uncertainty and change."</div></div>
+      <div class="tip say"><span class="tip-ic">✎</span><div><b>One-liner</b> "Traditional PM plans everything up front and delivers once; Agile delivers in small increments, inspects, and adapts. Waterfall suits stable requirements; Agile suits uncertainty and change — which is most of what we see in patient-facing software."</div></div>
     </div>
   </article>
 
   <article class="qa">
     <div class="q"><span class="qnum">Q25</span><h3>How do you do budget planning in project management?</h3></div>
     <div class="a">
-      <p><strong>Traditional:</strong> estimate costs bottom-up from the work breakdown, apply techniques like <strong>analogous</strong> (based on similar past projects), <strong>parametric</strong> (rate × units), and <strong>bottom-up</strong> estimating; aggregate into a <strong>cost baseline</strong>; add management and contingency reserves; then track actuals against plan.</p>
-      <p><strong>In SAFe / Lean:</strong> we fund <strong>value streams</strong>, not projects — <em>Lean budgets</em> with <strong>guardrails</strong>, and participatory budgeting each PI. This avoids the overhead of per-project cost accounting and keeps funding flowing to value.</p>
+      <p><strong>Traditional:</strong> estimate costs bottom-up from the work breakdown, apply techniques like <strong>analogous</strong> (based on similar past projects), <strong>parametric</strong> (rate × units) and <strong>bottom-up</strong> estimating; aggregate into a <strong>cost baseline</strong>; add management and contingency reserves; then track actuals against plan.</p>
+      <p><strong>In SAFe / Lean:</strong> we fund <strong>value streams</strong>, not projects — <em>Lean budgets</em> with <strong>guardrails</strong>, and participatory budgeting each PI. This keeps funding flowing to value instead of to fixed per-project cost accounting.</p>
+      <div class="tip"><span class="tip-ic">★</span><div><b>Honest framing</b> "As a Scrum Master I don't own the budget, but I contribute the inputs — capacity, velocity and forecast — that the RTE and Business Owners use for Lean budgeting and release forecasting."</div></div>
     </div>
   </article>
 
   <article class="qa">
     <div class="q"><span class="qnum">Q27</span><h3>What do you understand by "burn rate"?</h3></div>
     <div class="a">
-      <p><strong>Burn rate</strong> is the speed at which you consume a resource — usually budget — over time. E.g. spending ₹10 L/month is your monthly burn rate. Compared against planned spend and earned value, it tells you whether you'll run out of budget before the work is done.</p>
-      <div class="tip"><span class="tip-ic">★</span><div><b>Agile angle</b> Don't confuse it with a <em>burndown</em> chart (work remaining). Burn rate is about <em>money/resource consumption</em> vs plan.</div></div>
+      <p><strong>Burn rate</strong> is the speed at which you consume a resource — usually budget — over time. If a program spends, say, ₹40 lakh a month, that's the monthly burn rate. Compared against planned spend and earned value, it tells you whether you'll run out of budget before the work is done.</p>
+      <div class="tip"><span class="tip-ic">★</span><div><b>Don't confuse it</b> with a <em>burndown</em> chart (work remaining). Burn rate is about <em>money / resource consumption</em> against plan.</div></div>
     </div>
   </article>
 
   <article class="qa">
     <div class="q"><span class="qnum">Q28</span><h3>What do you understand by the "critical path"?</h3></div>
     <div class="a">
-      <p>The <strong>critical path</strong> is the longest chain of <em>dependent</em> tasks through a project — it determines the shortest possible project duration. Tasks on it have <strong>zero float/slack</strong>: any delay to a critical-path task delays the whole project. It tells you where to focus attention and where a slip actually hurts.</p>
+      <p>The <strong>critical path</strong> is the longest chain of <em>dependent</em> tasks through a project — it sets the shortest possible duration. Tasks on it have <strong>zero float</strong>: any delay to a critical-path task delays the whole project. It tells you where a slip actually hurts and where to focus attention.</p>
+      <div class="example"><b class="lbl">◆ In my experience</b>"For our telehealth launch, the critical path ran through the <strong>third-party video integration and its security/compliance sign-off</strong> — everything else had slack, but a slip there moved the whole go-live. Knowing that, I made sure that item was de-risked first."</div>
     </div>
   </article>
 
@@ -393,16 +414,17 @@
   <article class="qa">
     <div class="q"><span class="qnum">Q9</span><h3>What techniques do you use in Sprint Retrospectives?</h3></div>
     <div class="a">
-      <p>I <strong>vary the format</strong> so retros don't go stale, and always end with 1–2 owned action items.</p>
+      <p>I <strong>vary the format</strong> so retros don't go stale, and I always end with one or two owned action items.</p>
       <ul class="clean">
         <li><strong>Start / Stop / Continue</strong> — simple and fast.</li>
-        <li><strong>Mad / Sad / Glad</strong> — surfaces emotions and morale.</li>
-        <li><strong>Sailboat / Speedboat</strong> — wind (helps), anchors (holds back), rocks (risks).</li>
+        <li><strong>Mad / Sad / Glad</strong> — surfaces morale and emotion.</li>
+        <li><strong>Sailboat</strong> — wind (helps), anchors (holds back), rocks (risks).</li>
         <li><strong>4Ls</strong> — Liked, Learned, Lacked, Longed for.</li>
         <li><strong>Starfish</strong> — more of / less of / keep / start / stop.</li>
-        <li><strong>5 Whys</strong> — for drilling into a specific recurring problem.</li>
+        <li><strong>5 Whys</strong> — to drill into one recurring problem.</li>
       </ul>
-      <p>I use <strong>dot voting</strong> to prioritise, keep it psychologically safe, and <strong>track previous actions</strong> at the top — nothing kills a retro faster than "nothing ever changes."</p>
+      <p>I use <strong>dot voting</strong> to prioritise, keep it psychologically safe, and I <strong>review the previous retro's actions first</strong> — nothing kills a retro faster than "nothing ever changes."</p>
+      <div class="example"><b class="lbl">◆ In my experience</b>"When my team's retros went flat, I switched to the Sailboat and, crucially, started every retro by ticking off last sprint's action items. Once people saw their input actually change things — we automated a painful manual regression check that came out of one retro — engagement came straight back."</div>
     </div>
   </article>
 
@@ -410,36 +432,37 @@
   <div class="section-head" id="ai">
     <div class="section-kicker"><span class="num">06</span> AI for Scrum Masters</div>
     <h2>How you actually use AI in the role</h2>
-    <p>This was a heavy theme (four questions). Be concrete and balanced — AI augments you, it doesn't replace judgment, and be mindful of data privacy.</p>
+    <p>This was a heavy theme (four questions). Be concrete and balanced — AI augments you, it doesn't replace judgment, and in healthcare, data privacy is non-negotiable.</p>
   </div>
 
   <article class="qa">
     <div class="q"><span class="qnum">Q10</span><h3>How comfortable are you with AI as a Scrum Master?</h3></div>
     <div class="a">
-      <p>"Very comfortable, and I treat it as a productivity multiplier for the administrative and analytical parts of my role — while keeping the human coaching and facilitation firmly with me." Then back it with the specifics below.</p>
+      <p>"Very comfortable — I treat it as a productivity multiplier for the administrative and analytical parts of my role, while keeping the human coaching and facilitation firmly with me." Then I back it with the specifics below.</p>
     </div>
   </article>
 
   <article class="qa">
     <div class="q"><span class="qnum">Q11 · Q12 · Q13</span><h3>Have you implemented AI in your team? How do you leverage it day-to-day?</h3></div>
     <div class="a">
-      <p>Give concrete, believable use-cases (adjust to what you've genuinely done):</p>
+      <p>I give concrete, believable use-cases:</p>
       <ul class="clean">
         <li><strong>Backlog &amp; stories</strong> — drafting user stories and acceptance criteria, then refining with the team; checking stories against INVEST.</li>
-        <li><strong>Meeting support</strong> — summarising Daily Scrum notes, retros and reviews into action items.</li>
+        <li><strong>Meeting support</strong> — summarising retros and reviews into action items.</li>
         <li><strong>Reporting</strong> — turning raw sprint data into stakeholder-ready status summaries.</li>
-        <li><strong>Analysis</strong> — spotting patterns in defects, spillover, or cycle-time data; drafting risk descriptions for the RAID log.</li>
-        <li><strong>Test support</strong> — helping generate test-case outlines from acceptance criteria.</li>
+        <li><strong>Analysis</strong> — spotting patterns in defects, spillover or cycle-time data; drafting risk descriptions for the RAID log.</li>
+        <li><strong>Test support</strong> — generating test-case outlines from acceptance criteria.</li>
       </ul>
-      <div class="tip"><span class="tip-ic">★</span><div><b>Balance to show</b> "I always keep a human in the loop, validate AI output, and I'm careful about not putting sensitive/client data into public tools. AI speeds up my prep so I spend more time coaching people."</div></div>
+      <div class="example"><b class="lbl">◆ In my experience</b>"I use AI to turn a messy set of acceptance criteria into a first-draft test-case checklist for our QA, and to summarise a 40-minute retro into clear action items. It saves me a couple of hours a week that I put back into coaching. In healthcare I'm strict about this: <strong>no patient data or PHI ever goes into a public AI tool</strong> — only sanitised, non-sensitive text."</div>
+      <div class="tip"><span class="tip-ic">★</span><div><b>Balance to show</b> "There's always a human in the loop — I validate every output. AI speeds up my prep; it doesn't make the team's decisions."</div></div>
     </div>
   </article>
 
   <article class="qa">
     <div class="q"><span class="qnum">Q14b</span><h3>Are you using AI within Jira?</h3></div>
     <div class="a">
-      <p>Yes — <strong>Atlassian Intelligence</strong> in Jira/Confluence supports: natural-language <strong>JQL generation</strong> ("show me all blocked stories in this sprint"), <strong>summarising</strong> long issues and comment threads, <strong>drafting</strong> descriptions and acceptance criteria, and AI-assisted <strong>automation</strong> rules. If your org hasn't enabled it, say so honestly and describe how you'd use it.</p>
-      <div class="tip trap"><span class="tip-ic">▲</span><div><b>Don't over-claim</b> If you haven't used a specific feature, say "I've used X, and I'm aware Jira also offers Y" — interviewers probe exaggeration quickly.</div></div>
+      <p>Yes — <strong>Atlassian Intelligence</strong> in Jira/Confluence supports natural-language <strong>JQL generation</strong> ("show me all blocked stories in this sprint"), <strong>summarising</strong> long issues and comment threads, <strong>drafting</strong> descriptions and acceptance criteria, and AI-assisted <strong>automation</strong> rules.</p>
+      <div class="tip trap"><span class="tip-ic">▲</span><div><b>Don't over-claim</b> If you haven't used a specific feature, say "I've used X, and I'm aware Jira also offers Y." Interviewers probe exaggeration quickly — a calibrated answer beats a hollow one.</div></div>
     </div>
   </article>
 
@@ -455,10 +478,11 @@
       <ul class="clean">
         <li><strong>Identify early</strong> — at PI Planning, on the <strong>program board</strong> (the red strings between teams).</li>
         <li><strong>Visualise &amp; own</strong> — every dependency has an owner and a target iteration.</li>
-        <li><strong>Coordinate regularly</strong> — <strong>Scrum of Scrums</strong> and the ART sync, plus a PO sync for scope-level dependencies.</li>
-        <li><strong>De-risk</strong> — ROAM them; sequence work so the providing team delivers first; use clear interfaces/API contracts and feature toggles to decouple.</li>
+        <li><strong>Coordinate regularly</strong> — the <strong>Scrum of Scrums</strong> and ART sync, plus a PO sync for scope-level dependencies.</li>
+        <li><strong>De-risk</strong> — ROAM them; sequence work so the providing team delivers first; use clear API contracts and feature toggles to decouple.</li>
         <li><strong>Escalate</strong> blockers to the RTE when teams can't resolve them alone.</li>
       </ul>
+      <div class="example"><b class="lbl">◆ In my experience</b>"My team's booking feature depended on the <strong>integrations team exposing a real-time slot-availability API</strong> from the clinic PMS. At PI Planning we made it an explicit dependency on the program board, agreed the API contract up front, and sequenced their work one iteration ahead of ours. I built a mock to the agreed contract so we weren't blocked while they finished — we integrated for real in the next sprint with almost no rework."</div>
       <div class="tip say"><span class="tip-ic">✎</span><div><b>Say this</b> "The goal is to make dependencies <em>visible and owned</em> before they become blockers — the program board and Scrum of Scrums are my main tools."</div></div>
     </div>
   </article>
@@ -479,7 +503,7 @@
         <li><strong>Customer collaboration</strong> over contract negotiation</li>
         <li><strong>Responding to change</strong> over following a plan</li>
       </ol>
-      <div class="tip say"><span class="tip-ic">✎</span><div><b>Example (customise)</b> "'Responding to change over following a plan' — mid-PI a key client priority shifted. Instead of forcing the original plan, we re-ordered the backlog, adjusted the next sprint, and delivered the newly-critical feature first. We flexed scope to protect value."</div></div>
+      <div class="example"><b class="lbl">◆ In my experience</b>"'<strong>Responding to change over following a plan</strong>' — mid-PI, a regulatory update meant patient-consent capture had to change before we could ship telehealth. Instead of clinging to the original plan, we re-ordered the backlog, brought the consent story forward, and adjusted the next sprint. We flexed scope to protect a compliant, valuable release rather than shipping on the old plan."</div>
     </div>
   </article>
 
@@ -493,7 +517,7 @@
         <li><strong>Respect</strong> — treating each other as capable professionals.</li>
         <li><strong>Openness</strong> — being transparent about work and challenges.</li>
       </ul>
-      <p>Memory hook: <strong>C-F-C-R-O</strong>. "The events give structure; the values make the structure actually work."</p>
+      <p>Memory hook: <strong>C-F-C-R-O</strong>. "The events give the structure; the values make the structure actually work."</p>
     </div>
   </article>
 
@@ -506,23 +530,24 @@
   <article class="qa">
     <div class="q"><span class="qnum">Q17</span><h3>What SAFe metrics do you use? Which are most important for your role?</h3></div>
     <div class="a">
-      <p>SAFe groups metrics into <strong>Outcomes, Flow, and Competency</strong>. The ones I use most:</p>
+      <p>SAFe groups metrics into <strong>Outcomes, Flow and Competency</strong>. The ones I use most:</p>
       <ul class="clean">
         <li><strong>PI Predictability Measure</strong> — actual vs planned business value per team (target 80–100%). The headline ART metric.</li>
         <li><strong>Flow metrics</strong> — Flow Velocity, Flow Time, Flow Load (WIP), Flow Efficiency, Flow Distribution.</li>
-        <li><strong>Team velocity &amp; say/do ratio</strong> — for predictability at team level.</li>
-        <li><strong>Feature/Enabler progress</strong> and <strong>cumulative flow</strong>.</li>
-        <li><strong>Quality</strong> — defect leakage / escaped defects.</li>
+        <li><strong>Team velocity &amp; say/do ratio</strong> — for team-level predictability.</li>
+        <li><strong>Feature / Enabler progress</strong> and <strong>cumulative flow</strong>.</li>
+        <li><strong>Quality</strong> — defect leakage / escaped defects (which I watch closely in a patient-facing product).</li>
       </ul>
-      <div class="tip"><span class="tip-ic">★</span><div><b>Most important for an SM</b> "Team + ART <strong>predictability</strong> and <strong>flow</strong> — they tell me whether the team is reliable and where work is getting stuck, which is exactly what I coach against."</div></div>
+      <div class="tip"><span class="tip-ic">★</span><div><b>Most important for an SM</b> "Team and ART <strong>predictability</strong> plus <strong>flow</strong> — they tell me whether the team is reliable and where work is getting stuck, which is exactly what I coach against."</div></div>
     </div>
   </article>
 
   <article class="qa">
     <div class="q"><span class="qnum">Q18</span><h3>How do you track PI Predictability? How do you track Feature progress?</h3></div>
     <div class="a">
-      <p><strong>PI Predictability:</strong> each team sets <strong>PI Objectives</strong> with business value assigned by Business Owners at planning. At the end of the PI, Business Owners score <em>actual</em> value delivered. Predictability = <code class="inline">actual BV ÷ planned BV</code> (committed objectives only) — a healthy team lands 80–100%. Uncommitted objectives count in the actual but not the planned, so they're upside.</p>
-      <p><strong>Feature progress:</strong> a <strong>feature burn-up</strong> or % of child stories completed, tracked on the program board / in Jira (or Jira Align). I watch it sprint-by-sprint so a lagging feature is caught mid-PI, not at the end.</p>
+      <p><strong>PI Predictability:</strong> each team sets <strong>PI Objectives</strong> with business value assigned by Business Owners at planning. At the end of the PI, Business Owners score the <em>actual</em> value delivered. Predictability = <code class="inline">actual BV ÷ planned BV</code> (committed objectives only) — a healthy team lands 80–100%. Uncommitted objectives count in the actual but not the planned, so they're upside.</p>
+      <p><strong>Feature progress:</strong> a <strong>feature burn-up</strong> or the % of child stories completed, tracked on the program board and in Jira / Jira Align. I watch it sprint by sprint so a lagging feature is caught mid-PI, not at the end.</p>
+      <div class="example"><b class="lbl">◆ In my experience</b>"My teams run at roughly <strong>90–95% PI predictability</strong>. When a feature's burn-up flattened two sprints in, we caught it early, found a hidden dependency on the integrations team, and re-planned — instead of discovering the slip at the system demo."</div>
     </div>
   </article>
 
@@ -530,14 +555,14 @@
   <div class="section-head" id="jira">
     <div class="section-kicker"><span class="num">10</span> Jira Mastery</div>
     <h2>Dashboards, hygiene, and JQL</h2>
-    <p>EY drilled hard into Jira. Be specific and practical; they can smell bluffing.</p>
+    <p>EY drilled hard into Jira. Be specific and practical — they can smell bluffing.</p>
   </div>
 
   <article class="qa">
     <div class="q"><span class="qnum">Q19 · Q20</span><h3>Have you built Jira dashboards? How good are you — rate yourself out of 10.</h3></div>
     <div class="a">
-      <p>Yes — describe the gadgets you use: <strong>Sprint Burndown, Velocity Chart, Cumulative Flow Diagram, Control Chart (cycle time), Created vs Resolved, Sprint Health, and filter-based issue lists</strong> built on saved JQL.</p>
-      <div class="tip say"><span class="tip-ic">✎</span><div><b>Rating tip</b> Give an honest, confident number with justification — e.g. <strong>"8/10 — I build and maintain team and ART dashboards, write JQL, and configure boards/workflows; I'm not a Jira admin doing deep app/plugin configuration."</strong> A calibrated 8 beats a hollow 10.</div></div>
+      <p>Yes — I build and maintain team and ART dashboards. The gadgets I rely on: <strong>Sprint Burndown, Velocity Chart, Cumulative Flow Diagram, Control Chart (cycle time), Created vs Resolved, Sprint Health</strong>, and filter-based issue lists built on saved JQL.</p>
+      <div class="tip say"><span class="tip-ic">✎</span><div><b>Rating</b> "I'd say a confident <strong>8/10</strong> — I build dashboards, write JQL, and configure boards and workflows day to day. I'm not a Jira administrator doing deep app/plugin or permission-scheme configuration, so I won't claim a 10." A calibrated 8 with a reason beats a hollow 10.</div></div>
     </div>
   </article>
 
@@ -545,30 +570,31 @@
     <div class="q"><span class="qnum">Q21</span><h3>How do you maintain Jira hygiene?</h3></div>
     <div class="a">
       <ul class="clean">
-        <li>Every item has an <strong>owner, estimate, and correct status</strong>; statuses updated daily.</li>
+        <li>Every item has an <strong>owner, estimate and correct status</strong>; statuses updated daily.</li>
         <li><strong>No stale items</strong> — nothing sitting "In Progress" for days without movement.</li>
-        <li>Stories <strong>linked to epics/features</strong>; no orphans; dependencies linked.</li>
+        <li>Stories <strong>linked to epics / features</strong>; no orphans; dependencies linked.</li>
         <li>Acceptance criteria present before a story is "Ready"; DoD met before "Done".</li>
         <li>Backlog regularly <strong>refined and re-ordered</strong>; done items closed; sprint scope kept honest.</li>
       </ul>
+      <div class="example"><b class="lbl">◆ In my experience</b>"I run a five-minute 'board hygiene' check before every Daily and a slightly deeper one before refinement, driven by saved filters on a dashboard — so hygiene is monitored continuously rather than cleaned up in a panic before PI Planning."</div>
     </div>
   </article>
 
   <article class="qa">
     <div class="q"><span class="qnum">Q22</span><h3>Give 5 JQL queries you use for hygiene maintenance.</h3></div>
     <div class="a">
-      <p>They said "prompts" — they mean <strong>JQL queries</strong>. Have these ready:</p>
+      <p>They said "prompts" — they mean <strong>JQL queries</strong>. I keep these saved as filters:</p>
       <p><strong>1. Unestimated stories in the current sprint:</strong></p>
-      <pre class="jql">project = ABC AND sprint in openSprints() AND issuetype = Story AND "Story Points[Number]" is EMPTY</pre>
+      <pre class="jql">project = HEALTH AND sprint in openSprints() AND issuetype = Story AND "Story Points[Number]" is EMPTY</pre>
       <p><strong>2. Stale "In Progress" items (no update in 3 days):</strong></p>
-      <pre class="jql">project = ABC AND status = "In Progress" AND updated &lt;= -3d</pre>
+      <pre class="jql">project = HEALTH AND status = "In Progress" AND updated &lt;= -3d</pre>
       <p><strong>3. Blocked stories:</strong></p>
-      <pre class="jql">project = ABC AND status = Blocked OR (issueLinkType = "is blocked by" AND resolution = Unresolved)</pre>
-      <p><strong>4. Stories missing acceptance criteria / not epic-linked (orphans):</strong></p>
-      <pre class="jql">project = ABC AND issuetype = Story AND "Epic Link" is EMPTY</pre>
-      <p><strong>5. Unresolved high/critical bugs:</strong></p>
-      <pre class="jql">project = ABC AND issuetype = Bug AND priority in (High, Highest) AND resolution = Unresolved ORDER BY created ASC</pre>
-      <div class="tip"><span class="tip-ic">★</span><div><b>Bonus</b> Mention you save these as filters powering dashboard gadgets, so hygiene is monitored continuously, not manually.</div></div>
+      <pre class="jql">project = HEALTH AND (status = Blocked OR issueLinkType = "is blocked by") AND resolution = Unresolved</pre>
+      <p><strong>4. Orphan stories (not linked to an epic):</strong></p>
+      <pre class="jql">project = HEALTH AND issuetype = Story AND "Epic Link" is EMPTY</pre>
+      <p><strong>5. Unresolved high/critical bugs, oldest first:</strong></p>
+      <pre class="jql">project = HEALTH AND issuetype = Bug AND priority in (High, Highest) AND resolution = Unresolved ORDER BY created ASC</pre>
+      <div class="tip"><span class="tip-ic">★</span><div><b>Bonus</b> "I save each of these as a filter powering a dashboard gadget, so the whole team sees hygiene issues live."</div></div>
     </div>
   </article>
 
@@ -581,16 +607,17 @@
   <article class="qa">
     <div class="q"><span class="qnum">Q23</span><h3>Are you handling any "Capability" in your team?</h3></div>
     <div class="a">
-      <p>In SAFe, a <strong>Capability</strong> is a higher-level behaviour of a <em>solution</em> — it lives at the <strong>Large Solution</strong> level, above a Feature, and often spans <strong>multiple ARTs</strong>. A Capability is to a Solution Train what a Feature is to an ART: it's sized to fit within a single PI and is <strong>split into Features</strong>.</p>
-      <div class="tip say"><span class="tip-ic">✎</span><div><b>Answer honestly</b> If you work at Essential SAFe (single ART), say: "My team works at the Feature level; Capabilities apply at the Large Solution level, which I understand but my current ART doesn't operate at."</div></div>
+      <p>In SAFe, a <strong>Capability</strong> is a higher-level behaviour of a <em>solution</em> — it lives at the <strong>Large Solution</strong> level, above a Feature, and often spans <strong>multiple ARTs</strong>. A Capability is to a Solution Train what a Feature is to an ART: it's sized to fit within a PI and is <strong>split into Features</strong>.</p>
+      <div class="tip say"><span class="tip-ic">✎</span><div><b>Answer honestly</b> "My ART works at the Feature level — Essential SAFe — so I work with Features, not Capabilities. I understand Capabilities apply at the Large Solution level, but my current train doesn't operate there."</div></div>
     </div>
   </article>
 
   <article class="qa">
     <div class="q"><span class="qnum">Q24</span><h3>Do you understand Value Stream Mapping?</h3></div>
     <div class="a">
-      <p>Yes — <strong>Value Stream Mapping</strong> visualises every step needed to deliver value from <em>trigger to outcome</em> (concept to cash). For each step you capture <strong>process time, lead/wait time, and %Complete-and-Accurate</strong>, then compute <strong>flow efficiency</strong> (value-add time ÷ total time). It exposes bottlenecks, hand-off delays, and waste so you can improve flow.</p>
-      <p>SAFe distinguishes <strong>operational value streams</strong> (how the business delivers value to customers) from <strong>development value streams</strong> (how we build the solutions that enable them).</p>
+      <p>Yes — <strong>Value Stream Mapping</strong> visualises every step needed to deliver value from <em>trigger to outcome</em> (concept to cash). For each step you capture <strong>process time, lead/wait time and %Complete-and-Accurate</strong>, then compute <strong>flow efficiency</strong> (value-add time ÷ total time). It exposes bottlenecks, hand-off delays and waste.</p>
+      <p>SAFe distinguishes <strong>operational value streams</strong> (how the business delivers value — e.g. a patient booking and attending an appointment) from <strong>development value streams</strong> (how we build the solutions that enable them).</p>
+      <div class="example"><b class="lbl">◆ In my experience</b>"We mapped our release value stream and found the biggest delay wasn't coding — it was a multi-day wait for a manual compliance/security review before each release. Making that wait visible let us start the review earlier and in parallel, cutting our lead time noticeably."</div>
     </div>
   </article>
 
@@ -599,14 +626,12 @@
     <div class="a">
       <div class="figure">
         <svg viewBox="0 0 620 250" role="img" aria-label="Horizontal slicing cuts by technical layer and delivers no working feature; vertical slicing cuts a thin end-to-end slice through all layers delivering usable value.">
-          <!-- horizontal -->
           <text x="150" y="30" text-anchor="middle" class="d-ink t-title" font-size="13">Horizontal (by layer)</text>
           <rect x="60" y="46" width="180" height="34" rx="6" class="d-fill2 d-stroke" stroke-width="1.2"/><text x="150" y="68" text-anchor="middle" class="d-ink t-label">UI</text>
           <rect x="60" y="84" width="180" height="34" rx="6" class="d-fill2 d-stroke" stroke-width="1.2"/><text x="150" y="106" text-anchor="middle" class="d-ink t-label">Business logic</text>
           <rect x="60" y="122" width="180" height="34" rx="6" class="d-fill2 d-stroke" stroke-width="1.2"/><text x="150" y="144" text-anchor="middle" class="d-ink t-label">Database</text>
           <text x="150" y="184" text-anchor="middle" class="d-muted t-label">each slice = one layer</text>
           <text x="150" y="202" text-anchor="middle" class="d-accent-f t-label">✗ nothing usable alone</text>
-          <!-- vertical -->
           <text x="450" y="30" text-anchor="middle" class="d-ink t-title" font-size="13">Vertical (end-to-end)</text>
           <rect x="360" y="46" width="180" height="110" rx="6" class="d-fill d-stroke" stroke-width="1.2"/>
           <line x1="420" y1="46" x2="420" y2="156" class="d-teal-s" stroke-width="2" stroke-dasharray="4 4"/>
@@ -620,9 +645,10 @@
         <p class="figcap">Agile prefers vertical slices — each is a thin, shippable piece of real functionality.</p>
       </div>
       <ul class="clean">
-        <li><strong>Horizontal slicing</strong> — splitting work by <em>technical layer</em> (do all UI, then all backend, then all DB). No single slice delivers usable value.</li>
+        <li><strong>Horizontal slicing</strong> — splitting by <em>technical layer</em> (all UI, then all backend, then all DB). No single slice delivers usable value.</li>
         <li><strong>Vertical slicing</strong> — a thin slice through <em>all layers</em> that delivers a small piece of working, testable, valuable functionality. This is what we want for user stories.</li>
       </ul>
+      <div class="example"><b class="lbl">◆ In my experience</b>"For appointment booking we sliced vertically: slice 1 was 'book a fixed 30-minute slot with one provider' — real UI, real API, real DB, shippable. Then 'choose from multiple providers', then 'real-time availability'. Each slice was demoable and gave the clinic something usable, instead of a half-built UI with no working booking."</div>
     </div>
   </article>
 
@@ -650,7 +676,6 @@
             <rect x="188" y="82" width="150" height="30" rx="6" class="d-fill2 d-stroke" stroke-width="1.1"/><text x="263" y="101" text-anchor="middle" class="d-ink">Draft plan review</text>
             <rect x="346" y="82" width="240" height="30" rx="6" class="d-fill2 d-stroke" stroke-width="1.1"/><text x="466" y="101" text-anchor="middle" class="d-ink">Management review &amp; problem-solving</text>
           </g>
-
           <text x="30" y="150" class="d-ink t-title" font-size="13">DAY 2</text>
           <line x1="30" y1="160" x2="690" y2="160" class="d-line" stroke-width="1"/>
           <g class="t-label">
@@ -667,35 +692,37 @@
         <p class="figcap">Standard two-day agenda. Teal blocks are the team breakouts — where the Scrum Master is most hands-on.</p>
       </div>
 
-      <p><strong>Before PI Planning (readiness):</strong> three kinds of prep — <em>content readiness</em> (PM/PO have the vision and top 10 features prioritised, often via WSJF; Product Backlog refined), <em>planning readiness</em> (scope/context aligned, teams known), and <em>logistics readiness</em> (facility/tooling, program board ready).</p>
+      <p><strong>Before PI Planning (readiness):</strong> three kinds of prep — <em>content readiness</em> (PM/PO have the vision and top features prioritised, often via WSJF; backlog refined), <em>planning readiness</em> (scope and context aligned, teams known) and <em>logistics readiness</em> (facility/tooling, program board ready).</p>
 
       <p><strong>Day 1:</strong></p>
       <ol class="clean">
-        <li><strong>Business context</strong> — a Business Owner explains the current state and portfolio direction.</li>
-        <li><strong>Product/Solution vision</strong> — Product Management presents the vision and top features.</li>
-        <li><strong>Architecture vision &amp; dev practices</strong> — System Architect + a planning-process overview from the RTE.</li>
-        <li><strong>Team breakouts #1</strong> — teams estimate capacity per iteration, pull features, write draft stories, identify dependencies and risks, and draft their <strong>PI objectives</strong>.</li>
-        <li><strong>Draft plan review</strong> — each team presents; <strong>Management review &amp; problem-solving</strong> — leadership adjusts scope/priorities/resourcing to resolve conflicts.</li>
+        <li><strong>Business context</strong> — a Business Owner explains the current state and market/portfolio direction.</li>
+        <li><strong>Product / Solution vision</strong> — Product Management presents the vision and top features.</li>
+        <li><strong>Architecture vision &amp; dev practices</strong> — the System Architect, plus a planning-process overview from the RTE.</li>
+        <li><strong>Team breakouts #1</strong> — teams estimate capacity per iteration, pull features, draft stories, identify dependencies and risks, and draft their <strong>PI objectives</strong>.</li>
+        <li><strong>Draft plan review</strong>, then <strong>Management review &amp; problem-solving</strong> — leadership adjusts scope, priorities and resourcing to resolve conflicts.</li>
       </ol>
 
       <p><strong>Day 2:</strong></p>
       <ol class="clean">
-        <li><strong>Planning adjustments</strong> — RTE/management share overnight changes.</li>
-        <li><strong>Team breakouts #2</strong> — teams finalise plans, objectives, and dependencies.</li>
-        <li><strong>Final plan review</strong> — each team presents its final plan, objectives (with business value), risks.</li>
+        <li><strong>Planning adjustments</strong> — the RTE/management share overnight changes.</li>
+        <li><strong>Team breakouts #2</strong> — teams finalise plans, objectives and dependencies.</li>
+        <li><strong>Final plan review</strong> — each team presents its final plan, objectives (with business value) and risks.</li>
         <li><strong>ART risks — ROAM</strong> — program risks are Resolved / Owned / Accepted / Mitigated openly.</li>
-        <li><strong>Confidence vote</strong>, then plan rework if confidence is low, then a brief <strong>planning retrospective</strong> and next steps.</li>
+        <li><strong>Confidence vote</strong>, plan rework if confidence is low, then a brief <strong>planning retrospective</strong> and next steps.</li>
       </ol>
 
-      <p><strong>Role of the Scrum Master:</strong> facilitate the team breakouts, manage capacity, help draft and refine PI objectives, surface and track dependencies/risks, coordinate with other SMs and the RTE, keep the team on time, and drive the confidence vote for the team.</p>
+      <p><strong>Role of the Scrum Master:</strong> I facilitate the team breakouts, manage capacity, help draft and refine PI objectives, surface and track dependencies and risks, coordinate with the other SMs and the RTE, keep the team on time, and run the confidence vote for my team.</p>
 
-      <p><strong>Breakout sessions:</strong> the core working time — teams build a sprint-by-sprint plan on the board, write stories, size to capacity, and post dependencies.</p>
+      <p><strong>Breakout sessions:</strong> the core working time — teams build a sprint-by-sprint plan on the board, write stories, size to capacity and post dependencies.</p>
 
-      <p><strong>How dependencies are identified:</strong> on the <strong>program board</strong> — features per team per iteration, with <strong>strings/links</strong> connecting a team's item to the team it depends on, so the whole ART sees them.</p>
+      <p><strong>How dependencies are identified:</strong> on the <strong>program board</strong> — features per team per iteration, with <strong>strings/links</strong> connecting a team's item to the team it depends on, so the whole ART can see them.</p>
 
-      <p><strong>Confidence vote:</strong> a <strong>fist-of-five</strong> vote on the team's/ART's confidence in meeting the PI objectives. Average <strong>3+ proceeds</strong>; below 3, the team re-plans. Anyone voting 1–2 must be heard.</p>
+      <p><strong>Confidence vote:</strong> a <strong>fist-of-five</strong> vote on the team's/ART's confidence in meeting the PI objectives. Average <strong>3 or more proceeds</strong>; below 3, the team re-plans. Anyone voting 1–2 must be heard.</p>
 
-      <div class="tip"><span class="tip-ic">★</span><div><b>Committed vs uncommitted objectives</b> <strong>Committed</strong> objectives are ones the team is highly confident of and they <em>count toward the PI Predictability measure</em>. <strong>Uncommitted (stretch)</strong> objectives are lower-certainty — they're planned and give visibility and a buffer, but are <em>not</em> counted in the commitment (they count in actuals if delivered). They protect predictability while keeping stretch work visible.</div></div>
+      <div class="tip"><span class="tip-ic">★</span><div><b>Committed vs uncommitted objectives</b> <strong>Committed</strong> objectives are ones the team is highly confident of, and they <em>count toward the PI Predictability measure</em>. <strong>Uncommitted (stretch)</strong> objectives are lower-certainty — planned and visible, giving a buffer, but <em>not</em> counted in the commitment (they count in actuals if delivered). They protect predictability while keeping stretch work visible.</div></div>
+
+      <div class="example"><b class="lbl">◆ In my experience</b>"In our last PI, the third-party video integration was a genuine unknown, so we set it as an <strong>uncommitted objective</strong> and committed to the booking and waiting-room flow. That protected our predictability score, kept the stretch goal visible to stakeholders, and when the integration landed early it counted as upside."</div>
     </div>
   </article>
 
@@ -708,7 +735,7 @@
   <article class="qa">
     <div class="q"><span class="qnum">Q26</span><h3>"Can you show me your current table / room?" (camera pan)</h3></div>
     <div class="a">
-      <p>This is a <strong>logistics/authenticity check</strong> (common in remote interviews to confirm a professional, private setup and no unfair aids). Handle it calmly and comply — pan the camera, keep it light. A tidy, quiet, distraction-free background is all they're looking for.</p>
+      <p>This is a <strong>logistics / authenticity check</strong> — common in remote interviews to confirm a professional, private setup with no unfair aids. I handle it calmly and comply — pan the camera, keep it light. A tidy, quiet, distraction-free background is all they're looking for.</p>
       <div class="tip"><span class="tip-ic">★</span><div><b>Prep</b> Before any interview: clean, neutral background, good lighting, no notes visible on screen or desk, phone away. It signals professionalism.</div></div>
     </div>
   </article>
@@ -716,28 +743,28 @@
   <article class="qa">
     <div class="q"><span class="qnum">Q31</span><h3>Do you have any questions for me?</h3></div>
     <div class="a">
-      <p><strong>Always have 2–3 ready</strong> — it signals genuine interest. Strong options:</p>
+      <p><strong>Always have two or three ready</strong> — it signals genuine interest. Strong options:</p>
       <ul class="clean">
-        <li>"How mature is the SAFe adoption here — are you at Essential, Large Solution, or Portfolio level?"</li>
-        <li>"What does success look like for this Scrum Master role in the first 6 months?"</li>
+        <li>"How mature is the SAFe adoption here — are you at Essential, Large Solution or Portfolio level?"</li>
+        <li>"What does success look like for this Scrum Master role in the first six months?"</li>
         <li>"How many teams are on the ART, and what are the biggest delivery challenges right now?"</li>
         <li>"How does the organisation currently measure predictability and flow?"</li>
         <li>"What's the biggest impediment you'd want this person to tackle first?"</li>
       </ul>
-      <div class="tip trap"><span class="tip-ic">▲</span><div><b>Avoid</b> "I have no questions" (reads as disinterest) and opening with salary/leave. Ask about the team, the role, and the challenges first.</div></div>
+      <div class="tip trap"><span class="tip-ic">▲</span><div><b>Avoid</b> "I have no questions" (reads as disinterest) and opening with salary/leave. Ask about the team, the role and the challenges first.</div></div>
     </div>
   </article>
 
-  <p style="margin-top:44px; padding:20px 22px; background:var(--surface); border:1px solid var(--line); border-radius:14px; box-shadow:var(--shadow); color:var(--ink-soft); font-size:15.5px;">
+  <p style="margin-top:52px; padding:22px 24px; background:var(--surface); border:1px solid var(--line); border-radius:16px; box-shadow:var(--shadow); color:var(--ink-soft); font-size:15.5px;">
     <strong style="color:var(--ink); font-family:var(--font-display); font-size:18px;">Interview mindset for EY.</strong><br>
-    This round blends <em>SAFe depth</em>, <em>traditional PM literacy</em>, <em>hands-on Jira</em>, and <em>practical AI use</em>. For scenario questions, narrate your thinking: acknowledge → get curious about root cause → be transparent early → coach/facilitate rather than command → put in a proactive fix. For factual ones, be crisp and use the real terms.
+    This round blends <em>SAFe depth</em>, <em>traditional PM literacy</em>, <em>hands-on Jira</em> and <em>practical AI use</em>. For scenario questions, narrate your thinking: acknowledge → get curious about root cause → be transparent early → coach/facilitate rather than command → put in a proactive fix. For factual ones, be crisp and use the real terms. And whenever you can, anchor an answer in a <em>specific example</em> from your own work — it's what separates a 6-year practitioner from someone reciting theory.
   </p>
 
 </main>
 
 <footer>
   <div class="footer-inner">
-    Prep guide for <b>EY — Round 1 (L1)</b> Scrum Master interview · built from the actual questions asked. Answers reflect SAFe 6.0 / Scrum Guide 2020 practice; personal and scenario answers are suggested framings — adapt them to your real experience. ← <a href="index.html">Back to the Hub</a>
+    Prep guide for <b>EY — Round 1 (L1)</b> Scrum Master interview · answered in the first person as a ~6-year-experienced SM in a healthcare delivery context. Examples, names and figures are realistic illustrations — <b>replace them with your own real project details</b> before the interview. Reflects SAFe 6.0 / Scrum Guide 2020 practice. ← <a href="index.html">Back to the Hub</a>
   </div>
 </footer>
 
