@@ -130,9 +130,16 @@
   .say .tip-ic { color: var(--teal); }
   .say b { color: var(--teal); }
 
-  .figure { margin: 26px 0 8px; border: 1px solid var(--line-soft); background: var(--surface-2); border-radius: 14px; padding: 22px 16px 12px; overflow-x: auto; }
+  .figure { margin: 26px 0 8px; border: 1px solid var(--line-soft); background: var(--surface-2); border-radius: 14px; padding: 22px 16px 12px; overflow-x: auto; position: relative; }
   .figure svg { display: block; margin: 0 auto; max-width: 100%; height: auto; }
   .figcap { font-family: var(--font-mono); font-size: 12px; color: var(--muted); letter-spacing: .04em; margin-top: 12px; text-align: center; }
+  .anim-badge { position: absolute; top: 10px; right: 12px; font-family: var(--font-mono); font-size: 9.5px; letter-spacing: .12em; text-transform: uppercase; color: var(--accent-ink); background: color-mix(in srgb, var(--accent) 12%, var(--surface)); border: 1px solid color-mix(in srgb, var(--accent) 30%, transparent); border-radius: 999px; padding: 3px 9px; display: inline-flex; align-items: center; gap: 5px; }
+  .anim-badge::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: var(--accent); animation: blink 1.4s ease-in-out infinite; }
+  @keyframes blink { 0%,100% { opacity: 1; } 50% { opacity: .25; } }
+  .spin-marker { animation: orbit 6s linear infinite; transform-origin: 235px 130px; }
+  @keyframes orbit { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+  .draw-line { stroke-dasharray: 700; stroke-dashoffset: 700; animation: draw 5s ease-in-out infinite alternate; }
+  @keyframes draw { to { stroke-dashoffset: 0; } }
 
   code.inline { font-family: var(--font-mono); font-size: .86em; background: var(--surface-2); border: 1px solid var(--line); border-radius: 5px; padding: 1px 6px; color: var(--ink); }
   pre.jql { font-family: var(--font-mono); font-size: 13px; background: var(--surface-2); border: 1px solid var(--line); border-radius: 10px; padding: 14px 16px; overflow-x: auto; margin: 10px 0; color: var(--ink); line-height: 1.55; }
@@ -151,7 +158,7 @@
   .footer-inner { max-width: var(--maxw); margin: 0 auto; padding: 34px 24px 64px; color: var(--muted); font-size: 14.5px; line-height: 1.7; }
   .footer-inner a { color: var(--accent-ink); }
   :focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 4px; }
-  @media (prefers-reduced-motion: reduce) { * { scroll-behavior: auto !important; transition: none !important; } }
+  @media (prefers-reduced-motion: reduce) { * { scroll-behavior: auto !important; transition: none !important; } .spin-marker, .draw-line, .anim-badge::before { animation: none !important; } .draw-line { stroke-dashoffset: 0; } }
   @media (max-width: 640px) { body { font-size: 16px; } .qa { padding: 22px 20px 12px; } .brand { display: none; } }
 
   @media print {
@@ -207,6 +214,34 @@
 </div>
 
 <main>
+
+  <div class="figure">
+    <span class="anim-badge">Animated</span>
+    <svg viewBox="0 0 470 270" role="img" aria-label="Animated Scrum-within-SAFe cadence: the product backlog feeds the sprint, the team works through it with daily scrums, and each sprint ends with review and retro, feeding the increment — looping continuously inside the PI.">
+      <rect x="20" y="105" width="92" height="60" rx="10" class="d-fill2 d-stroke" stroke-width="1.4"/>
+      <text x="66" y="130" text-anchor="middle" class="d-ink t-title" font-size="11">Product</text>
+      <text x="66" y="146" text-anchor="middle" class="d-ink t-title" font-size="11">Backlog</text>
+      <line x1="114" y1="135" x2="150" y2="135" class="d-accent-s" stroke-width="2" marker-end="url(#ar)"/>
+      <circle cx="235" cy="130" r="72" class="d-teal-s" fill="none" stroke-width="2" stroke-dasharray="5 6"/>
+      <text x="235" y="42" text-anchor="middle" class="d-teal-f t-label" style="letter-spacing:.1em">SPRINT (× iterations in a PI)</text>
+      <circle cx="235" cy="130" r="44" class="d-fill2 d-stroke" fill="none" stroke-width="1.4"/>
+      <text x="235" y="126" text-anchor="middle" class="d-ink t-title" font-size="11">Daily</text>
+      <text x="235" y="141" text-anchor="middle" class="d-ink t-title" font-size="11">Scrum</text>
+      <g class="spin-marker"><circle cx="235" cy="58" r="7" class="d-accent-f"/></g>
+      <line x1="320" y1="135" x2="356" y2="135" class="d-accent-s" stroke-width="2" marker-end="url(#ar)"/>
+      <rect x="360" y="88" width="92" height="40" rx="9" class="d-fill d-stroke" stroke-width="1.4"/>
+      <text x="406" y="112" text-anchor="middle" class="d-ink t-title" font-size="10.5">Review</text>
+      <rect x="360" y="138" width="92" height="40" rx="9" class="d-fill d-stroke" stroke-width="1.4"/>
+      <text x="406" y="162" text-anchor="middle" class="d-ink t-title" font-size="10.5">Retro</text>
+      <path d="M406 180 L406 235 L66 235 L66 168" class="d-teal-s" fill="none" stroke-width="1.8" stroke-dasharray="5 5" marker-end="url(#art)"/>
+      <text x="235" y="256" text-anchor="middle" class="d-teal-f t-label">↑ Increment ships; the loop repeats every iteration</text>
+      <defs>
+        <marker id="ar" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto"><path d="M0 0 L9 4.5 L0 9 Z" fill="var(--dg-accent)"/></marker>
+        <marker id="art" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto"><path d="M0 0 L9 4.5 L0 9 Z" fill="var(--dg-teal)"/></marker>
+      </defs>
+    </svg>
+    <p class="figcap">The delivery heartbeat behind every answer below — short iterations, inspected and adapted, inside the PI.</p>
+  </div>
 
   <!-- POSITIONING -->
   <div class="section-head" id="about">
