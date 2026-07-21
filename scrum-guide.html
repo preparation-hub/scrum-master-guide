@@ -1,0 +1,1350 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="A visual, beginner-friendly study guide of 40 Scrum Master interview questions with in-depth answers and diagrams.">
+<title>Scrum Master Interview Field Manual</title>
+<style>*{margin:0;padding:0}</style>
+</head>
+<body>
+<style>
+  :root {
+    --paper: #eef1ef;
+    --surface: #ffffff;
+    --surface-2: #f6f8f6;
+    --ink: #16262b;
+    --ink-soft: #43565a;
+    --muted: #77878a;
+    --line: #dde3e0;
+    --line-soft: #e8ece9;
+    --accent: #ff5c39;
+    --accent-ink: #c8391a;
+    --teal: #0e7c7b;
+    --teal-soft: #d8eae9;
+    --amber: #c47d15;
+    --amber-bg: #fbf1dc;
+    --amber-line: #eccf92;
+    --good: #2f8f63;
+    --good-bg: #e3f2ea;
+    --shadow: 0 1px 2px rgba(22,38,43,.06), 0 8px 24px rgba(22,38,43,.06);
+    --shadow-lg: 0 2px 6px rgba(22,38,43,.08), 0 24px 60px rgba(22,38,43,.12);
+
+    --font-display: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Palatino, Georgia, serif;
+    --font-body: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    --font-mono: ui-monospace, "SF Mono", "Cascadia Code", "Consolas", monospace;
+
+    --maxw: 820px;
+
+    --dg-ink: var(--ink);
+    --dg-line: #c3ccc9;
+    --dg-fill: #ffffff;
+    --dg-fill-2: #eef2f0;
+    --dg-accent: var(--accent);
+    --dg-teal: var(--teal);
+    --dg-amber: var(--amber);
+    --dg-muted: #8b9a9c;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --paper: #0d1416;
+      --surface: #15201f;
+      --surface-2: #1a2624;
+      --ink: #eef3f0;
+      --ink-soft: #bcc9c5;
+      --muted: #839290;
+      --line: #26312f;
+      --line-soft: #202b29;
+      --accent: #ff6f4d;
+      --accent-ink: #ff8b70;
+      --teal: #37b3b0;
+      --teal-soft: #14312f;
+      --amber: #e6b45c;
+      --amber-bg: #2a2416;
+      --amber-line: #4d4222;
+      --good: #4bbd83;
+      --good-bg: #14281f;
+      --shadow: 0 1px 2px rgba(0,0,0,.4), 0 8px 24px rgba(0,0,0,.35);
+      --shadow-lg: 0 2px 6px rgba(0,0,0,.5), 0 24px 60px rgba(0,0,0,.5);
+
+      --dg-ink: #dfe8e4;
+      --dg-line: #3a4744;
+      --dg-fill: #1a2624;
+      --dg-fill-2: #223230;
+      --dg-muted: #7d8c8a;
+    }
+  }
+
+  :root[data-theme="dark"] {
+    --paper: #0d1416;
+    --surface: #15201f;
+    --surface-2: #1a2624;
+    --ink: #eef3f0;
+    --ink-soft: #bcc9c5;
+    --muted: #839290;
+    --line: #26312f;
+    --line-soft: #202b29;
+    --accent: #ff6f4d;
+    --accent-ink: #ff8b70;
+    --teal: #37b3b0;
+    --teal-soft: #14312f;
+    --amber: #e6b45c;
+    --amber-bg: #2a2416;
+    --amber-line: #4d4222;
+    --good: #4bbd83;
+    --good-bg: #14281f;
+    --shadow: 0 1px 2px rgba(0,0,0,.4), 0 8px 24px rgba(0,0,0,.35);
+    --shadow-lg: 0 2px 6px rgba(0,0,0,.5), 0 24px 60px rgba(0,0,0,.5);
+    --dg-ink: #dfe8e4;
+    --dg-line: #3a4744;
+    --dg-fill: #1a2624;
+    --dg-fill-2: #223230;
+    --dg-muted: #7d8c8a;
+  }
+
+  :root[data-theme="light"] {
+    --paper: #eef1ef;
+    --surface: #ffffff;
+    --surface-2: #f6f8f6;
+    --ink: #16262b;
+    --ink-soft: #43565a;
+    --muted: #77878a;
+    --line: #dde3e0;
+    --line-soft: #e8ece9;
+    --accent: #ff5c39;
+    --accent-ink: #c8391a;
+    --teal: #0e7c7b;
+    --teal-soft: #d8eae9;
+    --amber: #c47d15;
+    --amber-bg: #fbf1dc;
+    --amber-line: #eccf92;
+    --good: #2f8f63;
+    --good-bg: #e3f2ea;
+    --dg-ink: #16262b;
+    --dg-line: #c3ccc9;
+    --dg-fill: #ffffff;
+    --dg-fill-2: #eef2f0;
+    --dg-muted: #8b9a9c;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--font-body);
+    font-size: 17px;
+    line-height: 1.68;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  /* ---------- top nav ---------- */
+  .topbar {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: color-mix(in srgb, var(--paper) 86%, transparent);
+    backdrop-filter: saturate(1.4) blur(10px);
+    border-bottom: 1px solid var(--line);
+  }
+  .topbar-inner {
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 10px 24px;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+  }
+  .brand {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: var(--accent-ink);
+    font-weight: 600;
+    white-space: nowrap;
+  }
+  .brand b { color: var(--ink); }
+  .navchips {
+    display: flex;
+    gap: 6px;
+    overflow-x: auto;
+    scrollbar-width: none;
+    margin-left: auto;
+  }
+  .navchips::-webkit-scrollbar { display: none; }
+  .navchips a {
+    flex: none;
+    font-family: var(--font-mono);
+    font-size: 11.5px;
+    letter-spacing: .04em;
+    text-decoration: none;
+    color: var(--ink-soft);
+    padding: 5px 11px;
+    border-radius: 999px;
+    border: 1px solid transparent;
+    white-space: nowrap;
+    transition: background .18s, color .18s, border-color .18s;
+  }
+  .navchips a:hover { background: var(--surface-2); color: var(--ink); }
+  .navchips a.active {
+    background: var(--ink);
+    color: var(--paper);
+    border-color: var(--ink);
+  }
+  :root[data-theme="dark"] .navchips a.active,
+  .theme-dark .navchips a.active { color: #0d1416; }
+
+  /* ---------- hero ---------- */
+  .hero {
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 64px 24px 34px;
+  }
+  .eyebrow {
+    font-family: var(--font-mono);
+    font-size: 12.5px;
+    letter-spacing: .22em;
+    text-transform: uppercase;
+    color: var(--accent-ink);
+    margin: 0 0 18px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .eyebrow::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(90deg, var(--line), transparent);
+  }
+  .hero h1 {
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: clamp(34px, 6vw, 60px);
+    line-height: 1.04;
+    letter-spacing: -0.015em;
+    margin: 0 0 20px;
+    text-wrap: balance;
+    max-width: 15ch;
+  }
+  .hero h1 em { font-style: italic; color: var(--accent); }
+  .hero .lede {
+    font-size: clamp(17px, 2.2vw, 20px);
+    color: var(--ink-soft);
+    max-width: 62ch;
+    margin: 0 0 30px;
+  }
+  .hero-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px 28px;
+    font-family: var(--font-mono);
+    font-size: 12.5px;
+    color: var(--muted);
+    letter-spacing: .03em;
+    border-top: 1px solid var(--line);
+    padding-top: 22px;
+  }
+  .hero-meta b { color: var(--ink); font-weight: 600; }
+
+  /* ---------- hero diagram ---------- */
+  .hero-figure {
+    max-width: 1080px;
+    margin: 0 auto 20px;
+    padding: 0 24px;
+  }
+  .hero-figure .figframe {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 18px;
+    box-shadow: var(--shadow-lg);
+    padding: 28px 22px 20px;
+    overflow-x: auto;
+  }
+  .figcap {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    color: var(--muted);
+    letter-spacing: .04em;
+    margin-top: 12px;
+    text-align: center;
+  }
+
+  /* ---------- layout ---------- */
+  main {
+    max-width: var(--maxw);
+    margin: 0 auto;
+    padding: 30px 24px 80px;
+  }
+
+  .section-head {
+    margin: 60px 0 8px;
+    padding-top: 20px;
+    border-top: 2px solid var(--ink);
+  }
+  .section-head:first-of-type { margin-top: 24px; }
+  .section-kicker {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    letter-spacing: .16em;
+    text-transform: uppercase;
+    color: var(--accent-ink);
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+  }
+  .section-kicker .num {
+    color: var(--muted);
+  }
+  .section-head h2 {
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: clamp(24px, 4vw, 32px);
+    letter-spacing: -0.01em;
+    margin: 8px 0 6px;
+    text-wrap: balance;
+  }
+  .section-head p {
+    color: var(--ink-soft);
+    margin: 0;
+    max-width: 60ch;
+    font-size: 16px;
+  }
+
+  /* ---------- question card ---------- */
+  .qa {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    box-shadow: var(--shadow);
+    padding: 26px 28px 8px;
+    margin: 22px 0;
+    scroll-margin-top: 90px;
+  }
+  .q {
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+  }
+  .qnum {
+    flex: none;
+    font-family: var(--font-mono);
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--accent);
+    background: color-mix(in srgb, var(--accent) 12%, transparent);
+    border-radius: 8px;
+    padding: 4px 9px;
+    margin-top: 4px;
+    letter-spacing: .02em;
+  }
+  .q h3 {
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: clamp(20px, 3vw, 24px);
+    line-height: 1.25;
+    letter-spacing: -0.01em;
+    margin: 0;
+    text-wrap: balance;
+  }
+  .a { padding-left: 0; }
+  .a p { margin: 14px 0; }
+  .a strong { color: var(--ink); font-weight: 650; }
+  .a .accent-word { color: var(--accent-ink); font-weight: 600; }
+
+  .analogy {
+    border-left: 3px solid var(--teal);
+    background: var(--teal-soft);
+    border-radius: 0 10px 10px 0;
+    padding: 12px 16px;
+    margin: 16px 0;
+    font-size: 15.5px;
+    color: var(--ink-soft);
+  }
+  .analogy b { color: var(--teal); font-family: var(--font-mono); font-size: 11px; letter-spacing:.1em; text-transform: uppercase; display:block; margin-bottom: 3px; }
+
+  ul.clean, ol.clean { margin: 14px 0; padding-left: 0; list-style: none; }
+  ul.clean li, ol.clean li {
+    position: relative;
+    padding: 5px 0 5px 26px;
+  }
+  ul.clean li::before {
+    content: "";
+    position: absolute;
+    left: 4px; top: 15px;
+    width: 7px; height: 7px;
+    border-radius: 2px;
+    background: var(--accent);
+    transform: rotate(45deg);
+  }
+  ol.clean { counter-reset: step; }
+  ol.clean li { counter-increment: step; }
+  ol.clean li::before {
+    content: counter(step);
+    position: absolute;
+    left: 0; top: 6px;
+    font-family: var(--font-mono);
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--teal);
+    background: var(--teal-soft);
+    width: 18px; height: 18px;
+    border-radius: 5px;
+    display: grid;
+    place-items: center;
+  }
+
+  .tip {
+    display: flex;
+    gap: 12px;
+    background: var(--amber-bg);
+    border: 1px solid var(--amber-line);
+    border-radius: 12px;
+    padding: 13px 16px;
+    margin: 18px 0 20px;
+    font-size: 15px;
+    color: var(--ink);
+  }
+  .tip .tip-ic { flex: none; color: var(--amber); margin-top: 1px; }
+  .tip b { color: var(--amber); font-family: var(--font-mono); font-size: 11px; letter-spacing: .1em; text-transform: uppercase; }
+
+  .trap { border-color: var(--accent); background: color-mix(in srgb, var(--accent) 8%, var(--surface)); }
+  .trap .tip-ic { color: var(--accent); }
+  .trap b { color: var(--accent-ink); }
+
+  .figure {
+    margin: 20px 0 4px;
+    border: 1px solid var(--line-soft);
+    background: var(--surface-2);
+    border-radius: 12px;
+    padding: 18px 14px 10px;
+    overflow-x: auto;
+  }
+  .figure svg { display: block; margin: 0 auto; max-width: 100%; height: auto; }
+  .figure .figcap { margin-top: 10px; }
+
+  /* diagram primitives */
+  .d-fill { fill: var(--dg-fill); }
+  .d-fill2 { fill: var(--dg-fill-2); }
+  .d-stroke { stroke: var(--dg-line); }
+  .d-line { stroke: var(--dg-line); }
+  .d-ink { fill: var(--dg-ink); }
+  .d-muted { fill: var(--dg-muted); }
+  .d-accent-f { fill: var(--dg-accent); }
+  .d-accent-s { stroke: var(--dg-accent); }
+  .d-teal-f { fill: var(--dg-teal); }
+  .d-teal-s { stroke: var(--dg-teal); }
+  .d-amber-f { fill: var(--dg-amber); }
+  text { font-family: var(--font-body); }
+  .t-label { font-family: var(--font-mono); font-size: 11px; letter-spacing: .04em; }
+  .t-title { font-weight: 600; }
+
+  /* footer */
+  footer {
+    border-top: 1px solid var(--line);
+    background: var(--surface);
+  }
+  .footer-inner {
+    max-width: var(--maxw);
+    margin: 0 auto;
+    padding: 34px 24px 60px;
+    color: var(--muted);
+    font-size: 14.5px;
+  }
+  .footer-inner h4 {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    color: var(--ink);
+    margin: 0 0 12px;
+  }
+  .footer-inner a { color: var(--accent-ink); }
+
+  .kbd {
+    font-family: var(--font-mono);
+    font-size: .85em;
+    background: var(--surface-2);
+    border: 1px solid var(--line);
+    border-bottom-width: 2px;
+    border-radius: 5px;
+    padding: 1px 6px;
+    color: var(--ink);
+  }
+
+  a.jump { color: var(--accent-ink); text-decoration: none; border-bottom: 1px solid color-mix(in srgb, var(--accent) 40%, transparent); }
+  a.jump:hover { border-bottom-color: var(--accent); }
+
+  :focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 4px; }
+
+  @media (max-width: 640px) {
+    body { font-size: 16px; }
+    .qa { padding: 20px 18px 6px; }
+    .brand { display: none; }
+    .navchips { margin-left: 0; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    * { scroll-behavior: auto !important; transition: none !important; }
+  }
+  html { scroll-behavior: smooth; }
+
+  /* ---------- print / PDF ---------- */
+  @media print {
+    @page { margin: 14mm 12mm; }
+    * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
+    body { background: #ffffff; font-size: 12pt; }
+    .topbar { position: static; box-shadow: none; }
+    .navchips { display: none; }
+    .hero { padding: 12px 24px 20px; }
+    .hero-figure, main { padding-left: 24px; padding-right: 24px; }
+    .qa, .figure, .section-head, .hero-figure .figframe, article, .tip, .analogy {
+      break-inside: avoid;
+      page-break-inside: avoid;
+    }
+    .section-head { break-before: auto; }
+    a.jump, .navchips a { color: var(--accent-ink) !important; }
+    .qa { box-shadow: none; border-color: #d0d7d3; }
+    footer { break-inside: avoid; }
+  }
+</style>
+
+<div class="topbar">
+  <div class="topbar-inner">
+    <div class="brand"><b>SCRUM MASTER</b> · Interview Field Manual</div>
+    <nav class="navchips" aria-label="Sections">
+      <a href="#fundamentals">Fundamentals</a>
+      <a href="#roles">Roles</a>
+      <a href="#events">Events</a>
+      <a href="#artifacts">Artifacts</a>
+      <a href="#metrics">Metrics</a>
+      <a href="#scenarios">Scenarios</a>
+      <a href="#scaling">Scaling</a>
+      <a href="#curveballs">Curveballs</a>
+    </nav>
+  </div>
+</div>
+
+<header class="hero">
+  <p class="eyebrow">Interview Preparation · Agile &amp; Scrum</p>
+  <h1>The Scrum Master interview, <em>explained simply</em>.</h1>
+  <p class="lede">40 of the most-asked Scrum Master interview questions — each with a plain-English answer, an everyday analogy, a diagram to make it stick, and a short note on how to actually say it in the room. No jargon left unexplained.</p>
+  <div class="hero-meta">
+    <span><b>40</b> questions</span>
+    <span><b>8</b> topic areas</span>
+    <span><b>Based on</b> the 2020 Scrum Guide</span>
+    <span><b>Level</b> beginner → interview-ready</span>
+  </div>
+</header>
+
+<div class="hero-figure">
+  <div class="figframe">
+    <!-- HERO DIAGRAM: The Scrum Framework at a glance -->
+    <svg viewBox="0 0 960 340" role="img" aria-label="The Scrum framework: product backlog flows into a sprint through sprint planning, the team works daily during the sprint, and each sprint ends with a review and retrospective producing a product increment.">
+      <!-- Product Backlog -->
+      <rect x="24" y="120" width="120" height="110" rx="12" class="d-fill2 d-stroke" stroke-width="1.5"/>
+      <text x="84" y="150" text-anchor="middle" class="d-ink t-title" font-size="13">Product</text>
+      <text x="84" y="167" text-anchor="middle" class="d-ink t-title" font-size="13">Backlog</text>
+      <rect x="44" y="182" width="80" height="8" rx="4" class="d-accent-f"/>
+      <rect x="44" y="196" width="64" height="8" rx="4" class="d-line" fill="none" stroke-width="1.5" style="fill:var(--dg-fill)"/>
+      <rect x="44" y="210" width="72" height="8" rx="4" class="d-line" fill="none" stroke-width="1.5" style="fill:var(--dg-fill)"/>
+      <text x="84" y="252" text-anchor="middle" class="d-muted t-label">everything wanted</text>
+
+      <!-- arrow to planning -->
+      <line x1="150" y1="175" x2="196" y2="175" class="d-accent-s" stroke-width="2" marker-end="url(#ah)"/>
+
+      <!-- Sprint Planning -->
+      <rect x="202" y="135" width="104" height="80" rx="12" class="d-fill d-stroke" stroke-width="1.5"/>
+      <text x="254" y="170" text-anchor="middle" class="d-ink t-title" font-size="12">Sprint</text>
+      <text x="254" y="186" text-anchor="middle" class="d-ink t-title" font-size="12">Planning</text>
+
+      <line x1="312" y1="175" x2="356" y2="175" class="d-accent-s" stroke-width="2" marker-end="url(#ah)"/>
+
+      <!-- The Sprint big box -->
+      <rect x="362" y="70" width="392" height="205" rx="16" class="d-teal-s" fill="none" stroke-width="2" stroke-dasharray="6 6"/>
+      <text x="558" y="96" text-anchor="middle" class="d-teal-f t-label" font-size="12" style="letter-spacing:.14em">THE SPRINT · 1–4 WEEKS</text>
+
+      <!-- daily loop circle -->
+      <circle cx="470" cy="180" r="58" class="d-fill2 d-stroke" fill="none" stroke-width="1.5"/>
+      <path d="M470 122 A58 58 0 1 1 418 210" class="d-teal-s" fill="none" stroke-width="2.5" marker-end="url(#aht)"/>
+      <text x="470" y="176" text-anchor="middle" class="d-ink t-title" font-size="12">Daily</text>
+      <text x="470" y="192" text-anchor="middle" class="d-ink t-title" font-size="12">Scrum</text>
+      <text x="470" y="252" text-anchor="middle" class="d-muted t-label">every 24h</text>
+
+      <!-- sprint backlog small -->
+      <rect x="558" y="130" width="168" height="46" rx="9" class="d-fill d-stroke" stroke-width="1.5"/>
+      <text x="642" y="158" text-anchor="middle" class="d-ink" font-size="12">Sprint Backlog</text>
+      <rect x="558" y="190" width="168" height="60" rx="9" class="d-fill d-stroke" stroke-width="1.5"/>
+      <text x="642" y="214" text-anchor="middle" class="d-ink" font-size="12">Developers</text>
+      <text x="642" y="232" text-anchor="middle" class="d-muted t-label">build the work</text>
+      <line x1="528" y1="165" x2="556" y2="153" class="d-line" stroke-width="1.5"/>
+      <line x1="528" y1="195" x2="556" y2="212" class="d-line" stroke-width="1.5"/>
+
+      <line x1="760" y1="175" x2="806" y2="175" class="d-accent-s" stroke-width="2" marker-end="url(#ah)"/>
+
+      <!-- Review + Retro -->
+      <rect x="812" y="120" width="124" height="52" rx="11" class="d-fill d-stroke" stroke-width="1.5"/>
+      <text x="874" y="151" text-anchor="middle" class="d-ink t-title" font-size="12">Sprint Review</text>
+      <rect x="812" y="182" width="124" height="52" rx="11" class="d-fill d-stroke" stroke-width="1.5"/>
+      <text x="874" y="205" text-anchor="middle" class="d-ink t-title" font-size="12">Retrospective</text>
+      <text x="874" y="221" text-anchor="middle" class="d-muted t-label">improve</text>
+
+      <!-- increment output -->
+      <path d="M874 240 L874 292 L150 292 L150 236" class="d-teal-s" fill="none" stroke-width="2" stroke-dasharray="5 5" marker-end="url(#aht)"/>
+      <rect x="470" y="300" width="0" height="0"/>
+      <text x="512" y="313" text-anchor="middle" class="d-teal-f t-label" font-size="11" style="letter-spacing:.1em">DONE INCREMENT → feedback loops back to the backlog</text>
+
+      <defs>
+        <marker id="ah" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto">
+          <path d="M0 0 L9 4.5 L0 9 Z" fill="var(--dg-accent)"/>
+        </marker>
+        <marker id="aht" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto">
+          <path d="M0 0 L9 4.5 L0 9 Z" fill="var(--dg-teal)"/>
+        </marker>
+      </defs>
+    </svg>
+    <p class="figcap">The whole framework in one picture — a backlog of ideas, pulled into short Sprints, worked on daily, inspected and improved at the end. Everything below zooms into a piece of this.</p>
+  </div>
+</div>
+
+<main>
+
+  <!-- ============ FUNDAMENTALS ============ -->
+  <div class="section-head" id="fundamentals">
+    <div class="section-kicker"><span class="num">01</span> Scrum Fundamentals</div>
+    <h2>What Scrum is and the thinking behind it</h2>
+    <p>Start here. These are the "warm-up" questions almost every interview opens with — get them crisp and confident.</p>
+  </div>
+
+  <article class="qa" id="q1">
+    <div class="q"><span class="qnum">Q1</span><h3>What is Agile, and how is Scrum related to it?</h3></div>
+    <div class="a">
+      <p><strong>Agile</strong> is a <em class="accent-word">mindset</em> — a way of building products in small steps, getting feedback often, and adapting as you learn, instead of planning everything up front. It's captured in the <strong>Agile Manifesto</strong> (2001) and its 12 principles.</p>
+      <p><strong>Scrum</strong> is the most popular <em class="accent-word">framework</em> for actually <em>doing</em> Agile. Agile is the "why and what"; Scrum is one concrete "how".</p>
+      <div class="analogy"><b>Everyday analogy</b> Agile is like the idea of "eating healthily." Scrum is one specific meal plan that puts that idea into practice. You can be healthy without that exact plan — but the plan gives you clear structure.</div>
+      <div class="tip"><span class="tip-ic">★</span><div><b>Say this</b> "Agile is a set of values and principles; Scrum is a lightweight framework that helps a team live those values through fixed roles, events, and artifacts."</div></div>
+    </div>
+  </article>
+
+  <article class="qa" id="q2">
+    <div class="q"><span class="qnum">Q2</span><h3>What is Scrum in one clear sentence?</h3></div>
+    <div class="a">
+      <p><strong>Scrum is a lightweight framework that helps teams deliver value in short, repeatable cycles called Sprints</strong>, by working together, inspecting results frequently, and adapting as they go.</p>
+      <p>"Lightweight" matters: the Scrum Guide is only about 13 pages. It deliberately tells you very little — it defines the <em>minimum</em> rules and leaves the rest to the team. It is a framework, <strong>not</strong> a step-by-step methodology.</p>
+      <div class="tip"><span class="tip-ic">★</span><div><b>Say this</b> "Scrum is intentionally incomplete — it's a container for good practices, not a recipe. It surfaces problems fast so the team can adapt."</div></div>
+    </div>
+  </article>
+
+  <article class="qa" id="q3">
+    <div class="q"><span class="qnum">Q3</span><h3>What are the three pillars of Scrum?</h3></div>
+    <div class="a">
+      <p>Scrum is built on <strong>empiricism</strong> — the belief that knowledge comes from experience and decisions from what we actually observe. It stands on three pillars:</p>
+      <div class="figure">
+        <svg viewBox="0 0 640 250" role="img" aria-label="Three pillars — Transparency, Inspection, and Adaptation — holding up a roof labelled Empirical Process Control.">
+          <!-- roof -->
+          <rect x="70" y="34" width="500" height="34" rx="6" class="d-ink" />
+          <text x="320" y="57" text-anchor="middle" fill="var(--dg-fill)" class="t-title" font-size="14">EMPIRICAL PROCESS CONTROL</text>
+          <!-- pillars -->
+          <g>
+            <rect x="110" y="82" width="110" height="120" rx="8" class="d-fill2 d-stroke" stroke-width="1.5"/>
+            <text x="165" y="130" text-anchor="middle" class="d-accent-f t-title" font-size="14">Trans-</text>
+            <text x="165" y="148" text-anchor="middle" class="d-accent-f t-title" font-size="14">parency</text>
+            <text x="165" y="176" text-anchor="middle" class="d-muted t-label">see the truth</text>
+          </g>
+          <g>
+            <rect x="265" y="82" width="110" height="120" rx="8" class="d-fill2 d-stroke" stroke-width="1.5"/>
+            <text x="320" y="139" text-anchor="middle" class="d-teal-f t-title" font-size="14">Inspection</text>
+            <text x="320" y="176" text-anchor="middle" class="d-muted t-label">check often</text>
+          </g>
+          <g>
+            <rect x="420" y="82" width="110" height="120" rx="8" class="d-fill2 d-stroke" stroke-width="1.5"/>
+            <text x="475" y="139" text-anchor="middle" class="d-amber-f t-title" font-size="14">Adaptation</text>
+            <text x="475" y="176" text-anchor="middle" class="d-muted t-label">adjust fast</text>
+          </g>
+          <!-- ground -->
+          <rect x="70" y="210" width="500" height="10" rx="5" class="d-line" style="fill:var(--dg-line)"/>
+        </svg>
+        <p class="figcap">No pillar stands alone — you can only adapt what you inspect, and you can only inspect what's transparent.</p>
+      </div>
+      <ul class="clean">
+        <li><strong>Transparency</strong> — the work and progress are visible and honest to everyone. (e.g. a shared board, a clear Definition of Done.)</li>
+        <li><strong>Inspection</strong> — you regularly check the work and how you're working. (That's what the Scrum events are <em>for</em>.)</li>
+        <li><strong>Adaptation</strong> — when inspection shows a problem, you adjust quickly rather than waiting.</li>
+      </ul>
+    </div>
+  </article>
+
+  <article class="qa" id="q4">
+    <div class="q"><span class="qnum">Q4</span><h3>What are the five Scrum values?</h3></div>
+    <div class="a">
+      <p>These are the behaviors that make the framework actually work. A common memory hook is <strong>C-F-C-R-O</strong>:</p>
+      <ul class="clean">
+        <li><strong>Commitment</strong> — the team commits to goals and to supporting each other.</li>
+        <li><strong>Focus</strong> — everyone focuses on the Sprint's work and goal.</li>
+        <li><strong>Courage</strong> — courage to tackle hard problems and say uncomfortable truths.</li>
+        <li><strong>Respect</strong> — treat each other as capable, independent people.</li>
+        <li><strong>Openness</strong> — be open about the work and the challenges.</li>
+      </ul>
+      <div class="tip"><span class="tip-ic">★</span><div><b>Say this</b> "The events and artifacts are the skeleton; the five values are the muscle that makes them move. Without courage and openness, a retrospective is just a quiet meeting."</div></div>
+    </div>
+  </article>
+
+  <article class="qa" id="q5">
+    <div class="q"><span class="qnum">Q5</span><h3>What is a Sprint?</h3></div>
+    <div class="a">
+      <p>A <strong>Sprint</strong> is a fixed, short period — usually <strong>1 to 4 weeks</strong> — during which the team builds a usable, valuable piece of the product. It's the <em class="accent-word">heartbeat</em> of Scrum: a new Sprint starts the moment the previous one ends, so the team has a steady rhythm.</p>
+      <p>Key rules: the length stays <strong>consistent</strong>, the <strong>Sprint Goal</strong> doesn't change mid-Sprint, and quality never drops.</p>
+      <div class="analogy"><b>Everyday analogy</b> Think of a season of a TV show. Each season (Sprint) is a fixed length, tells a complete story you can actually watch (a usable increment), and the writers learn from audience reaction before planning the next season.</div>
+    </div>
+  </article>
+
+  <article class="qa" id="q6">
+    <div class="q"><span class="qnum">Q6</span><h3>How is Agile/Scrum different from Waterfall?</h3></div>
+    <div class="a">
+      <p><strong>Waterfall</strong> does everything once, in sequence — plan everything, then build everything, then test, then release at the very end. <strong>Scrum</strong> does a little of everything in every Sprint and releases value repeatedly.</p>
+      <div class="figure">
+        <svg viewBox="0 0 660 260" role="img" aria-label="Waterfall shown as a single long sequence ending in one release, versus Scrum shown as repeated short cycles each producing value.">
+          <text x="30" y="30" class="d-ink t-title" font-size="14">Waterfall</text>
+          <!-- waterfall steps descending -->
+          <g class="t-label">
+            <rect x="30" y="44" width="90" height="30" rx="5" class="d-fill2 d-stroke" stroke-width="1.2"/><text x="75" y="63" text-anchor="middle" class="d-ink">Plan</text>
+            <rect x="130" y="76" width="90" height="30" rx="5" class="d-fill2 d-stroke" stroke-width="1.2"/><text x="175" y="95" text-anchor="middle" class="d-ink">Design</text>
+            <rect x="230" y="108" width="90" height="30" rx="5" class="d-fill2 d-stroke" stroke-width="1.2"/><text x="275" y="127" text-anchor="middle" class="d-ink">Build</text>
+            <rect x="330" y="140" width="90" height="30" rx="5" class="d-fill2 d-stroke" stroke-width="1.2"/><text x="375" y="159" text-anchor="middle" class="d-ink">Test</text>
+            <rect x="430" y="172" width="120" height="30" rx="5" class="d-accent-f"/><text x="490" y="191" text-anchor="middle" fill="#fff">Release (once)</text>
+          </g>
+          <text x="560" y="150" class="d-muted t-label">feedback<tspan x="560" dy="14">arrives late</tspan></text>
+
+          <line x1="30" y1="222" x2="640" y2="222" class="d-line" stroke-width="1"/>
+
+          <text x="30" y="246" class="d-ink t-title" font-size="14" transform="translate(0,-8)">Scrum</text>
+          <!-- scrum repeated cycles -->
+          <g transform="translate(0,4)">
+            <g>
+              <circle cx="120" cy="250" r="26" class="d-teal-s" fill="none" stroke-width="2"/>
+              <path d="M120 224 A26 26 0 1 1 96 264" class="d-teal-s" fill="none" stroke-width="2" marker-end="url(#ah2)"/>
+              <rect x="108" y="284" width="24" height="10" rx="3" class="d-teal-f"/>
+            </g>
+            <g>
+              <circle cx="260" cy="250" r="26" class="d-teal-s" fill="none" stroke-width="2"/>
+              <path d="M260 224 A26 26 0 1 1 236 264" class="d-teal-s" fill="none" stroke-width="2" marker-end="url(#ah2)"/>
+              <rect x="248" y="284" width="24" height="10" rx="3" class="d-teal-f"/>
+            </g>
+            <g>
+              <circle cx="400" cy="250" r="26" class="d-teal-s" fill="none" stroke-width="2"/>
+              <path d="M400 224 A26 26 0 1 1 376 264" class="d-teal-s" fill="none" stroke-width="2" marker-end="url(#ah2)"/>
+              <rect x="388" y="284" width="24" height="10" rx="3" class="d-teal-f"/>
+            </g>
+            <g>
+              <circle cx="540" cy="250" r="26" class="d-teal-s" fill="none" stroke-width="2"/>
+              <path d="M540 224 A26 26 0 1 1 516 264" class="d-teal-s" fill="none" stroke-width="2" marker-end="url(#ah2)"/>
+              <rect x="528" y="284" width="24" height="10" rx="3" class="d-teal-f"/>
+            </g>
+            <text x="330" y="252" text-anchor="middle" class="d-muted t-label">value every Sprint →</text>
+          </g>
+          <defs><marker id="ah2" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8 Z" fill="var(--dg-teal)"/></marker></defs>
+        </svg>
+        <p class="figcap">Waterfall bets everything on one release far in the future. Scrum ships small, learns, and corrects course repeatedly.</p>
+      </div>
+      <div class="tip"><span class="tip-ic">★</span><div><b>Balanced answer</b> Don't bash Waterfall. Say: "Waterfall works when requirements are stable and well understood. Scrum shines when there's uncertainty and change — which is most software."</div></div>
+    </div>
+  </article>
+
+  <!-- ============ ROLES ============ -->
+  <div class="section-head" id="roles">
+    <div class="section-kicker"><span class="num">02</span> Roles &amp; Accountabilities</div>
+    <h2>Who's who on a Scrum Team</h2>
+    <p>Modern Scrum calls these <strong>accountabilities</strong>, not "roles." A Scrum Team has exactly three, and no sub-teams or hierarchies.</p>
+  </div>
+
+  <div class="hero-figure" style="padding:0; margin-bottom: 22px;">
+    <div class="figure" style="margin:0;">
+      <svg viewBox="0 0 720 250" role="img" aria-label="The three Scrum accountabilities: Product Owner focuses on the what and why, Developers on the how, and the Scrum Master on how the team works together.">
+        <!-- container team -->
+        <rect x="20" y="20" width="680" height="210" rx="16" class="d-line" fill="none" stroke-width="1.5" stroke-dasharray="6 6"/>
+        <text x="360" y="46" text-anchor="middle" class="d-muted t-label" style="letter-spacing:.14em">ONE SCRUM TEAM · usually 10 or fewer people</text>
+
+        <!-- PO -->
+        <g>
+          <circle cx="150" cy="130" r="46" class="d-accent-f" opacity="0.12"/>
+          <circle cx="150" cy="130" r="46" class="d-accent-s" fill="none" stroke-width="2"/>
+          <text x="150" y="126" text-anchor="middle" class="d-ink t-title" font-size="13">Product</text>
+          <text x="150" y="143" text-anchor="middle" class="d-ink t-title" font-size="13">Owner</text>
+          <text x="150" y="200" text-anchor="middle" class="d-accent-f t-label">the WHAT &amp; WHY</text>
+          <text x="150" y="216" text-anchor="middle" class="d-muted t-label">maximises value</text>
+        </g>
+        <!-- Devs -->
+        <g>
+          <circle cx="360" cy="130" r="46" class="d-teal-f" opacity="0.12"/>
+          <circle cx="360" cy="130" r="46" class="d-teal-s" fill="none" stroke-width="2"/>
+          <text x="360" y="135" text-anchor="middle" class="d-ink t-title" font-size="13">Developers</text>
+          <text x="360" y="200" text-anchor="middle" class="d-teal-f t-label">the HOW</text>
+          <text x="360" y="216" text-anchor="middle" class="d-muted t-label">build the increment</text>
+        </g>
+        <!-- SM -->
+        <g>
+          <circle cx="570" cy="130" r="46" class="d-amber-f" opacity="0.14"/>
+          <circle cx="570" cy="130" r="46" style="stroke:var(--dg-amber)" fill="none" stroke-width="2"/>
+          <text x="570" y="126" text-anchor="middle" class="d-ink t-title" font-size="13">Scrum</text>
+          <text x="570" y="143" text-anchor="middle" class="d-ink t-title" font-size="13">Master</text>
+          <text x="570" y="200" text-anchor="middle" class="d-amber-f t-label">the HOW-WE-WORK</text>
+          <text x="570" y="216" text-anchor="middle" class="d-muted t-label">makes Scrum effective</text>
+        </g>
+      </svg>
+      <p class="figcap">Three accountabilities, one team, one shared goal. The Scrum Master owns the <em>way of working</em> — not the people.</p>
+    </div>
+  </div>
+
+  <article class="qa" id="q7">
+    <div class="q"><span class="qnum">Q7</span><h3>What are the three accountabilities on a Scrum Team?</h3></div>
+    <div class="a">
+      <ul class="clean">
+        <li><strong>Product Owner (PO)</strong> — owns the <em>what</em> and <em>why</em>. Maximises the value of the product; manages and orders the Product Backlog.</li>
+        <li><strong>Developers</strong> — the people who do the work of building the increment (anyone building it: coders, testers, designers). They own the <em>how</em>.</li>
+        <li><strong>Scrum Master</strong> — accountable for the team's <em>effectiveness</em> and for the correct use of Scrum. Owns <em>how the team works together</em>.</li>
+      </ul>
+      <p>The team is <strong>cross-functional</strong> (has all skills needed) and <strong>self-managing</strong> (decides who does what and how).</p>
+    </div>
+  </article>
+
+  <article class="qa" id="q8">
+    <div class="q"><span class="qnum">Q8</span><h3>What exactly does a Scrum Master do all day?</h3></div>
+    <div class="a">
+      <p>The Scrum Master is a <strong>servant leader</strong> and coach. They don't assign tasks or manage people — they make the <em>team</em> and the <em>environment</em> better. Concretely, they serve three groups:</p>
+      <ul class="clean">
+        <li><strong>The team</strong> — coach self-management, remove impediments (blockers), facilitate the events, protect focus.</li>
+        <li><strong>The Product Owner</strong> — help with backlog management and clear goals, arrange stakeholder collaboration.</li>
+        <li><strong>The organisation</strong> — help everyone understand and adopt Scrum, remove barriers between teams and stakeholders.</li>
+      </ul>
+      <div class="analogy"><b>Everyday analogy</b> Like a <strong>sports coach</strong>, not the team captain and not a player. They don't score the goals; they train the players, study the opponents, clear obstacles, and help the team get better every game.</div>
+      <div class="tip"><span class="tip-ic">★</span><div><b>Say this</b> "My job is to make myself less needed over time. A great Scrum Master builds a team that can eventually run Scrum well without them."</div></div>
+    </div>
+  </article>
+
+  <article class="qa" id="q9">
+    <div class="q"><span class="qnum">Q9</span><h3>Scrum Master vs Project Manager — what's the difference?</h3></div>
+    <div class="a">
+      <p>This is a classic trap for people transitioning into the role. The key: a Scrum Master has <strong>no command authority</strong> over the team.</p>
+      <div class="figure">
+        <svg viewBox="0 0 640 240" role="img" aria-label="Comparison table: Project Manager directs from above and owns scope, budget, and assignments, while Scrum Master serves from alongside and owns process, coaching, and impediment removal.">
+          <!-- PM column -->
+          <rect x="24" y="24" width="290" height="192" rx="12" class="d-fill2 d-stroke" stroke-width="1.5"/>
+          <text x="169" y="52" text-anchor="middle" class="d-ink t-title" font-size="14">Project Manager</text>
+          <text x="169" y="72" text-anchor="middle" class="d-muted t-label">directs from ABOVE ↓</text>
+          <g class="t-label"><text x="44" y="104" class="d-ink">• Owns scope, budget, timeline</text>
+          <text x="44" y="130" class="d-ink">• Assigns tasks to people</text>
+          <text x="44" y="156" class="d-ink">• Has authority over the team</text>
+          <text x="44" y="182" class="d-ink">• Accountable for delivery</text></g>
+
+          <rect x="326" y="24" width="290" height="192" rx="12" class="d-fill d-stroke" stroke-width="1.5"/>
+          <rect x="326" y="24" width="290" height="34" rx="12" class="d-amber-f" opacity="0.16"/>
+          <text x="471" y="52" text-anchor="middle" class="d-ink t-title" font-size="14">Scrum Master</text>
+          <text x="471" y="72" text-anchor="middle" class="d-amber-f t-label">serves from ALONGSIDE ↔</text>
+          <g class="t-label"><text x="346" y="104" class="d-ink">• Owns the process &amp; team health</text>
+          <text x="346" y="130" class="d-ink">• Team pulls its own tasks</text>
+          <text x="346" y="156" class="d-ink">• Influences, coaches, facilitates</text>
+          <text x="346" y="182" class="d-ink">• Team is accountable for delivery</text></g>
+        </svg>
+      </div>
+      <div class="tip"><span class="tip-ic">★</span><div><b>Say this</b> "A PM pushes work down and manages the plan. A Scrum Master creates the conditions for a self-managing team to succeed — leadership through influence, not authority."</div></div>
+    </div>
+  </article>
+
+  <article class="qa" id="q10">
+    <div class="q"><span class="qnum">Q10</span><h3>What does the Product Owner do?</h3></div>
+    <div class="a">
+      <p>The PO is a single person accountable for <strong>maximising the value</strong> the team delivers. They are the voice of the customer and the decider on priorities. Their main tools are the Product Backlog and a clear <strong>Product Goal</strong>.</p>
+      <p>They decide <strong>what</strong> gets built and in <strong>what order</strong> — but not <em>how</em>, and not <em>how much</em> the team commits to in a Sprint.</p>
+      <div class="tip"><span class="tip-ic">★</span><div><b>Key point</b> "One person, not a committee. For the PO to be effective, the organisation must respect their decisions."</div></div>
+    </div>
+  </article>
+
+  <article class="qa" id="q11">
+    <div class="q"><span class="qnum">Q11</span><h3>What are Developers responsible for?</h3></div>
+    <div class="a">
+      <p>"Developers" in Scrum means <em>anyone doing the work to create the increment</em> — not just programmers. That includes testers, designers, analysts, and so on. They are responsible for:</p>
+      <ul class="clean">
+        <li>Creating the Sprint Backlog (the plan for the Sprint).</li>
+        <li>Building a "Done" increment that meets the Definition of Done.</li>
+        <li>Adapting their plan each day toward the Sprint Goal.</li>
+        <li>Holding each other accountable as professionals.</li>
+      </ul>
+    </div>
+  </article>
+
+  <article class="qa" id="q12">
+    <div class="q"><span class="qnum">Q12</span><h3>What does "servant leadership" mean?</h3></div>
+    <div class="a">
+      <p>It's leading by <strong>serving the needs of the team first</strong>. Instead of "What do I want the team to do?", the servant leader asks "What does the team need to succeed, and how do I remove what's in the way?" The 2020 Scrum Guide phrases this as being a <em class="accent-word">true leader who serves</em>.</p>
+      <p>In practice: clearing blockers, shielding the team from distraction, asking questions instead of giving orders, and building the team's confidence to make its own decisions.</p>
+    </div>
+  </article>
+
+  <!-- ============ EVENTS ============ -->
+  <div class="section-head" id="events">
+    <div class="section-kicker"><span class="num">03</span> The Five Events</div>
+    <h2>The Sprint and its four ceremonies</h2>
+    <p>Every event is a formal opportunity to <strong>inspect and adapt</strong>. Each is <strong>timeboxed</strong> — given a maximum length so it stays focused.</p>
+  </div>
+
+  <div class="hero-figure" style="padding:0; margin-bottom: 22px;">
+    <div class="figure" style="margin:0;">
+      <svg viewBox="0 0 760 210" role="img" aria-label="Timeline of a Sprint: Sprint Planning at the start, Daily Scrums each day through the middle, then Sprint Review and Sprint Retrospective at the end.">
+        <!-- timeline -->
+        <line x1="40" y1="110" x2="720" y2="110" class="d-line" stroke-width="2"/>
+        <!-- planning -->
+        <circle cx="70" cy="110" r="9" class="d-accent-f"/>
+        <text x="70" y="90" text-anchor="middle" class="d-ink t-title" font-size="12">Sprint</text>
+        <text x="70" y="76" text-anchor="middle" class="d-ink t-title" font-size="12">Planning</text>
+        <text x="70" y="140" text-anchor="middle" class="d-muted t-label">start</text>
+        <!-- dailies -->
+        <g class="d-teal-f">
+          <circle cx="200" cy="110" r="6"/><circle cx="300" cy="110" r="6"/><circle cx="400" cy="110" r="6"/><circle cx="500" cy="110" r="6"/>
+        </g>
+        <text x="350" y="80" text-anchor="middle" class="d-teal-f t-title" font-size="12">Daily Scrum × every day</text>
+        <text x="350" y="146" text-anchor="middle" class="d-muted t-label">15 min each morning</text>
+        <!-- review -->
+        <circle cx="640" cy="110" r="9" style="fill:var(--dg-amber)"/>
+        <text x="640" y="82" text-anchor="middle" class="d-ink t-title" font-size="12">Review</text>
+        <text x="640" y="140" text-anchor="middle" class="d-muted t-label">show &amp; feedback</text>
+        <!-- retro -->
+        <circle cx="700" cy="110" r="9" class="d-accent-f"/>
+        <text x="710" y="82" text-anchor="middle" class="d-ink t-title" font-size="12">Retro</text>
+        <text x="700" y="164" text-anchor="middle" class="d-muted t-label">end</text>
+      </svg>
+      <p class="figcap">The Sprint is itself an event — a container holding the other four.</p>
+    </div>
+  </div>
+
+  <article class="qa" id="q13">
+    <div class="q"><span class="qnum">Q13</span><h3>What are the five Scrum events?</h3></div>
+    <div class="a">
+      <ol class="clean">
+        <li><strong>The Sprint</strong> — the container for all other events (1–4 weeks).</li>
+        <li><strong>Sprint Planning</strong> — plan the upcoming Sprint (max 8 hrs for a 1-month Sprint).</li>
+        <li><strong>Daily Scrum</strong> — 15-min daily sync for the Developers.</li>
+        <li><strong>Sprint Review</strong> — show the increment to stakeholders and get feedback (max 4 hrs).</li>
+        <li><strong>Sprint Retrospective</strong> — the team improves how it works (max 3 hrs).</li>
+      </ol>
+    </div>
+  </article>
+
+  <article class="qa" id="q14">
+    <div class="q"><span class="qnum">Q14</span><h3>What happens in Sprint Planning?</h3></div>
+    <div class="a">
+      <p>The whole team plans the Sprint by answering three questions:</p>
+      <ul class="clean">
+        <li><strong>Why</strong> is this Sprint valuable? → they craft the <strong>Sprint Goal</strong>.</li>
+        <li><strong>What</strong> can be done this Sprint? → they pick backlog items.</li>
+        <li><strong>How</strong> will the work get done? → they break items into a plan.</li>
+      </ul>
+      <p>The output is the <strong>Sprint Backlog</strong> (the Sprint Goal + selected items + the plan).</p>
+      <div class="tip"><span class="tip-ic">★</span><div><b>Watch out</b> The PO proposes the "why/what," but the <em>Developers</em> decide how much they can realistically take on. Management can't stuff the Sprint.</div></div>
+    </div>
+  </article>
+
+  <article class="qa" id="q15">
+    <div class="q"><span class="qnum">Q15</span><h3>What is the Daily Scrum (stand-up)?</h3></div>
+    <div class="a">
+      <p>A <strong>15-minute, same-time-same-place</strong> daily meeting <em>for the Developers</em> to inspect progress toward the Sprint Goal and re-plan the day. It keeps everyone aligned and surfaces blockers early.</p>
+      <p>The old "three questions" (What did I do? What will I do? Any blockers?) are <em>optional</em> — the 2020 Guide only says the Developers can structure it however they like, as long as it focuses on the Sprint Goal.</p>
+      <div class="tip trap"><span class="tip-ic">▲</span><div><b>Common trap</b> It is <em>not</em> a status report to the Scrum Master or manager. It's the team talking to <em>each other</em>. The Scrum Master ensures it happens but doesn't run it.</div></div>
+    </div>
+  </article>
+
+  <article class="qa" id="q16">
+    <div class="q"><span class="qnum">Q16</span><h3>What is the Sprint Review?</h3></div>
+    <div class="a">
+      <p>At the end of the Sprint, the team <strong>shows the working increment to stakeholders</strong>, gathers feedback, and discusses what to do next. It's a <em>working session</em>, not a one-way demo — the backlog often gets adjusted based on what's learned.</p>
+      <div class="analogy"><b>Everyday analogy</b> Like showing a rough cut of a film to a test audience — you watch their reaction and decide what to change before the next round, rather than guessing alone.</div>
+    </div>
+  </article>
+
+  <article class="qa" id="q17">
+    <div class="q"><span class="qnum">Q17</span><h3>What is the Sprint Retrospective — and why does it matter most?</h3></div>
+    <div class="a">
+      <p>The Retro is the team's private meeting to inspect <strong>how they worked</strong> (people, relationships, process, tools) and pick concrete improvements for next Sprint. The Review is about the <em>product</em>; the Retro is about the <em>team</em>.</p>
+      <p>Many practitioners call it the <strong>most important event</strong> because it's the engine of continuous improvement — the one place the team gets better at everything else.</p>
+      <div class="tip"><span class="tip-ic">★</span><div><b>Say this</b> "A good retro ends with 1–2 specific, actionable improvements the team owns — not a long wish-list that gets forgotten."</div></div>
+    </div>
+  </article>
+
+  <article class="qa" id="q18">
+    <div class="q"><span class="qnum">Q18</span><h3>What is timeboxing, and why use it?</h3></div>
+    <div class="a">
+      <p><strong>Timeboxing</strong> means giving an activity a fixed maximum duration. When time's up, you stop. It creates focus, prevents endless meetings, and forces the team to prioritise.</p>
+      <p>Note the events have a <em>maximum</em>, not a required length — if the Daily Scrum takes 8 minutes, that's fine.</p>
+    </div>
+  </article>
+
+  <!-- ============ ARTIFACTS ============ -->
+  <div class="section-head" id="artifacts">
+    <div class="section-kicker"><span class="num">04</span> Artifacts &amp; Commitments</div>
+    <h2>The three things Scrum makes visible</h2>
+    <p>Artifacts represent work or value and exist to maximise transparency. Each has a "commitment" attached to it that gives it focus.</p>
+  </div>
+
+  <div class="hero-figure" style="padding:0; margin-bottom: 22px;">
+    <div class="figure" style="margin:0;">
+      <svg viewBox="0 0 720 220" role="img" aria-label="Three artifacts and their commitments: Product Backlog commits to the Product Goal, Sprint Backlog commits to the Sprint Goal, and the Increment commits to the Definition of Done.">
+        <g>
+          <rect x="24" y="40" width="200" height="120" rx="12" class="d-accent-s" fill="none" stroke-width="2"/>
+          <text x="124" y="72" text-anchor="middle" class="d-ink t-title" font-size="14">Product Backlog</text>
+          <text x="124" y="94" text-anchor="middle" class="d-muted t-label">the ordered wish-list</text>
+          <rect x="44" y="118" width="160" height="28" rx="14" class="d-accent-f" opacity="0.14"/>
+          <text x="124" y="137" text-anchor="middle" class="d-accent-f t-label">↳ Product Goal</text>
+        </g>
+        <g>
+          <rect x="260" y="40" width="200" height="120" rx="12" class="d-teal-s" fill="none" stroke-width="2"/>
+          <text x="360" y="72" text-anchor="middle" class="d-ink t-title" font-size="14">Sprint Backlog</text>
+          <text x="360" y="94" text-anchor="middle" class="d-muted t-label">this Sprint's plan</text>
+          <rect x="280" y="118" width="160" height="28" rx="14" class="d-teal-f" opacity="0.14"/>
+          <text x="360" y="137" text-anchor="middle" class="d-teal-f t-label">↳ Sprint Goal</text>
+        </g>
+        <g>
+          <rect x="496" y="40" width="200" height="120" rx="12" style="stroke:var(--dg-amber)" fill="none" stroke-width="2"/>
+          <text x="596" y="72" text-anchor="middle" class="d-ink t-title" font-size="14">Increment</text>
+          <text x="596" y="94" text-anchor="middle" class="d-muted t-label">the usable product</text>
+          <rect x="516" y="118" width="160" height="28" rx="14" class="d-amber-f" opacity="0.18"/>
+          <text x="596" y="137" text-anchor="middle" class="d-amber-f t-label">↳ Definition of Done</text>
+        </g>
+        <text x="360" y="196" text-anchor="middle" class="d-muted t-label" style="letter-spacing:.1em">each artifact carries one commitment that focuses it</text>
+      </svg>
+    </div>
+  </div>
+
+  <article class="qa" id="q19">
+    <div class="q"><span class="qnum">Q19</span><h3>What are the three Scrum artifacts?</h3></div>
+    <div class="a">
+      <ul class="clean">
+        <li><strong>Product Backlog</strong> — the single, ordered list of everything that might be needed in the product. Commitment: the <strong>Product Goal</strong>.</li>
+        <li><strong>Sprint Backlog</strong> — the Sprint Goal plus the items chosen for this Sprint plus the plan to deliver them. Commitment: the <strong>Sprint Goal</strong>.</li>
+        <li><strong>Increment</strong> — a usable, "Done" step toward the Product Goal. Commitment: the <strong>Definition of Done</strong>.</li>
+      </ul>
+    </div>
+  </article>
+
+  <article class="qa" id="q20">
+    <div class="q"><span class="qnum">Q20</span><h3>What is the Product Backlog, and who owns it?</h3></div>
+    <div class="a">
+      <p>It's the <strong>single source of truth</strong> for what the team might build — features, fixes, improvements — kept in <strong>priority order</strong>, most valuable at the top. The <strong>Product Owner owns it</strong> and decides the ordering.</p>
+      <p>Keeping it healthy is called <strong>backlog refinement</strong> (or grooming): breaking big items down, adding detail, and re-ordering. It's an ongoing activity, not a formal event.</p>
+    </div>
+  </article>
+
+  <article class="qa" id="q21">
+    <div class="q"><span class="qnum">Q21</span><h3>What is the Sprint Backlog, and who owns it?</h3></div>
+    <div class="a">
+      <p>It's the <strong>Developers' plan for the current Sprint</strong>: the Sprint Goal, the items they selected, and how they intend to build them. It's owned entirely by the <strong>Developers</strong>, and they update it throughout the Sprint as they learn.</p>
+    </div>
+  </article>
+
+  <article class="qa" id="q22">
+    <div class="q"><span class="qnum">Q22</span><h3>What is the "Definition of Done"?</h3></div>
+    <div class="a">
+      <p>A <strong>shared checklist of quality</strong> that a piece of work must meet to be considered truly finished — e.g. "code reviewed, tested, documented, deployed to staging." If it doesn't meet the DoD, it is <em>not</em> Done and can't be part of the increment.</p>
+      <div class="analogy"><b>Everyday analogy</b> Like a restaurant's standard for "ready to serve": plated, correct temperature, garnished, checked. A half-cooked dish isn't "done" just because the timer went off.</div>
+      <div class="tip"><span class="tip-ic">★</span><div><b>Why it matters</b> The DoD creates transparency and prevents "90% done" work that secretly isn't shippable. It's how Scrum protects quality.</div></div>
+    </div>
+  </article>
+
+  <article class="qa" id="q23">
+    <div class="q"><span class="qnum">Q23</span><h3>What is a user story, and what makes a good one (INVEST)?</h3></div>
+    <div class="a">
+      <p>A <strong>user story</strong> is a short, plain-language description of a feature from the user's point of view. The common template:</p>
+      <p style="font-family:var(--font-mono); font-size:14.5px; background:var(--surface-2); border:1px solid var(--line); border-radius:10px; padding:12px 16px;">"<strong>As a</strong> [type of user], <strong>I want</strong> [some goal] <strong>so that</strong> [some benefit]."</p>
+      <p>Good stories follow <strong>INVEST</strong>:</p>
+      <ul class="clean">
+        <li><strong>I</strong>ndependent · <strong>N</strong>egotiable · <strong>V</strong>aluable · <strong>E</strong>stimable · <strong>S</strong>mall · <strong>T</strong>estable</li>
+      </ul>
+      <div class="tip"><span class="tip-ic">★</span><div><b>Note</b> "User story" isn't a Scrum term — it comes from XP — but Scrum teams use it heavily to fill the backlog.</div></div>
+    </div>
+  </article>
+
+  <article class="qa" id="q24">
+    <div class="q"><span class="qnum">Q24</span><h3>What are story points?</h3></div>
+    <div class="a">
+      <p>A <strong>relative</strong> measure of effort/complexity/uncertainty — not hours. Teams estimate how big an item is <em>compared to others</em>, often using a Fibonacci-like scale (1, 2, 3, 5, 8, 13…) and a game called <strong>Planning Poker</strong>.</p>
+      <div class="analogy"><b>Everyday analogy</b> You don't know exactly how many minutes it takes to climb a hill, but you can confidently say "that hill is about twice as hard as this one." Points capture relative size, which turns out to be easier and more reliable to estimate than exact time.</div>
+    </div>
+  </article>
+
+  <!-- ============ METRICS ============ -->
+  <div class="section-head" id="metrics">
+    <div class="section-kicker"><span class="num">05</span> Metrics &amp; Tracking</div>
+    <h2>How progress is made visible</h2>
+    <p>Scrum itself mandates no metrics, but teams commonly use a few. Know what each shows — and its limits.</p>
+  </div>
+
+  <article class="qa" id="q25">
+    <div class="q"><span class="qnum">Q25</span><h3>What is velocity?</h3></div>
+    <div class="a">
+      <p><strong>Velocity</strong> is the average amount of work (usually story points) a team completes per Sprint. It's used for <em>forecasting</em> — roughly how many Sprints a chunk of backlog might take.</p>
+      <div class="tip trap"><span class="tip-ic">▲</span><div><b>Common trap</b> Velocity is a <em>planning aid for the team</em>, never a productivity target or a way to compare teams. Two teams' points aren't comparable, and pushing for "higher velocity" just inflates estimates.</div></div>
+    </div>
+  </article>
+
+  <article class="qa" id="q26">
+    <div class="q"><span class="qnum">Q26</span><h3>What is a burndown chart? (and burn-up)</h3></div>
+    <div class="a">
+      <p>A <strong>burndown chart</strong> tracks work <em>remaining</em> over time. The line should trend down toward zero by the end of the Sprint. Comparing the real line to the ideal line shows whether you're ahead or behind.</p>
+      <div class="figure">
+        <svg viewBox="0 0 560 300" role="img" aria-label="A Sprint burndown chart: a dashed ideal line falls steadily from full work to zero, while the actual line stays above it early then drops, showing the team catching up.">
+          <!-- axes -->
+          <line x1="60" y1="30" x2="60" y2="250" class="d-line" stroke-width="1.5"/>
+          <line x1="60" y1="250" x2="520" y2="250" class="d-line" stroke-width="1.5"/>
+          <text x="20" y="145" class="d-muted t-label" transform="rotate(-90 20 145)" text-anchor="middle">Work remaining</text>
+          <text x="290" y="284" class="d-muted t-label" text-anchor="middle">Days in Sprint →</text>
+          <!-- gridlines -->
+          <g class="d-line" stroke-width="1" opacity="0.4">
+            <line x1="60" y1="80" x2="520" y2="80"/><line x1="60" y1="140" x2="520" y2="140"/><line x1="60" y1="200" x2="520" y2="200"/>
+          </g>
+          <!-- ideal line -->
+          <line x1="60" y1="50" x2="520" y2="250" class="d-teal-s" stroke-width="2" stroke-dasharray="6 6"/>
+          <text x="360" y="150" class="d-teal-f t-label">ideal</text>
+          <!-- actual line -->
+          <polyline points="60,50 122,60 184,72 246,120 308,118 370,150 432,205 520,250" class="d-accent-s" fill="none" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+          <g class="d-accent-f">
+            <circle cx="60" cy="50" r="4"/><circle cx="184" cy="72" r="4"/><circle cx="308" cy="118" r="4"/><circle cx="432" cy="205" r="4"/><circle cx="520" cy="250" r="4"/>
+          </g>
+          <text x="200" y="60" class="d-accent-f t-label">actual (behind early)</text>
+        </svg>
+        <p class="figcap">Above the ideal line = behind; below = ahead. It's a conversation-starter, not a scoreboard.</p>
+      </div>
+      <p>A <strong>burn-up chart</strong> is the mirror image — it tracks work <em>completed</em> rising toward a total, which makes scope changes easier to see.</p>
+    </div>
+  </article>
+
+  <article class="qa" id="q27">
+    <div class="q"><span class="qnum">Q27</span><h3>How do you measure whether a Scrum team is successful?</h3></div>
+    <div class="a">
+      <p>Not by velocity or "story points delivered." The real measures are outcome-based:</p>
+      <ul class="clean">
+        <li><strong>Value delivered</strong> to customers and the business.</li>
+        <li><strong>Predictability</strong> — does the team reliably meet its Sprint Goals?</li>
+        <li><strong>Quality</strong> — few escaped defects, low technical debt.</li>
+        <li><strong>Team health &amp; happiness</strong> — sustainable pace, engaged people.</li>
+        <li><strong>Continuous improvement</strong> — is the team getting better each Sprint?</li>
+      </ul>
+      <div class="tip"><span class="tip-ic">★</span><div><b>Say this</b> "I care more about outcomes than output. A team producing lots of features nobody uses isn't succeeding."</div></div>
+    </div>
+  </article>
+
+  <!-- ============ SCENARIOS ============ -->
+  <div class="section-head" id="scenarios">
+    <div class="section-kicker"><span class="num">06</span> Scenario &amp; Behavioral</div>
+    <h2>"What would you do if…"</h2>
+    <p>These test judgment, not memory. The winning pattern is almost always: <strong>don't command — coach, facilitate, and make the problem visible to the team.</strong></p>
+  </div>
+
+  <article class="qa" id="q28">
+    <div class="q"><span class="qnum">Q28</span><h3>A team member dominates every Daily Scrum. What do you do?</h3></div>
+    <div class="a">
+      <p><strong>Approach:</strong> Observe first, then coach — don't publicly scold anyone.</p>
+      <ul class="clean">
+        <li>Have a quiet 1-on-1 to raise it gently; they may not realise.</li>
+        <li>Reinforce the purpose: the Daily is for the <em>whole team's</em> alignment.</li>
+        <li>Introduce a light structure (e.g. walk the board, timebox each person, "take it offline" for deep dives).</li>
+        <li>If needed, raise it in the retro as a team topic so the team sets its own norm.</li>
+      </ul>
+    </div>
+  </article>
+
+  <article class="qa" id="q29">
+    <div class="q"><span class="qnum">Q29</span><h3>The Product Owner keeps changing priorities mid-Sprint. How do you handle it?</h3></div>
+    <div class="a">
+      <p><strong>Approach:</strong> Protect the Sprint Goal — that's a core Scrum Master duty.</p>
+      <ul class="clean">
+        <li>Coach the PO on why a stable Sprint Goal matters: constant churn kills focus and delivery.</li>
+        <li>Explain the escape valve: if priorities truly changed, they can be reflected in the <em>next</em> Sprint, or in the extreme the Sprint can be <strong>cancelled</strong> (only the PO can do that).</li>
+        <li>Channel new ideas into the Product Backlog for future refinement, not into the running Sprint.</li>
+      </ul>
+      <div class="tip"><span class="tip-ic">★</span><div><b>Say this</b> "I'd help the PO see that stability within a Sprint and flexibility between Sprints aren't in conflict — that's exactly what the Sprint boundary is for."</div></div>
+    </div>
+  </article>
+
+  <article class="qa" id="q30">
+    <div class="q"><span class="qnum">Q30</span><h3>The team consistently fails to finish what it commits to. What now?</h3></div>
+    <div class="a">
+      <p><strong>Approach:</strong> Get curious about the <em>root cause</em> — this is a retro topic, not a blame exercise.</p>
+      <ul class="clean">
+        <li>Are they over-committing? Coach realistic forecasting using past data.</li>
+        <li>Are estimates poor? Improve refinement so items are smaller and clearer.</li>
+        <li>Are there hidden blockers, interruptions, or unplanned work? Make them visible and remove them.</li>
+        <li>Is the Definition of Done too vague? Tighten it.</li>
+      </ul>
+      <div class="tip"><span class="tip-ic">★</span><div><b>Framing</b> "Repeatedly missing the goal is a signal, not a failure. My job is to help the team inspect why and adapt — maybe they just need to commit to less and build trust in delivering it."</div></div>
+    </div>
+  </article>
+
+  <article class="qa" id="q31">
+    <div class="q"><span class="qnum">Q31</span><h3>How do you handle conflict within the team?</h3></div>
+    <div class="a">
+      <p>Healthy conflict about <em>ideas</em> is good; personal conflict needs care. Facilitate a conversation, keep it focused on the work and shared goals, listen to all sides, and help them reach their own resolution rather than imposing one. Model the Scrum values of respect and openness. Escalate to management only if it becomes a serious HR issue.</p>
+    </div>
+  </article>
+
+  <article class="qa" id="q32">
+    <div class="q"><span class="qnum">Q32</span><h3>Stakeholders keep assigning work directly to Developers, bypassing the PO. What do you do?</h3></div>
+    <div class="a">
+      <p>This undermines both the PO and the Sprint. As Scrum Master serving the organisation:</p>
+      <ul class="clean">
+        <li>Coach stakeholders on how Scrum works — all work flows through the Product Backlog and the PO.</li>
+        <li>Empower the Developers to redirect such requests to the PO politely.</li>
+        <li>Make the impact visible: side-work steals capacity from the agreed Sprint Goal.</li>
+      </ul>
+    </div>
+  </article>
+
+  <article class="qa" id="q33">
+    <div class="q"><span class="qnum">Q33</span><h3>The team is disengaged and quiet in retrospectives. How do you fix it?</h3></div>
+    <div class="a">
+      <p>Usually a sign of low psychological safety or retro fatigue. Try: <strong>varying the format</strong> (Start/Stop/Continue, Sailboat, Mad-Sad-Glad), making it safe to be honest, ensuring past action items actually got done (nothing kills a retro faster than "nothing ever changes"), and occasionally stepping out so the team can speak freely.</p>
+      <div class="tip"><span class="tip-ic">★</span><div><b>Key insight</b> "If people don't see change come out of retros, they stop investing in them. The fix is following through on improvements, visibly."</div></div>
+    </div>
+  </article>
+
+  <!-- ============ SCALING & ADVANCED ============ -->
+  <div class="section-head" id="scaling">
+    <div class="section-kicker"><span class="num">07</span> Scaling &amp; Advanced</div>
+    <h2>Beyond a single team</h2>
+    <p>Mid-to-senior interviews probe how Scrum stretches across many teams, and how it compares to its cousin, Kanban.</p>
+  </div>
+
+  <article class="qa" id="q34">
+    <div class="q"><span class="qnum">Q34</span><h3>How does Scrum scale to many teams? (SAFe, LeSS, Nexus, Scrum of Scrums)</h3></div>
+    <div class="a">
+      <p>When one product needs several teams, you use a <strong>scaling framework</strong> to coordinate them:</p>
+      <ul class="clean">
+        <li><strong>Scrum of Scrums</strong> — a simple sync meeting where a rep from each team coordinates dependencies.</li>
+        <li><strong>Nexus</strong> — Scrum.org's lightweight framework for ~3–9 teams on one product; adds a "Nexus Integration Team."</li>
+        <li><strong>LeSS</strong> (Large-Scale Scrum) — keeps Scrum as-is with one Product Backlog and one PO across many teams; minimal extra process.</li>
+        <li><strong>SAFe</strong> (Scaled Agile Framework) — the heaviest and most prescriptive; adds portfolio/program layers. Popular in large enterprises, sometimes criticised as not truly agile.</li>
+      </ul>
+      <div class="tip"><span class="tip-ic">★</span><div><b>Say this</b> "The principle across all of them is the same: keep teams aligned to one product goal while managing cross-team dependencies. I'd pick the lightest framework that solves the actual problem."</div></div>
+    </div>
+  </article>
+
+  <article class="qa" id="q35">
+    <div class="q"><span class="qnum">Q35</span><h3>Scrum vs Kanban — and what's Scrumban?</h3></div>
+    <div class="a">
+      <div class="figure">
+        <svg viewBox="0 0 640 220" role="img" aria-label="Scrum uses fixed-length Sprints with roles and events; Kanban is a continuous flow limiting work in progress with no required roles.">
+          <rect x="24" y="30" width="290" height="160" rx="12" class="d-fill2 d-stroke" stroke-width="1.5"/>
+          <text x="169" y="58" text-anchor="middle" class="d-accent-f t-title" font-size="15">Scrum</text>
+          <g class="t-label d-ink">
+            <text x="44" y="88">• Fixed Sprints (1–4 wks)</text>
+            <text x="44" y="112">• 3 accountabilities, 5 events</text>
+            <text x="44" y="136">• Plan &amp; commit per Sprint</text>
+            <text x="44" y="160">• Change between Sprints</text>
+          </g>
+          <rect x="326" y="30" width="290" height="160" rx="12" class="d-fill2 d-stroke" stroke-width="1.5"/>
+          <text x="471" y="58" text-anchor="middle" class="d-teal-f t-title" font-size="15">Kanban</text>
+          <g class="t-label d-ink">
+            <text x="346" y="88">• Continuous flow (no Sprints)</text>
+            <text x="346" y="112">• No required roles/events</text>
+            <text x="346" y="136">• Limit Work-In-Progress (WIP)</text>
+            <text x="346" y="160">• Change any time</text>
+          </g>
+        </svg>
+      </div>
+      <p><strong>Scrum</strong> works in fixed cadences with defined roles; <strong>Kanban</strong> is a continuous flow that limits work-in-progress and pulls new work as capacity frees up. <strong>Scrumban</strong> blends them — a Scrum structure with Kanban's WIP limits and flow, popular for maintenance/support teams.</p>
+    </div>
+  </article>
+
+  <article class="qa" id="q36">
+    <div class="q"><span class="qnum">Q36</span><h3>What is technical debt, and how should a Scrum Master handle it?</h3></div>
+    <div class="a">
+      <p><strong>Technical debt</strong> is the future cost of taking shortcuts today — messy or quick code that will slow the team later, like interest on a loan. The Scrum Master helps the team keep it visible (make it backlog items), coaches a strong Definition of Done to prevent new debt, and helps the PO understand why some capacity each Sprint should go to paying it down.</p>
+    </div>
+  </article>
+
+  <article class="qa" id="q37">
+    <div class="q"><span class="qnum">Q37</span><h3>Can one person be Scrum Master for several teams? Can the role be part-time?</h3></div>
+    <div class="a">
+      <p>Yes — Scrum doesn't forbid it, and experienced Scrum Masters often serve 2–3 teams. But it depends on team maturity: a new team forming needs far more attention than a mature, self-managing one. The risk is spreading too thin and becoming a passive "meeting scheduler" rather than an active coach.</p>
+      <div class="tip"><span class="tip-ic">★</span><div><b>Nuance to show</b> "It's possible, but I'd push back if I'm assigned so many teams that I can only book meetings, not actually coach. That's a red flag for the org's understanding of the role."</div></div>
+    </div>
+  </article>
+
+  <!-- ============ CURVEBALLS ============ -->
+  <div class="section-head" id="curveballs">
+    <div class="section-kicker"><span class="num">08</span> Curveballs &amp; Traps</div>
+    <h2>The questions designed to catch you out</h2>
+    <p>Interviewers slip these in to separate the memorisers from the people who truly understand Scrum. Each one has a tempting wrong answer.</p>
+  </div>
+
+  <article class="qa" id="q38">
+    <div class="q"><span class="qnum">Q38</span><h3>Isn't the Daily Scrum a status meeting for the Scrum Master?</h3></div>
+    <div class="a">
+      <div class="tip trap"><span class="tip-ic">▲</span><div><b>The trap</b> Saying "yes, everyone reports their status to me."</div></div>
+      <p><strong>Correct answer:</strong> No. The Daily Scrum is <em>by and for the Developers</em> to re-plan their day toward the Sprint Goal. The Scrum Master ensures it happens and is effective, but doesn't run it or collect status. It's a peer conversation, not a report-up.</p>
+    </div>
+  </article>
+
+  <article class="qa" id="q39">
+    <div class="q"><span class="qnum">Q39</span><h3>Who writes the user stories — only the Product Owner?</h3></div>
+    <div class="a">
+      <div class="tip trap"><span class="tip-ic">▲</span><div><b>The trap</b> "The Product Owner writes all the stories."</div></div>
+      <p><strong>Correct answer:</strong> The PO is <em>accountable</em> for the Product Backlog and its ordering, but <em>anyone</em> on the team can write or contribute to backlog items and stories. In fact, collaboration on stories (with Developers who understand the technical side) produces much better ones. Accountability ≠ doing all the work.</p>
+    </div>
+  </article>
+
+  <article class="qa" id="q40">
+    <div class="q"><span class="qnum">Q40</span><h3>Can a Sprint be extended or cancelled?</h3></div>
+    <div class="a">
+      <div class="tip trap"><span class="tip-ic">▲</span><div><b>The trap</b> "Sure, if the team needs a few more days, just extend the Sprint."</div></div>
+      <p><strong>Correct answer:</strong> A Sprint's length is <em>never</em> extended — that would break the steady cadence and the whole point of a timebox. If work isn't done, it goes back to the Product Backlog for a future Sprint.</p>
+      <p>A Sprint <em>can</em> be <strong>cancelled</strong> — but only by the <strong>Product Owner</strong>, and only if the Sprint Goal becomes obsolete (e.g. a major business pivot). This is rare.</p>
+    </div>
+  </article>
+
+  <p style="margin-top:48px; padding:20px 22px; background:var(--surface); border:1px solid var(--line); border-radius:14px; box-shadow:var(--shadow); color:var(--ink-soft); font-size:15.5px;">
+    <strong style="color:var(--ink); font-family:var(--font-display); font-size:18px;">One last tip for the interview itself.</strong><br>
+    When you get a "what would you do" question, narrate your <em>thinking</em>, not just an answer: acknowledge the situation → say you'd get curious about the root cause → describe coaching/facilitating rather than commanding → mention making it visible or bringing it to the right event. That structure signals a real Scrum Master mindset, and it works even for scenarios you've never seen before.
+  </p>
+
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <h4>About this guide</h4>
+    <p>Built as interview-prep study material, based on the <b>2020 Scrum Guide</b> by Ken Schwaber and Jeff Sutherland. Scrum terminology and definitions are drawn from that guide; the analogies, scenarios, and "say this" notes are practical interpretations to aid understanding, not official doctrine.</p>
+    <p style="margin-top:16px;">Use <span class="kbd">Tab</span> to move through sections, and the chips at the top to jump between topics. Good luck in the room. 🍀</p>
+  </div>
+</footer>
+
+<script>
+  // Scrollspy — highlight the current section chip
+  (function () {
+    var chips = Array.prototype.slice.call(document.querySelectorAll('.navchips a'));
+    var map = {};
+    chips.forEach(function (c) {
+      var id = c.getAttribute('href').slice(1);
+      var el = document.getElementById(id);
+      if (el) map[id] = c;
+    });
+    var sections = Object.keys(map).map(function (id) { return document.getElementById(id); });
+
+    function onScroll() {
+      var pos = window.scrollY + 140;
+      var current = null;
+      sections.forEach(function (s) {
+        if (s.offsetTop <= pos) current = s.id;
+      });
+      chips.forEach(function (c) { c.classList.remove('active'); });
+      if (current && map[current]) {
+        map[current].classList.add('active');
+        // keep active chip in view within the horizontal nav
+        map[current].scrollIntoView({ block: 'nearest', inline: 'nearest' });
+      }
+    }
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+  })();
+</script>
+</body>
+</html>
